@@ -1,0 +1,28 @@
+!!URxvt.font: xft:Bitstream Vera Sans Mono:size=11
+URxvt.font: xft:Inconsolata:size=15
+!!URxvt.font: -*-terminus-medium-r-normal--17-*-*-*-*-*-*-*
+URxvt.background: #100010
+URxvt.borderColor: #000000
+URxvt.foreground: #ffffff
+URxvt.scrollBar: false
+URxvt.saveLines: 1000
+URxvt.internalBorder: 2
+URxvt.title: PRAMPT
+URxvt.visualBell: false
+
+urxvt*color0: #b7b7b7
+urxvt*color1: #ff6306
+urxvt*color2: #B3F815
+urxvt*color3: #F3DC10
+urxvt*color4: #01B1E2
+urxvt*color5: #CF65FF
+urxvt*color6: #17ECB2
+urxvt*color7: #f2f2f2
+urxvt*color8: #2e202e
+urxvt*color9: #D7000D
+urxvt*color10: #46C900
+urxvt*color11: #FFD14C
+urxvt*color12: #0168E2
+urxvt*color13: #8E2CFF
+urxvt*color14: #00DDC7
+urxvt*color15: #dddddd
