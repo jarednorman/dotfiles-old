@@ -69,8 +69,11 @@ nmap <leader>w :w!<cr>
 nmap <leader>d :bd<cr>
 nmap <leader>ee :e 
 nmap <leader>. <C-^>
-nmap <leader>c "*p
+nmap <leader>y "*p
 nmap <leader><tab> <c-w><c-w>
+
+""" Copy file to clipboard
+nmap <leader>c :w<cr>:!cat % \| pbcopy<cr>
 
 """ Mapping mapping mapping mapping mapping 
 map <leader>mt :map <lt>leader>t :w<lt>cr>

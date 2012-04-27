@@ -2,7 +2,6 @@
 setopt autocd extendedglob nohup rmstarsilent
 setopt promptsubst
 
-eval `dircolors -b`
 autoload colors && colors
 for COLOR in RED GREEN YELLOW BLUE MAGENTA CYAN BLACK WHITE; do
 	eval $COLOR='%{$fg_no_bold[${(L)COLOR}]%}'
@@ -37,7 +36,7 @@ setopt appendhistory histignoredups nohistsavebycopy
 # ls on changing directories
 function chpwd() {
 	emulate -L zsh
-	ls --color=auto
+	ls -G
 }
 
 alias -g ...=../..
@@ -46,6 +45,7 @@ alias -g .....=../../../..
 alias -g ......=../../../../..
 alias grep='grep --color=auto'
 # random common
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias zource='source ~/.zshrc'
 alias bex='bundle exec'
 alias v='vim'
@@ -60,13 +60,11 @@ alias rg='rails g'
 alias gi='git init && git add . && git commit -m "initial commit"'
 alias i='sudo netcfg'
 # ls variants
-alias l='ls -F'
-alias ls='ls --color=auto'
-alias sl='ls --color=auto'
-alias ll='ls -lh --color=auto'
-alias la='ls -a --color=auto'
-alias lsd='ls -ld *(-/DN)'
-alias lsa='ls -ld .*'
+alias l='ls'
+alias ls='ls -G'
+alias sl='ls -G'
+alias ll='ls -lhG'
+alias la='ls -aG'
 alias lg='ls|egrep'
 # nocorrect
 alias mv='nocorrect mv'

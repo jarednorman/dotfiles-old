@@ -16,7 +16,7 @@ hi DiffChange ctermfg=3
 hi DiffDelete ctermfg=3
 hi DiffText ctermfg=3
 hi ErrorMsg ctermfg=16
-hi VertSplit ctermfg=11 ctermbg=11 cterm=none
+hi VertSplit ctermfg=1 ctermbg=1 cterm=none
 hi Folded ctermfg=3
 hi FoldColumn ctermfg=3
 hi IncSearch ctermfg=3
@@ -27,8 +27,8 @@ hi NonText ctermfg=3
 hi Question ctermfg=3
 hi Search ctermfg=3
 hi SpecialKey ctermfg=3
-hi StatusLine ctermbg=11 ctermfg=8 cterm=BOLD
-hi StatusLineNC ctermfg=8 ctermbg=11 cterm=none
+hi StatusLine ctermbg=1 ctermfg=8 cterm=BOLD
+hi StatusLineNC ctermfg=1 ctermbg=1 cterm=none
 hi Title ctermfg=3
 hi Visual ctermfg=3
 hi VisualNOS ctermfg=3
