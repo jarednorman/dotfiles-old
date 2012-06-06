@@ -1,6 +1,7 @@
 set nocompatible
 filetype off
-
+" On new machines remember to:
+"   git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " Bundles go here dawwwg
