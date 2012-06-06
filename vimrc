@@ -1,8 +1,20 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" Bundles go here dawwwg
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+Bundle 'msanders/snipmate.vim'
+" Don't remove this guy
+filetype plugin indent on
+
+
 set noswapfile
 syntax enable
 colo keepitsimple
 set nonumber
-set nocompatible
 set backspace=indent,eol,start
 set nobackup
 set wildmenu
