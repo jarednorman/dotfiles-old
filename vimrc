@@ -1,4 +1,3 @@
-call pathogen#infect()
 set noswapfile
 syntax enable
 colo keepitsimple
