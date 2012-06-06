@@ -1,7 +1,7 @@
 call pathogen#infect()
 set noswapfile
 syntax on
-colo txa-ea
+colo keepitsimple
 set nonumber
 set nocompatible
 set backspace=indent,eol,start

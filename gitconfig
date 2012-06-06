@@ -1,3 +1,6 @@
 [user]
-	name = Jared Norman
-	email = moc.ae-axt@txa-ea.com
+    name = Jared Norman
+    email = hi@jarednorman.ca
+[alias]
+    d = diff --color
+    l = log --graph --pretty=oneline --color
