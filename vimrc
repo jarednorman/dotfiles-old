@@ -1,6 +1,6 @@
 call pathogen#infect()
 set noswapfile
-syntax on
+syntax enable
 colo keepitsimple
 set nonumber
 set nocompatible

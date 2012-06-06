@@ -1,10 +1,9 @@
 " keepitsimple.vim
 " Maintainer: Jared Norman <hi@jarednorman.ca>
 " Last Change: 5 June 2012
-"URL: http://blog.jarednorman.ca
+" URL: http://blog.jarednorman.ca
 
 set background=dark
-set syntax_cmd=skip
 hi clear
 if exists("syntax_on")
     syntax reset
@@ -13,7 +12,7 @@ let g:colors_name="keepitsimple"
 
 " groups
 "hi Normal ctermfg=8 ctermbg=0 cterm=none
-"hi Comment ctermfg=8 ctermbg=0 cterm=none
+"hi Comment ctermfg=9 ctermbg=0 cterm=none
 "hi Constant ctermfg=8 ctermbg=0 cterm=none
 "hi Special ctermfg=8 ctermbg=0 cterm=none
 "hi Identifier ctermfg=8 ctermbg=0 cterm=none

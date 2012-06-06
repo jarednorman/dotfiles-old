@@ -3,6 +3,7 @@
     email = hi@jarednorman.ca
 [alias]
     head = !git l -1
+    d = diff --color
     h = !git head
     hp = "!source ~/.githelpers && show_git_head"
     r = !git l -30
