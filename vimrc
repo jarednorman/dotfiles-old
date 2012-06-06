@@ -11,6 +11,10 @@ Bundle 'msanders/snipmate.vim'
 " Don't remove this guy
 filetype plugin indent on
 
+" Check this out?
+set ttyfast
+set ttyscroll=3
+set lazyredraw
 
 set noswapfile
 syntax enable

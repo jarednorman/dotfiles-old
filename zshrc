@@ -46,17 +46,13 @@ alias -g .....=../../../..
 alias -g ......=../../../../..
 alias grep='grep --color=auto'
 # random common
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+# alias vim="/Applications/MacVim.app/Contents/MacOS/Vim" TODO: Move this to local.zsh
 alias hist="cat ~/.histfile | grep"
 alias zource='source ~/.zshrc'
 alias bex='bundle exec'
 alias v='vim'
-alias irc="ssh home -t \"screen -dr\""
-alias alsamixer='alsamixer -g'
 alias vzshrc='vim ~/.zshrc'
 alias treeless='tree -C | less -R'
-alias sleeps='killall ssh;sudo umount /home/txa-ea/music 2> /dev/null;sudo netcfg -a;sudo pm-suspend'
-alias mmusic='sshfs home:media/music /home/txa-ea/music'
 alias f='fg'
 alias rg='rails g'
 alias gi='git init && git add . && git commit -m "initial commit"'
@@ -102,3 +98,4 @@ zstyle ':completion:*:expand:*' tag-order all-expansions
 autoload -Uz compinit && compinit -C
 # End of lines added by compinstall
 
+source ~/.zsh/local.zsh

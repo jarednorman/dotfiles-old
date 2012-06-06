@@ -2,7 +2,7 @@
 URxvt.font: xft:Inconsolata:size=12
 !!URxvt.font: -*-terminus-medium-r-normal--14-*-*-*-*-*-*-*
 urxvt*depth: 32
-urxvt*background: rgba:1200/0F00/0F00/eeee
+urxvt*background: rgba:1200/0F00/0F00/ffff
 URxvt.background: #100010
 URxvt.borderColor: #000000
 URxvt.foreground: #ffffff
