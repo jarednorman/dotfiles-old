@@ -27,6 +27,7 @@ PS1='${RED}%n${BOLD_BLACK}@${BOLD_YELLOW}%m${BOLD_BLACK}:${BOLD_CYAN}%c${BOLD_BL
 RPROMPT='$(prompt_git_info)%{${RESET}%}'
 
 export EDITOR=vim
+export RUBYOPT=rubygems
 
 HISTFILE=~/.histfile
 HISTSIZE=1000

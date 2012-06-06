@@ -1,6 +1,6 @@
 [user]
-	name = Jared Norman
-	email = moc.ae-axt@txa-ea.com
+    name = Jared Norman
+    email = hi@jarednorman.ca
 [alias]
     head = !git l -1
     h = !git head
