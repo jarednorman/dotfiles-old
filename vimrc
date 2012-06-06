@@ -20,8 +20,6 @@ set backspace=indent,eol,start
 set nobackup
 set wildmenu
 set ruler
-set cursorline
-set colorcolumn=80
 
 filetype plugin indent on
 set autoindent
