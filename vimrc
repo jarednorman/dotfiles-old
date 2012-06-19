@@ -15,6 +15,7 @@ filetype plugin indent on
 set ttyfast
 set ttyscroll=3
 set lazyredraw
+set cursorline
 
 set noswapfile
 syntax enable

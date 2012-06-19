@@ -22,6 +22,7 @@ hi Todo ctermfg=0 cterm=none
 hi Menu ctermfg=0 cterm=none
 hi Text ctermfg=8 cterm=none
 hi Type ctermfg=4 cterm=none
+hi LineNr ctermfg=0
 
 hi NonText ctermfg=0
 
@@ -47,3 +48,7 @@ hi htmlUnderline cterm=none
 " js
 hi javaScriptValue ctermfg=14
 hi javaScriptParens ctermfg=5
+
+" tumblr
+hi tumblrBlock ctermfg=11
+hi tumblrTag ctermfg=11

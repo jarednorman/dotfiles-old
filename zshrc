@@ -46,7 +46,6 @@ alias -g .....=../../../..
 alias -g ......=../../../../..
 alias grep='grep --color=auto'
 # random common
-# alias vim="/Applications/MacVim.app/Contents/MacOS/Vim" TODO: Move this to local.zsh
 alias hist="cat ~/.histfile | grep"
 alias zource='source ~/.zshrc'
 alias bex='bundle exec'
