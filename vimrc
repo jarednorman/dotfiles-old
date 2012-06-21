@@ -19,7 +19,7 @@ set cursorline
 
 set noswapfile
 syntax enable
-colo keepitsimple
+colo solarized
 set nonumber
 set backspace=indent,eol,start
 set nobackup
