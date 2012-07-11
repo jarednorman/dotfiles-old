@@ -26,6 +26,11 @@ hi LineNr ctermfg=0
 
 hi NonText ctermfg=0
 
+" folds
+hi Folded ctermfg=0 ctermbg=8 cterm=none
+hi FoldColumn ctermfg=0 ctermbg=8 cterm=none
+
+
 " splits
 hi StatusLine ctermfg=5 cterm=reverse
 hi StatusLineNC ctermfg=5 ctermbg=8 cterm=none

@@ -17,5 +17,5 @@ if [ -n "$__CURRENT_GIT_BRANCH" ]; then
 	fi
 	s+=")"
  
-	printf " %s%s" "%{${BOLD_BLACK}%}" $s
+	printf " %s%s" "%{${YELLOW}%}" $s
 fi
