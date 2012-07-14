@@ -15,11 +15,16 @@ filetype plugin indent on
 set ttyfast
 set ttyscroll=3
 set lazyredraw
+set cursorline
+
+" Solarized
+set background=dark
+colo keepitsimple
+source ~/.vim/autoload/*
 
 set noswapfile
 syntax enable
-colo keepitsimple
-set nonumber
+set number
 set backspace=indent,eol,start
 set nobackup
 set wildmenu
@@ -64,6 +69,7 @@ let g:mapleader = ","
 
 " Toggle line wrap
 nmap <leader>qw :set nowrap! <CR>
+nmap <leader>qh :set hlsearch! <CR>
 nmap <leader>qn :set nonumber! <CR>
 
 """ctrlp.vim"""
@@ -72,6 +78,7 @@ let g:ctrlp_open_new_file = "r"
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 nmap <leader><leader> :CtrlP ./<cr>
 nmap <leader>b :CtrlPBuffer<cr>
+
 "RoR CtrlP stuff
 nmap <leader>ec :CtrlP app/controllers<cr>
 nmap <leader>ea :CtrlP app<cr>
@@ -87,7 +94,13 @@ nmap <leader>y "*p
 nmap <leader><tab> <c-w><c-w>
 
 """ Copy file to clipboard
+""" TODO: generalize this for xclip or pbcopy
 nmap <leader>c :w<cr>:!cat % \| pbcopy<cr>
+""" Paste from clipboard
+nmap <leader>v "*p
+
+""" Download yanked url
+nmap <leader>g :!curl -OL <c-r>"<cr>
 
 """ Mapping mapping mapping mapping mapping 
 map <leader>mt :map <lt>leader>t :w<lt>cr>
