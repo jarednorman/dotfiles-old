@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'msanders/snipmate.vim'
+Bundle 'kchmck/vim-coffee-script'
 " Don't remove this guy
 filetype plugin indent on
 
