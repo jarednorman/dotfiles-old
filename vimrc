@@ -7,7 +7,7 @@ call vundle#rc()
 " Bundles go here dawwwg
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
-Bundle 'msanders/snipmate.vim'
+Bundle 'jarednorman/snipmate.vim'
 Bundle 'kchmck/vim-coffee-script'
 " Don't remove this guy
 filetype plugin indent on
@@ -18,18 +18,19 @@ set ttyscroll=3
 set lazyredraw
 set cursorline
 
-" Solarized
 set background=dark
 colo keepitsimple
-source ~/.vim/autoload/*
 
 set noswapfile
 syntax enable
+set showtabline=2
 set number
+set foldcolumn=2
 set backspace=indent,eol,start
 set nobackup
 set wildmenu
 set ruler
+set mouse=a
 
 filetype plugin indent on
 set autoindent
@@ -65,8 +66,11 @@ let mapleader = ","
 let g:mapleader = ","
 
 " Screen scrolling w/o moving cursor
-:nmap <c-j> j<c-e>
-:nmap <c-k> k<c-y>
+nmap <c-j> j<c-e>
+nmap <c-k> k<c-y>
+" Tab movement
+map <c-l> <c-PageDown>
+map <c-h> <c-PageUp>
 
 " Toggle line wrap
 nmap <leader>qw :set nowrap! <CR>
@@ -122,7 +126,6 @@ if has("gui_running")
   colo gitt
   set anti enc=utf-8 guifont=Inconsolata\ Medium\ 15
   set guioptions=
-  set showtabline=2
   map <leader>[ :tabp<cr>
   map <leader>] :tabN<cr>
   map <leader>\ :tabnew<cr>

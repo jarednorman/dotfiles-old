@@ -38,7 +38,7 @@ hi StatusLineNC ctermfg=8 ctermbg=0 cterm=none
 hi VertSplit ctermfg=0 ctermbg=0  cterm=none
 
 " Cursor line
-hi CursorLine cterm=underline
+hi CursorLine cterm=none
 
 " randoms
 hi Underlined cterm=bold
