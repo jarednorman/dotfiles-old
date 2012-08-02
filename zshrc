@@ -57,6 +57,7 @@ alias f='fg'
 alias rg='rails g'
 alias gi='git init && git add . && git commit -m "initial commit"'
 alias i='sudo netcfg'
+alias scr='screen -dr'
 # ls variants
 alias l='ls'
 alias ls='ls -G'

@@ -23,9 +23,9 @@ colo keepitsimple
 
 set noswapfile
 syntax enable
+set list
 set showtabline=2
 set number
-set foldcolumn=2
 set backspace=indent,eol,start
 set nobackup
 set wildmenu
@@ -50,6 +50,7 @@ set nohlsearch
 set incsearch
 
 set foldmethod=manual
+set foldcolumn=2
 
 set laststatus=2
 set cmdheight=2
