@@ -6,9 +6,10 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " Bundles go here dawwwg
 Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
 Bundle 'jarednorman/snipmate.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 " Don't remove this guy
 filetype plugin indent on
 
@@ -77,20 +78,6 @@ map <c-h> <c-PageUp>
 nmap <leader>qw :set nowrap! <CR>
 nmap <leader>qh :set hlsearch! <CR>
 nmap <leader>qn :set nonumber! <CR>
-
-"""ctrlp.vim"""
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_open_new_file = "r"
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-nmap <leader><leader> :CtrlP ./<cr>
-nmap <leader>b :CtrlPBuffer<cr>
-
-"RoR CtrlP stuff
-nmap <leader>ec :CtrlP app/controllers<cr>
-nmap <leader>ea :CtrlP app<cr>
-nmap <leader>em :CtrlP app/models<cr>
-nmap <leader>ev :CtrlP app/views<cr>
-nmap <leader>es :CtrlP spec<cr>
 
 nmap <leader>w :w!<cr>
 nmap <leader>d :bd<cr>
