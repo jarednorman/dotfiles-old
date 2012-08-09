@@ -53,8 +53,16 @@ set winheight=999
 " Specific File Settings
 autocmd FileType ruby set tabstop=2
 autocmd FileType ruby set shiftwidth=2
-autocmd FileType ruby set expandtab
 autocmd FileType ruby set softtabstop=2
+autocmd FileType scss set tabstop=2
+autocmd FileType scss set shiftwidth=2
+autocmd FileType scss set softtabstop=2
+autocmd FileType sass set tabstop=2
+autocmd FileType sass set shiftwidth=2
+autocmd FileType sass set softtabstop=2
+autocmd FileType css set tabstop=2
+autocmd FileType css set shiftwidth=2
+autocmd FileType css set softtabstop=2
 
 """EVERTHING FASTER"""
 let mapleader = ","
