@@ -13,6 +13,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-haml'
 
 " Functionality
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'jarednorman/snipmate.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -24,11 +25,10 @@ set ttyfast
 set ttyscroll=3
 set lazyredraw
 set cursorline
-set background=dark
-colo keepitsimple
+set background=light
+colo solarized
 set noswapfile
 syntax enable
-set list
 set showtabline=2
 set number
 set backspace=indent,eol,start
