@@ -4,13 +4,19 @@ filetype off
 "   git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-" Bundles go here dawwwg
 Bundle 'gmarik/vundle'
-Bundle 'jarednorman/snipmate.vim'
+
+" Language Support
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-haml'
+
+" Functionality
+Bundle 'jarednorman/snipmate.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+
 " Don't remove this guy:
 filetype plugin indent on
 
