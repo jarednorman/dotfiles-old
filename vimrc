@@ -13,6 +13,9 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-haml'
 
 " Functionality
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-fugitive'
 Bundle 'jarednorman/snipmate.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -70,6 +73,9 @@ autocmd FileType sass set softtabstop=2
 autocmd FileType css set tabstop=2
 autocmd FileType css set shiftwidth=2
 autocmd FileType css set softtabstop=2
+autocmd FileType html set tabstop=2
+autocmd FileType html set shiftwidth=2
+autocmd FileType html set softtabstop=2
 
 """EVERTHING FASTER"""
 let mapleader = ","
