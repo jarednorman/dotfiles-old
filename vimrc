@@ -13,6 +13,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-haml'
 
 " Functionality
+Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-fugitive'
@@ -50,7 +51,7 @@ autocmd GUIEnter * set visualbell t_vb=
 set nohlsearch
 set incsearch
 set foldmethod=manual
-set foldcolumn=2
+" set foldcolumn=2
 set laststatus=2
 set cmdheight=2
 set showcmd
