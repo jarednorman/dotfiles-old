@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'jarednorman/snipmate.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'nono/vim-handlebars'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " Don't remove this guy:
