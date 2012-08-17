@@ -79,8 +79,11 @@ autocmd FileType html set shiftwidth=2
 autocmd FileType html set softtabstop=2
 
 """EVERTHING FASTER"""
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = "\<space>"
+let g:mapleader = "\<space>"
+
+"" TADA!!!!!
+nmap <leader>1234567890 :wq<cr>
 
 " Screen scrolling w/o moving cursor
 nmap <c-j> j<c-e>
@@ -96,13 +99,12 @@ nmap <leader>qh :set hlsearch! <CR>
 nmap <leader>qn :set nonumber! <CR>
 
 " Fuzzy Search
-nmap <leader><leader> :FufFile<cr>
+nmap <leader>e :FufFile<cr>
 nmap <leader><space> :FufTag<cr>
 nmap <leader>b :FufBuffer<cr>
 
 nmap <leader>w :w!<cr>
 nmap <leader>d :bd<cr>
-nmap <leader>ee :e 
 nmap <leader>. <C-^>
 nmap <leader>y "*p
 nmap <leader><tab> <c-w><c-w>
