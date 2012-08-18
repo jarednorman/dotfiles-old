@@ -10,6 +10,7 @@ Bundle 'jarednorman/snipmate.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'bbommarito/vim-slim'
 " Don't remove this guy:
 filetype plugin indent on
 
@@ -28,7 +29,6 @@ set backspace=indent,eol,start
 set nobackup
 set wildmenu
 set ruler
-set mouse=a
 filetype plugin indent on
 set autoindent
 set expandtab

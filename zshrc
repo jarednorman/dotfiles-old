@@ -1,4 +1,7 @@
 
+export PATH=$HOME/bin:$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
+export GEM_HOME=$HOME/.gem
+
 setopt autocd extendedglob nohup rmstarsilent
 setopt promptsubst
 
