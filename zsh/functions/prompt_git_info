@@ -3,13 +3,13 @@ if [ -n "$__CURRENT_GIT_BRANCH" ]; then
 	s+="$__CURRENT_GIT_BRANCH"
 	case "$__CURRENT_GIT_BRANCH_STATUS" in
 		ahead)
-		s+="→"
+		s+="~>"
 		;;
 		diverged)
-		s+="↕"
+		s+=":S"
 		;;
 		behind)
-		s+="←"
+		s+="<-"
 		;;
 	esac
 	if [ -n "$__CURRENT_GIT_BRANCH_IS_DIRTY" ]; then
@@ -17,5 +17,5 @@ if [ -n "$__CURRENT_GIT_BRANCH" ]; then
 	fi
 	s+=")"
  
-	printf " %s%s" "%{${YELLOW}%}" $s
+	printf " %s%s" "%{${BLUE}%}" $s
 fi

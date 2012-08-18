@@ -26,7 +26,7 @@ preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'
 chpwd_functions+='chpwd_update_git_vars'
 
-PS1='${RED}%n${BOLD_BLACK}@${BOLD_YELLOW}%m${BOLD_BLACK}:${BOLD_CYAN}%c${BOLD_BLACK}%# %{${RESET}%}'
+PS1='${BOLD_YELLOW}%n${WHITE}@${BOLD_CYAN}%m${WHITE}:${RED}%c${WHITE}%# %{${RESET}%}'
 RPROMPT='$(prompt_git_info)%{${RESET}%}'
 
 export EDITOR=vim

@@ -30,7 +30,7 @@ set ttyfast
 set ttyscroll=3
 set lazyredraw
 set cursorline
-set background=light
+set background=dark
 colo solarized
 set noswapfile
 syntax enable
