@@ -56,10 +56,10 @@ set laststatus=2
 set cmdheight=2
 set showcmd
 " Proper split sizing
-set winwidth=80
-set winheight=5
-set winminheight=5
-set winheight=999
+"set winwidth=80
+"set winheight=5
+"set winminheight=5
+"set winheight=999
 
 " Specific File Settings
 autocmd FileType ruby set tabstop=2
@@ -81,9 +81,13 @@ autocmd FileType html set softtabstop=2
 """EVERTHING FASTER"""
 let mapleader = "\<space>"
 let g:mapleader = "\<space>"
+nmap <cr> :
 
 "" TADA!!!!!
 nmap <leader>1234567890 :wq<cr>
+
+" Who bound this stupid thing?
+nmap K \<noop>
 
 " Screen scrolling w/o moving cursor
 nmap <c-j> j<c-e>
@@ -99,8 +103,8 @@ nmap <leader>qh :set hlsearch! <CR>
 nmap <leader>qn :set nonumber! <CR>
 
 " Fuzzy Search
-nmap <leader>e :FufFile<cr>
-nmap <leader><space> :FufTag<cr>
+nmap <leader><leader> :FufFile<cr>
+nmap <leader>t :FufTag<cr>
 nmap <leader>b :FufBuffer<cr>
 
 nmap <leader>w :w!<cr>

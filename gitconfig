@@ -1,32 +1,33 @@
 [user]
-    name = "Jared Norman"
-    email = hi@jarednorman.ca
+    name   = "Jared Norman"
+    email  = hi@jarednorman.ca
 [alias]
-    head = !git l -1
-    d = diff --color
-    h = !git head
-    hp = "!source ~/.githelpers && show_git_head"
-    ff = merge --ff-only
+    head   = !git l -1
+    d      = diff --color
+    h      = !git head
+    hp     = "!source ~/.githelpers && show_git_head"
+    ff     = merge --ff-only
     pullff = pull --ff-only
-    l = "!source ~/.githelpers && pretty_git_log"
-    stat = status
-    com = commit
-    cam = commit -am
-    pom = push origin master
+    l      = "!source ~/.githelpers && pretty_git_log"
+    stat   = status
+    com    = commit
+    cam    = commit -am
+    ca     = commit -a
+    pom    = push origin master
 [color]
     branch = auto
-    diff = auto
+    diff   = auto
     status = auto
 [color "branch"]
     current = yellow reverse
-    local = yellow 
-    remote = green
+    local   = yellow 
+    remote  = green
 [color "diff"]
-    meta = yellow bold
-    frag = yellow
-    old = red
-    new = green
+    meta   = yellow bold
+    frag   = yellow
+    old    = red
+    new    = green
 [color "status"]
-    added = yellow
-    changed = green
+    added     = yellow
+    changed   = green
     untracked = cyan
