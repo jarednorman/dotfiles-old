@@ -4,13 +4,25 @@ filetype off
 "   git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-" Bundles go here dawwwg
 Bundle 'gmarik/vundle'
-Bundle 'jarednorman/snipmate.vim'
+
+" Language Support
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'nono/vim-handlebars'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-haml'
+
+" Functionality
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-fugitive'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'jarednorman/snipmate.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'bbommarito/vim-slim'
+"
 " Don't remove this guy:
 filetype plugin indent on
 
@@ -18,11 +30,10 @@ set ttyfast
 set ttyscroll=3
 set lazyredraw
 set cursorline
-set background=dark
-colo keepitsimple
+set background=light
+colo solarized
 set noswapfile
 syntax enable
-set list
 set showtabline=2
 set number
 set backspace=indent,eol,start
@@ -40,15 +51,15 @@ autocmd GUIEnter * set visualbell t_vb=
 set nohlsearch
 set incsearch
 set foldmethod=manual
-set foldcolumn=2
+" set foldcolumn=2
 set laststatus=2
 set cmdheight=2
 set showcmd
 " Proper split sizing
-set winwidth=80
-set winheight=5
-set winminheight=5
-set winheight=999
+"set winwidth=80
+"set winheight=5
+"set winminheight=5
+"set winheight=999
 
 " Specific File Settings
 autocmd FileType ruby set tabstop=2
@@ -63,10 +74,20 @@ autocmd FileType sass set softtabstop=2
 autocmd FileType css set tabstop=2
 autocmd FileType css set shiftwidth=2
 autocmd FileType css set softtabstop=2
+autocmd FileType html set tabstop=2
+autocmd FileType html set shiftwidth=2
+autocmd FileType html set softtabstop=2
 
 """EVERTHING FASTER"""
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = "\<space>"
+let g:mapleader = "\<space>"
+nmap <cr> :
+
+"" TADA!!!!!
+nmap <leader>1234567890 :wq<cr>
+
+" Who bound this stupid thing?
+nmap K \<noop>
 
 " Screen scrolling w/o moving cursor
 nmap <c-j> j<c-e>
@@ -83,12 +104,11 @@ nmap <leader>qn :set nonumber! <CR>
 
 " Fuzzy Search
 nmap <leader><leader> :FufFile<cr>
-nmap <leader><space> :FufTag<cr>
+nmap <leader>t :FufTag<cr>
 nmap <leader>b :FufBuffer<cr>
 
 nmap <leader>w :w!<cr>
 nmap <leader>d :bd<cr>
-nmap <leader>ee :e 
 nmap <leader>. <C-^>
 nmap <leader>y "*p
 nmap <leader><tab> <c-w><c-w>
