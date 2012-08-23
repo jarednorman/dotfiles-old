@@ -22,7 +22,8 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'jarednorman/snipmate.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-
+Bundle 'bbommarito/vim-slim'
+"
 " Don't remove this guy:
 filetype plugin indent on
 
@@ -30,7 +31,7 @@ set ttyfast
 set ttyscroll=3
 set lazyredraw
 set cursorline
-set background=light
+set background=dark
 colo solarized
 set noswapfile
 syntax enable
@@ -40,7 +41,6 @@ set backspace=indent,eol,start
 set nobackup
 set wildmenu
 set ruler
-set mouse=a
 filetype plugin indent on
 set autoindent
 set expandtab
