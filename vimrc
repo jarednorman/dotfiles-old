@@ -11,6 +11,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-haml'
+Bundle 'bbommarito/vim-slim'
 
 " Functionality
 Bundle 'tomtom/tcomment_vim'
