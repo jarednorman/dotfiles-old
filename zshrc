@@ -26,7 +26,7 @@ preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'
 chpwd_functions+='chpwd_update_git_vars'
 
-PS1='${BOLD_YELLOW}%n${WHITE}@${BOLD_CYAN}%m${WHITE}:${RED}%c${WHITE}%# %{${RESET}%}'
+PS1='${BOLD_CYAN}%n${BOLD_YELLOW}@${WHITE}%m${BOLD_YELLOW}:${YELLOW}%c${BOLD_YELLOW}%# %{${RESET}%}'
 RPROMPT='$(prompt_git_info)%{${RESET}%}'
 
 export EDITOR=vim
@@ -49,6 +49,8 @@ alias -g .....=../../../..
 alias -g ......=../../../../..
 alias grep='grep --color=auto'
 # random common
+alias irc="ssh txa-ea@txa.doesntexist.com -t 'screen -dr'"
+alias irc-home="ssh txa-ea@192.168.1.100 -t 'screen -dr'"
 alias serve="thin -R ~/.static.ru start"
 alias hist="cat ~/.histfile | grep"
 alias zource='source ~/.zshrc'
