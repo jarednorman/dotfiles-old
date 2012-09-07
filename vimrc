@@ -57,24 +57,31 @@ set laststatus=2
 set cmdheight=2
 set showcmd
 " Proper split sizing
-"set winwidth=80
+set winwidth=80
 "set winheight=5
 "set winminheight=5
 "set winheight=999
 
 " Specific File Settings
+autocmd FileType lua  set tabstop=2
+autocmd FileType lua  set shiftwidth=2
+autocmd FileType lua  set softtabstop=2
+
 autocmd FileType ruby set tabstop=2
 autocmd FileType ruby set shiftwidth=2
 autocmd FileType ruby set softtabstop=2
+
 autocmd FileType scss set tabstop=2
 autocmd FileType scss set shiftwidth=2
 autocmd FileType scss set softtabstop=2
 autocmd FileType sass set tabstop=2
 autocmd FileType sass set shiftwidth=2
 autocmd FileType sass set softtabstop=2
-autocmd FileType css set tabstop=2
-autocmd FileType css set shiftwidth=2
-autocmd FileType css set softtabstop=2
+
+autocmd FileType css  set tabstop=2
+autocmd FileType css  set shiftwidth=2
+autocmd FileType css  set softtabstop=2
+
 autocmd FileType html set tabstop=2
 autocmd FileType html set shiftwidth=2
 autocmd FileType html set softtabstop=2
@@ -107,6 +114,7 @@ nmap <leader>qn :set nonumber! <CR>
 nmap <leader><leader> :FufFile<cr>
 nmap <leader>t :FufTag<cr>
 nmap <leader>b :FufBuffer<cr>
+nmap <F5> :FufRenew<cr>
 
 nmap <leader>w :w!<cr>
 nmap <leader>d :bd<cr>
