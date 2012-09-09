@@ -25,15 +25,15 @@ preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'
 chpwd_functions+='chpwd_update_git_vars'
 
-PS1='${BOLD_CYAN}%n${BOLD_YELLOW}@${WHITE}%m${BOLD_YELLOW}:${YELLOW}%c${BOLD_YELLOW}%# %{${RESET}%}'
+PS1='${BOLD_BLUE}%n@${BOLD_GREEN}%m:${RED}%c%# %{${RESET}%}'
 RPROMPT='$(prompt_git_info)%{${RESET}%}'
 
 export EDITOR=vim
 export RUBYOPT=rubygems
 
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=100000
+HISTSIZE=1000000
+SAVEHIST=1000000
 setopt appendhistory histignoredups nohistsavebycopy
 
 # ls on changing directories
