@@ -80,17 +80,11 @@ autocmd FileType scss set softtabstop=2
 autocmd FileType sass set tabstop=2
 autocmd FileType sass set shiftwidth=2
 autocmd FileType sass set softtabstop=2
-<<<<<<< HEAD
-autocmd FileType css  set tabstop=2
-autocmd FileType css  set shiftwidth=2
-autocmd FileType css  set softtabstop=2
-=======
 
 autocmd FileType css  set tabstop=2
 autocmd FileType css  set shiftwidth=2
 autocmd FileType css  set softtabstop=2
 
->>>>>>> FETCH_HEAD
 autocmd FileType html set tabstop=2
 autocmd FileType html set shiftwidth=2
 autocmd FileType html set softtabstop=2
