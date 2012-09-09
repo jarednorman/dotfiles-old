@@ -23,9 +23,15 @@ Bundle 'jarednorman/snipmate.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'bbommarito/vim-slim'
-"
+Bundle 'myusuf3/numbers.vim'
+Bundle 'Lokaltog/vim-powerline'
+
 " Don't remove this guy:
 filetype plugin indent on
+
+" POWERLINE
+set laststatus=2
+let g:Powerline_colorscheme='skwp'
 
 set ttyfast
 set ttyscroll=3
@@ -53,7 +59,6 @@ set nohlsearch
 set incsearch
 set foldmethod=manual
 " set foldcolumn=2
-set laststatus=2
 set cmdheight=2
 set showcmd
 " Proper split sizing
