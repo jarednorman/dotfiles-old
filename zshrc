@@ -63,6 +63,7 @@ alias rg='rails g'
 alias gi='git init && git add . && git commit -m "initial commit"'
 alias i='sudo netcfg'
 alias scr='screen -dr'
+alias sleeps='killall ssh;sudo netcfg -a;sudo pm-suspend'
 # ls variants
 alias l='ls'
 alias ls='ls -G'
