@@ -31,14 +31,12 @@ filetype plugin indent on
 
 " POWERLINE
 set laststatus=2
-let g:Powerline_colorscheme='skwp'
 
 set ttyfast
 set ttyscroll=3
 set lazyredraw
-set cursorline
-set background=light
-colo solarized
+set background=dark
+colo keepitsimple
 set noswapfile
 syntax enable
 set showtabline=2
