@@ -61,9 +61,9 @@ set cmdheight=2
 set showcmd
 " Proper split sizing
 set winwidth=80
-"set winheight=5
-"set winminheight=5
-"set winheight=999
+set winheight=5
+set winminheight=5
+set winheight=999
 
 " Specific File Settings
 autocmd FileType lua  set tabstop=2
@@ -88,6 +88,9 @@ autocmd FileType css  set softtabstop=2
 autocmd FileType html set tabstop=2
 autocmd FileType html set shiftwidth=2
 autocmd FileType html set softtabstop=2
+autocmd FileType lua  set tabstop=2
+autocmd FileType lua  set shiftwidth=2
+autocmd FileType lua  set softtabstop=2
 
 """EVERTHING FASTER"""
 let mapleader = "\<space>"
