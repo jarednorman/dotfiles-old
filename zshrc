@@ -34,7 +34,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/jarednorman/.rvm/gems/ruby-1.9.3-p194/bin:/Users/jarednorman/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/jarednorman/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/jarednorman/.rvm/bin:/opt/local/bin:/opt/local/sbin:/usr/local/git/bin:/Users/jarednorman/bin:/Users/jarednorman/.luarocks/bin:/Users/jarednorman/.gem/ruby/1.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/opt/local/sbin:/usr/local/git/bin:/Users/jarednorman/bin:/Users/jarednorman/.luarocks/bin:/Users/jarednorman/.gem/ruby/1.8/bin
+#export PATH=/Users/jarednorman/.rvm/gems/ruby-1.9.3-p194/bin:/Users/jarednorman/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/jarednorman/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/jarednorman/.rvm/bin:/opt/local/bin:/opt/local/sbin:/usr/local/git/bin:/Users/jarednorman/bin:/Users/jarednorman/.luarocks/bin:/Users/jarednorman/.gem/ruby/1.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/opt/local/sbin:/usr/local/git/bin:/Users/jarednorman/bin:/Users/jarednorman/.luarocks/bin:/Users/jarednorman/.gem/ruby/1.8/bin
+export PATH=$HOME/bin:$HOME/.luarocks/bin:$(ruby -rubygems -e "puts Gem.user_dir")/bin:/usr/local/bin:$PATH
 export EDITOR=vim
 export RUBYOPT=rubygems
 
@@ -73,3 +74,5 @@ function chpwd() {
 	emulate -L zsh
 	ls -G
 }
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
