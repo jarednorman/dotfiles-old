@@ -144,6 +144,9 @@ map <leader>j <C-w>j
 map <leader>k <C-w>k
 map <leader>l <C-w>l
 
+"" This is hell
+nmap h :echo "NO!"<cr>
+nmap l :echo "NO!"<cr>
 "" Don't even think about it
 map <Up> :echo "NO!"<cr>
 map <Down> :echo "NO!"<cr>
