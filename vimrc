@@ -1,3 +1,7 @@
+
+""" Vundle
+""""""""""
+
 set nocompatible
 filetype off
 " On new machines remember to:
@@ -6,74 +10,118 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-" Language Support
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'nono/vim-handlebars'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-haml'
-Bundle 'bbommarito/vim-slim'
+""" Basic Settings
+""""""""""""""""""
 
-" Functionality
-Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-fugitive'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'jarednorman/snipmate.vim'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'bbommarito/vim-slim'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'Lokaltog/vim-powerline'
-
-" Don't remove this guy:
 filetype plugin indent on
-
-" POWERLINE
-set laststatus=2
-
+let mapleader = "\<space>"
+let g:mapleader = "\<space>"
+set relativenumber
 set ttyfast
 set ttyscroll=3
 set lazyredraw
-set background=dark
-colo keepitsimple
 set noswapfile
-syntax enable
 set showtabline=2
 set number
 set backspace=indent,eol,start
 set nobackup
-set wildmenu
-set ruler
 filetype plugin indent on
 set autoindent
 set expandtab
 set softtabstop=4
 set shiftwidth=4
-" STOP BEEPING PLEASE
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 set nohlsearch
 set incsearch
 set foldmethod=manual
-" set foldcolumn=2
 set cmdheight=2
 set showcmd
-" Proper split sizing
 set winwidth=80
 set winheight=5
 set winminheight=5
 set winheight=999
+""" Language Support
+""""""""""""""""""""
 
-" Specific File Settings
+" Coffeescript
+Bundle 'kchmck/vim-coffee-script'
+
+" Handlebars
+Bundle 'nono/vim-handlebars'
+
+" Haml
+Bundle 'tpope/vim-haml'
+
+" Slim
+Bundle 'bbommarito/vim-slim'
+
+" Javascript (works for semicolonless js)
+Bundle 'jiangmiao/simple-javascript-indenter'
+let g:SimpleJsIndenter_BriefMode = 1
+
+" Slim
+Bundle 'bbommarito/vim-slim'
+
+""" Functionality
+"""""""""""""""""
+
+" Unimpaired
+Bundle 'tpope/vim-unimpaired'
+
+" TComment
+Bundle 'tomtom/tcomment_vim'
+
+" Surround
+Bundle 'tpope/vim-surround'
+
+" Ragtag
+Bundle 'tpope/vim-ragtag'
+
+" Fugitive
+Bundle 'tpope/vim-fugitive'
+
+" Solarized
+Bundle 'altercation/vim-colors-solarized'
+syntax enable
+set background=light
+colo solarized
+
+" SnipMate
+Bundle 'jarednorman/snipmate.vim'
+
+" L9
+Bundle 'L9'
+
+" FuzzyFinder
+Bundle 'FuzzyFinder'
+nmap <leader><leader> :FufFile<cr>
+nmap <leader>t :FufTag<cr>
+nmap <leader>b :FufBuffer<cr>
+nmap <F5> :FufRenew<cr>
+
+" Powerline
+Bundle 'Lokaltog/vim-powerline'
+set laststatus=2
+let g:Powerline_colorscheme='solarizedLight'
+
+" Syntastic
+Bundle 'scrooloose/syntastic.git'
+
+""" Filetype Specific stuff
+"""""""""""""""""""""""""""
+
+" Lua
 autocmd FileType lua  set tabstop=2
 autocmd FileType lua  set shiftwidth=2
 autocmd FileType lua  set softtabstop=2
 
+" Ruby
 autocmd FileType ruby set tabstop=2
 autocmd FileType ruby set shiftwidth=2
 autocmd FileType ruby set softtabstop=2
 
+" Sass
 autocmd FileType scss set tabstop=2
 autocmd FileType scss set shiftwidth=2
 autocmd FileType scss set softtabstop=2
@@ -81,73 +129,57 @@ autocmd FileType sass set tabstop=2
 autocmd FileType sass set shiftwidth=2
 autocmd FileType sass set softtabstop=2
 
+" CSS
 autocmd FileType css  set tabstop=2
 autocmd FileType css  set shiftwidth=2
 autocmd FileType css  set softtabstop=2
 
+" HTML
 autocmd FileType html set tabstop=2
 autocmd FileType html set shiftwidth=2
 autocmd FileType html set softtabstop=2
-autocmd FileType lua  set tabstop=2
-autocmd FileType lua  set shiftwidth=2
-autocmd FileType lua  set softtabstop=2
 
-"""EVERTHING FASTER"""
-let mapleader = "\<space>"
-let g:mapleader = "\<space>"
+""" EVERTHING FASTER
+""""""""""""""""""""
+
 nmap <cr> :
-
-"" TADA!!!!!
 nmap <leader>1234567890 :wq<cr>
-
-" Who bound this stupid thing?
 nmap K \<noop>
-
-" Screen scrolling w/o moving cursor
 nmap <c-j> j<c-e>
 nmap <c-k> k<c-y>
-
-" Tab movement
 map <c-l> <c-PageDown>
 map <c-h> <c-PageUp>
 
-" Settings
-nmap <leader>qw :set nowrap! <CR>
-nmap <leader>qh :set hlsearch! <CR>
-nmap <leader>qn :set nonumber! <CR>
-
-" Fuzzy Search
-nmap <leader><leader> :FufFile<cr>
-nmap <leader>t :FufTag<cr>
-nmap <leader>b :FufBuffer<cr>
-nmap <F5> :FufRenew<cr>
+""" LEADER LEADER
+"""""""""""""""""
 
 nmap <leader>w :w!<cr>
 nmap <leader>d :bd<cr>
 nmap <leader>. <C-^>
 nmap <leader>y "*p
 nmap <leader><tab> <c-w><c-w>
-
-""" Copy/Paste file to clipboard
 nmap <leader>c :w<cr>:!cat % \| pbcopy<cr>
 nmap <leader>v "*p
-
-""" Download yanked url
 nmap <leader>g :!curl -OL <c-r>"<cr>
-
-""" Mapping mapping mapping mapping mapping 
 map <leader>mt :map <lt>leader>t :w<lt>cr>
 map <leader>mr :map <lt>leader>r :w<lt>cr>
-
 map <leader>h <C-w>h
 map <leader>j <C-w>j
 map <leader>k <C-w>k
 map <leader>l <C-w>l
 
-"" This is hell
+""" Quick settings
+""""""""""""""""""
+
+nmap <leader>qw :set nowrap! <CR>
+nmap <leader>qh :set hlsearch! <CR>
+nmap <leader>qn :set nonumber! <CR>
+
+""" Welcome to Hell
+"""""""""""""""""""
+
 nmap h :echo "NO!"<cr>
 nmap l :echo "NO!"<cr>
-"" Don't even think about it
 map <Up> :echo "NO!"<cr>
 map <Down> :echo "NO!"<cr>
 map <Left> :echo "NO!"<cr>
