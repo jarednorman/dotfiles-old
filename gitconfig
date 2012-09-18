@@ -23,10 +23,10 @@
     local   = yellow 
     remote  = green
 [color "diff"]
-    meta   = magenta
+    meta   = blue
     frag   = yellow
-    old    = yellow bold
-    new    = blue bold
+    old    = red
+    new    = green
 [color "status"]
     added     = blue bold
     changed   = yellow
