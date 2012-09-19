@@ -40,6 +40,7 @@ set winheight=5
 set winminheight=5
 set winheight=999
 set relativenumber
+
 """ Language Support
 """"""""""""""""""""
 
@@ -106,6 +107,7 @@ let g:Powerline_colorscheme='solarizedLight'
 
 " Syntastic
 Bundle 'scrooloose/syntastic.git'
+let g:syntastic_javascript_jshint_conf = "~/.jshint.config"
 
 """ Filetype Specific stuff
 """""""""""""""""""""""""""
