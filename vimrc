@@ -10,36 +10,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-""" Basic Settings
-""""""""""""""""""
-
-filetype plugin indent on
 let mapleader = "\<space>"
 let g:mapleader = "\<space>"
-set ttyfast
-set ttyscroll=3
-set lazyredraw
-set noswapfile
-set showtabline=2
-set backspace=indent,eol,start
-set nobackup
-filetype plugin indent on
-set autoindent
-set expandtab
-set softtabstop=4
-set shiftwidth=4
-set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
-set nohlsearch
-set incsearch
-set foldmethod=manual
-set cmdheight=2
-set showcmd
-set winwidth=80
-set winheight=5
-set winminheight=5
-set winheight=999
-set relativenumber
 
 """ Language Support
 """"""""""""""""""""
@@ -86,6 +58,8 @@ Bundle 'altercation/vim-colors-solarized'
 syntax enable
 set background=light
 colo solarized
+highlight RedundantSpaces ctermbg=red
+match RedundantSpaces /\s\+$\| \+\ze\t\|\t/
 
 " SnipMate
 Bundle 'jarednorman/snipmate.vim'
@@ -109,8 +83,41 @@ let g:Powerline_colorscheme='solarizedLight'
 Bundle 'scrooloose/syntastic.git'
 let g:syntastic_javascript_jshint_conf = "~/.jshint.config"
 
+""" Basic Settings
+""""""""""""""""""
+
+filetype plugin indent on
+set ttyfast
+set ttyscroll=3
+set lazyredraw
+set noswapfile
+set showtabline=2
+set backspace=indent,eol,start
+set nobackup
+set autoindent
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+set nohlsearch
+set incsearch
+set foldmethod=manual
+set cmdheight=2
+set showcmd
+set winwidth=80
+set winheight=5
+set winminheight=5
+set winheight=999
+set relativenumber
+
 """ Filetype Specific stuff
 """""""""""""""""""""""""""
+
+" Coffee
+autocmd FileType coffee  set tabstop=4
+autocmd FileType coffee  set shiftwidth=4
+autocmd FileType coffee  set softtabstop=4
 
 " Lua
 autocmd FileType lua  set tabstop=2
@@ -174,7 +181,6 @@ map <leader>l <C-w>l
 
 nmap <leader>qw :set nowrap! <CR>
 nmap <leader>qh :set hlsearch! <CR>
-nmap <leader>qn :set nonumber! <CR>
 
 """ Welcome to Hell
 """""""""""""""""""
