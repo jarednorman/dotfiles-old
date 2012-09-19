@@ -16,13 +16,11 @@ Bundle 'gmarik/vundle'
 filetype plugin indent on
 let mapleader = "\<space>"
 let g:mapleader = "\<space>"
-set relativenumber
 set ttyfast
 set ttyscroll=3
 set lazyredraw
 set noswapfile
 set showtabline=2
-set number
 set backspace=indent,eol,start
 set nobackup
 filetype plugin indent on
@@ -41,6 +39,7 @@ set winwidth=80
 set winheight=5
 set winminheight=5
 set winheight=999
+set relativenumber
 """ Language Support
 """"""""""""""""""""
 
