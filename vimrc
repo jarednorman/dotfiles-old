@@ -58,8 +58,6 @@ Bundle 'altercation/vim-colors-solarized'
 syntax enable
 set background=light
 colo solarized
-highlight RedundantSpaces ctermbg=red
-match RedundantSpaces /\s\+$\| \+\ze\t\|\t/
 
 " SnipMate
 Bundle 'jarednorman/snipmate.vim'
@@ -103,6 +101,7 @@ autocmd GUIEnter * set visualbell t_vb=
 set nohlsearch
 set incsearch
 set foldmethod=manual
+set cursorline
 set cmdheight=2
 set showcmd
 set winwidth=80
