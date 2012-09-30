@@ -40,6 +40,8 @@ Bundle 'bbommarito/vim-slim'
 
 " Rainbow Parentheses
 Bundle 'kien/rainbow_parentheses.vim'
+let g:rbpt_max = 5
+nmap <leader>{ :RainbowParenthesesToggleAll<cr>
 
 " Unimpaired
 Bundle 'tpope/vim-unimpaired'
@@ -114,6 +116,12 @@ set relativenumber
 
 """ Filetype Specific stuff
 """""""""""""""""""""""""""
+
+" Rainbow Parens Always
+autocmd VimEnter * RainbowParenthesesToggle
+autocmd Syntax   * RainbowParenthesesLoadRound
+autocmd Syntax   * RainbowParenthesesLoadSquare
+autocmd Syntax   * RainbowParenthesesLoadBraces
 
 " Coffee
 autocmd FileType coffee  set tabstop=4
