@@ -71,7 +71,10 @@ Bundle 'L9'
 
 " CtrlP
 Bundle 'kien/ctrlp.vim'
-let g:ctrlp_working_path_mode = ''
+let g:ctrlp_working_path_mode = '' " Stop messing with the path
+let g:ctrlp_match_window_bottom = 0 " Show at top of window
+let g:ctrlp_mru_files = 1 " Enable Most Recently Used files feature
+let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open
 nmap <leader><leader> :CtrlP<cr>
 nmap <leader>t :CtrlPTag<cr>
 nmap <leader>b :CtrlPBuffer<cr>
