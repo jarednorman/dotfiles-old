@@ -1,33 +1,11 @@
 !!URxvt.font: xft:Bitstream Vera Sans Mono:size=11
 !!URxvt.font: xft:Ubuntu Mono:size=13
-URxvt.font: xft:Inconsolata:size=18
-!!URxvt.font: xft:Ubuntu Mono:size=16
+!!URxvt.font: xft:Inconsolata:size=12
+URxvt.font: xft:Ubuntu Mono:size=14
 !!URxvt.boldFont: xft:Ubuntu Mono:size=16
 !!URxvt.font: -*-terminus-medium-r-normal--17-*-*-*-*-*-*-*
-!!urxvt*depth: 32
-!!urxvt*background: rgba:1200/0F00/0F00/ffff
-URxvt.background: #100010
-!!URxvt.borderColor: #000000
-URxvt.foreground: #999999
 URxvt.scrollBar: false
 URxvt.saveLines: 1000
-URxvt.internalBorder: 6
+URxvt.internalBorder: 4
 URxvt.title: PRAMPT
 URxvt.visualBell: false
-
-urxvt*color0: #705e5e
-urxvt*color1: #ffb78c
-urxvt*color2: #f3ff9e
-urxvt*color3: #fbff96
-urxvt*color4: #a5ecff
-urxvt*color5: #ffceee
-urxvt*color6: #bfffee
-urxvt*color7: #f2f2f2
-urxvt*color8: #453939
-urxvt*color9: #ff5c33
-urxvt*color10: #beff64
-urxvt*color11: #f6e344
-urxvt*color12: #41d2f9
-urxvt*color13: #ff8ac1
-urxvt*color14: #57ffea
-urxvt*color15: #c2a2a2
