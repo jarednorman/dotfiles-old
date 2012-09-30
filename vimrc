@@ -194,8 +194,6 @@ nmap <leader>qh :set hlsearch! <CR>
 """ Welcome to Hell
 """""""""""""""""""
 
-nmap h :echo "NO!"<cr>
-nmap l :echo "NO!"<cr>
 map <Up> :echo "NO!"<cr>
 map <Down> :echo "NO!"<cr>
 map <Left> :echo "NO!"<cr>
