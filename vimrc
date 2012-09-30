@@ -38,6 +38,9 @@ Bundle 'bbommarito/vim-slim'
 """ Functionality
 """""""""""""""""
 
+" Rainbow Parentheses
+Bundle 'kien/rainbow_parentheses.vim'
+
 " Unimpaired
 Bundle 'tpope/vim-unimpaired'
 
