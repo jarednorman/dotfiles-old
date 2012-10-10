@@ -73,7 +73,7 @@ Bundle 'L9'
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = '' " Stop messing with the path
 let g:ctrlp_match_window_bottom = 0 " Show at top of window
-let g:ctrlp_mru_files = 1 " Enable Most Recently Used files feature
+let g:ctrlp_mru_files = 2 " Enable Most Recently Used files feature
 let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open
 nmap <leader><leader> :CtrlP<cr>
 nmap <leader>t :CtrlPTag<cr>
@@ -82,7 +82,7 @@ nmap <leader>b :CtrlPBuffer<cr>
 " Powerline
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
-let g:Powerline_colorscheme='skwp'
+let g:Powerline_colorscheme='solarizedLight'
 
 " Syntastic
 Bundle 'scrooloose/syntastic.git'
@@ -109,6 +109,7 @@ set nohlsearch
 set incsearch
 set foldmethod=manual
 set cursorline
+set colorcolumn=80
 set cmdheight=2
 set showcmd
 set winwidth=80
@@ -116,6 +117,9 @@ set winheight=5
 set winminheight=5
 set winheight=999
 set relativenumber
+set list listchars=tab:»·,trail:·
+set wildmode=list:longest,list:full
+set timeoutlen=1000 ttimeoutlen=0
 
 """ Filetype Specific stuff
 """""""""""""""""""""""""""
