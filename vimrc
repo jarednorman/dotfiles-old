@@ -61,6 +61,7 @@ Bundle 'tpope/vim-fugitive'
 " Solarized
 Bundle 'altercation/vim-colors-solarized'
 syntax enable
+set background=dark
 colo solarized
 
 " SnipMate
@@ -82,7 +83,7 @@ nmap <leader>b :CtrlPBuffer<cr>
 " Powerline
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
-let g:Powerline_colorscheme='solarizedLight'
+let g:Powerline_colorscheme='solarizedDark'
 
 " Syntastic
 Bundle 'scrooloose/syntastic.git'

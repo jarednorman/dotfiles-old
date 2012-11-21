@@ -1,5 +1,5 @@
 [user]
-    name   = "Jared Norman"
+	name = Jared Norman
     email  = hi@jarednorman.ca
 [alias]
     head   = !git l -1
