@@ -46,6 +46,8 @@ SAVEHIST=1000000
 
 # aliases
 alias v=vim
+alias f=fg
+alias j=jobs
 alias irc="ssh txa-ea@txa.doesntexist.com -t 'screen -dr'"
 alias irc-home="ssh txa-ea@192.168.1.100 -t 'screen -dr'"
 alias serve="thin -R ~/.static.ru start"

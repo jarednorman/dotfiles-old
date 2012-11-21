@@ -1,4 +1,7 @@
 
+" I always forget the help prefixes:
+"   http://vim.wikia.com/wiki/Learn_to_use_help
+
 """ Vundle
 """"""""""
 
@@ -73,7 +76,7 @@ Bundle 'L9'
 " CtrlP
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = '' " Stop messing with the path
-let g:ctrlp_match_window_bottom = 0 " Show at top of window
+let g:ctrlp_match_window_bottom = 1 " Show at top of window
 let g:ctrlp_mru_files = 2 " Enable Most Recently Used files feature
 let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open
 nmap <leader><leader> :CtrlP<cr>
@@ -188,6 +191,7 @@ nmap <leader>v "*p
 nmap <leader>g :!curl -OL <c-r>"<cr>
 map <leader>mt :map <lt>leader>t :w<lt>cr>
 map <leader>mr :map <lt>leader>r :w<lt>cr>
+nmap <leader>p :!mkdir -p %:p:h<cr>
 map <leader>h <C-w>h
 map <leader>j <C-w>j
 map <leader>k <C-w>k
@@ -206,4 +210,6 @@ map <Up> :echo "NO!"<cr>
 map <Down> :echo "NO!"<cr>
 map <Left> :echo "NO!"<cr>
 map <Right> :echo "NO!"<cr>
+nmap h :echo "NO!"<cr>
+nmap l :echo "NO!"<cr>
 
