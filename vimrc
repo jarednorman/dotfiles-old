@@ -64,6 +64,7 @@ Bundle 'tpope/vim-fugitive'
 " Solarized
 Bundle 'altercation/vim-colors-solarized'
 syntax enable
+set background=dark
 colo solarized
 
 " SnipMate
@@ -85,7 +86,7 @@ nmap <leader>b :CtrlPBuffer<cr>
 " Powerline
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
-let g:Powerline_colorscheme='solarizedLight'
+let g:Powerline_colorscheme='solarizedDark'
 
 " Syntastic
 Bundle 'scrooloose/syntastic.git'
@@ -115,7 +116,7 @@ set cursorline
 set colorcolumn=80
 set cmdheight=2
 set showcmd
-set winwidth=80
+set winwidth=100
 set winheight=5
 set winminheight=5
 set winheight=999
@@ -123,6 +124,7 @@ set relativenumber
 set list listchars=tab:»·,trail:·
 set wildmode=list:longest,list:full
 set timeoutlen=1000 ttimeoutlen=0
+set nowrap
 
 """ Filetype Specific stuff
 """""""""""""""""""""""""""
@@ -170,12 +172,19 @@ autocmd FileType html set softtabstop=2
 """"""""""""""""""""
 
 nmap <cr> :
+" Flourish.
 nmap <leader>1234567890 :wq<cr>
+" Made a habit of accidentally hitting K when entering visual line mode to
+" select a few lines.
 nmap K \<noop>
+" Scroll file (cursor line fixed relative to display)
 nmap <c-j> j<c-e>
 nmap <c-k> k<c-y>
+" Next/prev tab.
 map <c-l> <c-PageDown>
 map <c-h> <c-PageUp>
+" New tabs for free!
+map <leader><cr> :tabnew<cr>
 
 """ LEADER LEADER
 """""""""""""""""
@@ -186,6 +195,9 @@ nmap <leader>. <C-^>
 nmap <leader>y "*p
 nmap <leader><tab> <c-w><c-w>
 nmap <leader>c :w<cr>:!cat % \| pbcopy<cr>
+" Specific to using Middleman as an asset pipeline for Tumblr theme
+" development.
+nmap <leader>z :w<cr>:!bundle exec middleman build -g index.html && cat ../build/index.html \| pbcopy<cr>
 nmap <leader>v "*p
 nmap <leader>g :!curl -OL <c-r>"<cr>
 map <leader>mt :map <lt>leader>t :w<lt>cr>
@@ -195,6 +207,7 @@ map <leader>h <C-w>h
 map <leader>j <C-w>j
 map <leader>k <C-w>k
 map <leader>l <C-w>l
+:nmap <leader>b <c-^>
 
 """ Quick settings
 """"""""""""""""""
@@ -209,6 +222,4 @@ map <Up> :echo "NO!"<cr>
 map <Down> :echo "NO!"<cr>
 map <Left> :echo "NO!"<cr>
 map <Right> :echo "NO!"<cr>
-nmap h :echo "NO!"<cr>
-nmap l :echo "NO!"<cr>
 
