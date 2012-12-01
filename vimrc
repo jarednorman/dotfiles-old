@@ -64,7 +64,7 @@ Bundle 'tpope/vim-fugitive'
 " Solarized
 Bundle 'altercation/vim-colors-solarized'
 syntax enable
-set background=dark
+set background=light
 colo solarized
 
 " SnipMate
