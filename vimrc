@@ -19,6 +19,9 @@ let g:mapleader = "\<space>"
 """ Language Support
 """"""""""""""""""""
 
+" Jade
+Bundle 'digitaltoad/vim-jade'
+
 " Coffeescript
 Bundle 'kchmck/vim-coffee-script'
 
