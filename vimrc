@@ -44,10 +44,8 @@ Bundle 'bbommarito/vim-slim'
 """ Functionality
 """""""""""""""""
 
-" Rainbow Parentheses
-Bundle 'kien/rainbow_parentheses.vim'
-let g:rbpt_max = 5
-nmap <leader>{ :RainbowParenthesesToggleAll<cr>
+" Indent Guides
+Bundle 'nathanaelkane/vim-indent-guides'
 
 " Unimpaired
 Bundle 'tpope/vim-unimpaired'
@@ -89,7 +87,7 @@ nmap <leader>b :CtrlPBuffer<cr>
 " Powerline
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
-let g:Powerline_colorscheme='solarizedDark'
+let g:Powerline_colorscheme='solarizedLight'
 
 " Syntastic
 Bundle 'scrooloose/syntastic.git'
@@ -132,11 +130,10 @@ set nowrap
 """ Filetype Specific stuff
 """""""""""""""""""""""""""
 
-" Rainbow Parens Always
-autocmd VimEnter * RainbowParenthesesToggle
-autocmd Syntax   * RainbowParenthesesLoadRound
-autocmd Syntax   * RainbowParenthesesLoadSquare
-autocmd Syntax   * RainbowParenthesesLoadBraces
+" Indent Guides
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=none
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=7
 
 " Coffee
 autocmd FileType coffee  set tabstop=4
@@ -226,3 +223,5 @@ map <Down> :echo "NO!"<cr>
 map <Left> :echo "NO!"<cr>
 map <Right> :echo "NO!"<cr>
 
+map h :echo "NO!"<cr>
+map l :echo "NO!"<cr>
