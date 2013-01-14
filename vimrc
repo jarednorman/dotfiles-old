@@ -92,6 +92,17 @@ let g:Powerline_colorscheme='solarizedLight'
 " Syntastic
 Bundle 'scrooloose/syntastic.git'
 let g:syntastic_javascript_jshint_conf = "~/.jshint.config"
+let g:syntastic_mode_map = { 'mode': 'passive',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': ['scss', 'coffee', 'javascript'] }
+
+" Not sure if I hate nerdtree or not
+Bundle 'scrooloose/nerdtree'
+let g:NERDTreeWinSize=45
+let g:NERDTreeMinimalUI=1
+
+" Mad split/join skillllz
+Bundle 'AndrewRadev/splitjoin.vim'
 
 """ Basic Settings
 """"""""""""""""""
@@ -215,13 +226,15 @@ map <leader>l <C-w>l
 nmap <leader>qw :set nowrap! <CR>
 nmap <leader>qh :set hlsearch! <CR>
 
-""" Welcome to Hell
+""" Vim. Live it.
 """""""""""""""""""
 
-map <Up> :echo "NO!"<cr>
-map <Down> :echo "NO!"<cr>
-map <Left> :echo "NO!"<cr>
-map <Right> :echo "NO!"<cr>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+vnoremap <Up> <nop>
+vnoremap <Down> <nop>
+vnoremap <Left> <nop>
+vnoremap <Right> <nop>
 
-map h :echo "NO!"<cr>
-map l :echo "NO!"<cr>
