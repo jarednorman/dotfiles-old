@@ -44,6 +44,14 @@ Bundle 'bbommarito/vim-slim'
 """ Functionality
 """""""""""""""""
 
+" Ack integration
+Bundle 'mileszs/ack.vim'
+" The Silver Searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" tabular.vim
+Bundle 'godlygeek/tabular'
+
 " Indent Guides
 Bundle 'nathanaelkane/vim-indent-guides'
 
