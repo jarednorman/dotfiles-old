@@ -133,7 +133,8 @@ set nohlsearch
 set incsearch
 set foldmethod=manual
 set cursorline
-set colorcolumn=80
+set cursorcolumn
+" set colorcolumn=80
 set cmdheight=2
 set showcmd
 set winwidth=100
