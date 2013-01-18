@@ -44,10 +44,16 @@ Bundle 'bbommarito/vim-slim'
 """ Functionality
 """""""""""""""""
 
-" Rainbow Parentheses
-Bundle 'kien/rainbow_parentheses.vim'
-let g:rbpt_max = 5
-nmap <leader>{ :RainbowParenthesesToggleAll<cr>
+" Ack integration
+Bundle 'mileszs/ack.vim'
+" The Silver Searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" tabular.vim
+Bundle 'godlygeek/tabular'
+
+" Indent Guides
+Bundle 'nathanaelkane/vim-indent-guides'
 
 " Unimpaired
 Bundle 'tpope/vim-unimpaired'
@@ -89,11 +95,22 @@ nmap <leader>b :CtrlPBuffer<cr>
 " Powerline
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
-let g:Powerline_colorscheme='solarizedDark'
+let g:Powerline_colorscheme='solarizedLight'
 
 " Syntastic
 Bundle 'scrooloose/syntastic.git'
 let g:syntastic_javascript_jshint_conf = "~/.jshint.config"
+let g:syntastic_mode_map = { 'mode': 'passive',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': ['scss', 'coffee', 'javascript'] }
+
+" Not sure if I hate nerdtree or not
+Bundle 'scrooloose/nerdtree'
+let g:NERDTreeWinSize=45
+let g:NERDTreeMinimalUI=1
+
+" Mad split/join skillllz
+Bundle 'AndrewRadev/splitjoin.vim'
 
 " Still Unsure if I like this guy:
 " NerdTREE
@@ -120,7 +137,8 @@ set nohlsearch
 set incsearch
 set foldmethod=manual
 set cursorline
-set colorcolumn=80
+set cursorcolumn
+" set colorcolumn=80
 set cmdheight=2
 set showcmd
 set winwidth=100
@@ -136,11 +154,10 @@ set nowrap
 """ Filetype Specific stuff
 """""""""""""""""""""""""""
 
-" Rainbow Parens Always
-autocmd VimEnter * RainbowParenthesesToggle
-autocmd Syntax   * RainbowParenthesesLoadRound
-autocmd Syntax   * RainbowParenthesesLoadSquare
-autocmd Syntax   * RainbowParenthesesLoadBraces
+" Indent Guides
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=none
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=7
 
 " Coffee
 autocmd FileType coffee  set tabstop=4
@@ -222,11 +239,15 @@ map <leader>l <C-w>l
 nmap <leader>qw :set nowrap! <CR>
 nmap <leader>qh :set hlsearch! <CR>
 
-""" Welcome to Hell
+""" Vim. Live it.
 """""""""""""""""""
 
-map <Up> :echo "NO!"<cr>
-map <Down> :echo "NO!"<cr>
-map <Left> :echo "NO!"<cr>
-map <Right> :echo "NO!"<cr>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+vnoremap <Up> <nop>
+vnoremap <Down> <nop>
+vnoremap <Left> <nop>
+vnoremap <Right> <nop>
 
