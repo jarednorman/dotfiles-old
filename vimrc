@@ -115,6 +115,10 @@ let g:NERDTreeMinimalUI=1
 " Mad split/join skillllz
 Bundle 'AndrewRadev/splitjoin.vim'
 
+" Still Unsure if I like this guy:
+" NerdTREE
+Bundle 'scrooloose/nerdtree'
+
 """ Basic Settings
 """"""""""""""""""
 
