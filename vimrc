@@ -95,6 +95,10 @@ let g:Powerline_colorscheme='solarizedDark'
 Bundle 'scrooloose/syntastic.git'
 let g:syntastic_javascript_jshint_conf = "~/.jshint.config"
 
+" Still Unsure if I like this guy:
+" NerdTREE
+Bundle 'scrooloose/nerdtree'
+
 """ Basic Settings
 """"""""""""""""""
 
