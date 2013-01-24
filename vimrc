@@ -44,6 +44,9 @@ Bundle 'bbommarito/vim-slim'
 """ Functionality
 """""""""""""""""
 
+" Super Tab
+Bundle 'ervandew/supertab'
+
 " Ack integration
 Bundle 'mileszs/ack.vim'
 " The Silver Searcher
@@ -137,15 +140,15 @@ set cursorcolumn
 " set colorcolumn=80
 set cmdheight=2
 set showcmd
-set winwidth=100
-set winheight=5
-set winminheight=5
-set winheight=999
+set winwidth=80
 set relativenumber
 set list listchars=tab:»·,trail:·
 set wildmode=list:longest,list:full
 set timeoutlen=1000 ttimeoutlen=0
 set nowrap
+set ignorecase
+set smartcase
+set autoread
 
 """ Filetype Specific stuff
 """""""""""""""""""""""""""
