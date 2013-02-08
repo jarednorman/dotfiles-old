@@ -47,6 +47,10 @@ Bundle 'bbommarito/vim-slim'
 " Super Tab
 Bundle 'ervandew/supertab'
 
+" EasyMotion
+Bundle 'Lokaltog/vim-easymotion'
+let g:EasyMotion_leader_key = '<Leader>m'
+
 " Ack integration
 Bundle 'mileszs/ack.vim'
 " The Silver Searcher
@@ -76,7 +80,7 @@ Bundle 'tpope/vim-fugitive'
 " Solarized
 Bundle 'altercation/vim-colors-solarized'
 syntax enable
-set background=dark
+set background=light
 colo solarized
 
 " SnipMate
@@ -98,7 +102,7 @@ nmap <leader>b :CtrlPBuffer<cr>
 " Powerline
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
-let g:Powerline_colorscheme='solarizedDark'
+let g:Powerline_colorscheme='solarizedLight'
 
 " Syntastic
 Bundle 'scrooloose/syntastic.git'
@@ -109,8 +113,9 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 
 " Not sure if I hate nerdtree or not
 Bundle 'scrooloose/nerdtree'
-let g:NERDTreeWinSize=45
+let g:NERDTreeWinSize=40
 let g:NERDTreeMinimalUI=1
+nmap <leader>f :NERDTreeToggle<cr>
 
 " Mad split/join skillllz
 Bundle 'AndrewRadev/splitjoin.vim'
@@ -153,6 +158,7 @@ set nowrap
 set ignorecase
 set smartcase
 set autoread
+set scrolloff=8
 
 """ Filetype Specific stuff
 """""""""""""""""""""""""""
@@ -212,6 +218,8 @@ map <c-l> <c-PageDown>
 map <c-h> <c-PageUp>
 " New tabs for free!
 map <leader><cr> :tabnew<cr>
+" Fucking arrows
+imap <c-l> ->
 
 """ LEADER LEADER
 """""""""""""""""
