@@ -44,6 +44,9 @@ HISTFILE=~/.histfile
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+# Use hub
+eval "$(hub alias -s)"
+
 # aliases
 alias v=vim
 alias f=fg
@@ -69,6 +72,7 @@ alias plz=sudo
 alias please=sudo
 alias ':q'=exit
 alias ':wq'=exit
+alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
 source ~/.zsh/local.zsh
 
 # ls on changing directories

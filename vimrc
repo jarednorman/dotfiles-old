@@ -232,7 +232,7 @@ nmap <leader><tab> <c-w><c-w>
 nmap <leader>c :w<cr>:!cat % \| pbcopy<cr>
 " Specific to using Middleman as an asset pipeline for Tumblr theme
 " development.
-nmap <leader>z :w<cr>:!bundle exec middleman build -g index.html && cat ../build/index.html \| pbcopy<cr>
+nmap <leader>z :w<cr>:!bundle exec middleman build -g development.html && cat ../build/development.html \| pbcopy<cr>
 nmap <leader>v "*p
 nmap <leader>g :!curl -OL <c-r>"<cr>
 map <leader>mt :map <lt>leader>t :w<lt>cr>
