@@ -65,7 +65,6 @@ alias sl='ls -G'
 alias ll='ls -lhG'
 alias la='ls -aG'
 alias lg='ls|egrep'
-alias gi='git init && git add . && git commit -m "initial commit"'
 alias i='sudo netcfg'
 alias scr='screen -dr'
 alias treeless='tree -C | less -R'
@@ -75,6 +74,11 @@ alias ':q'=exit
 alias ':wq'=exit
 alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
 source ~/.zsh/local.zsh
+
+# git aliases
+alias gi='git init && git add . && git commit -m "initial commit"'
+alias gs='git status'
+alias gd='git d'
 
 # ls on changing directories
 function chpwd() {
