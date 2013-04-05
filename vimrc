@@ -41,6 +41,9 @@ Bundle 'slim-template/vim-slim'
 """ Functionality
 """""""""""""""""
 
+" Iterm2/tmux niceness
+Bundle 'sjl/vitality.vim'
+
 " Brace completion
 Bundle 'Raimondi/delimitMate'
 let delimitMate_expand_cr = 1
