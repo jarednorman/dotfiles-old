@@ -31,20 +31,22 @@ Bundle 'nono/vim-handlebars'
 " Haml
 Bundle 'tpope/vim-haml'
 
-" Slim
-Bundle 'bbommarito/vim-slim'
-
 " Javascript (works for semicolonless js)
 Bundle 'jiangmiao/simple-javascript-indenter'
 let g:SimpleJsIndenter_BriefMode = 1
 
 " Slim
-Bundle 'bbommarito/vim-slim'
+Bundle 'slim-template/vim-slim'
 
 """ Functionality
 """""""""""""""""
 
-" Super Tab
+" Brace completion
+Bundle 'Raimondi/delimitMate'
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+
+" Tab
 Bundle 'ervandew/supertab'
 
 " EasyMotion
@@ -92,7 +94,7 @@ Bundle 'L9'
 " CtrlP
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = '' " Stop messing with the path
-let g:ctrlp_match_window_bottom = 1 " Show at top of window
+let g:ctrlp_match_window_bottom = 0 " Show at top of window
 let g:ctrlp_mru_files = 2 " Enable Most Recently Used files feature
 let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open
 nmap <leader><leader> :CtrlP<cr>
@@ -149,7 +151,7 @@ set cursorcolumn
 " set colorcolumn=80
 set cmdheight=2
 set showcmd
-set winwidth=80
+set winwidth=100
 set relativenumber
 set list listchars=tab:»·,trail:·
 set wildmode=list:longest,list:full
