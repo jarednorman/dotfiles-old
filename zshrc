@@ -57,6 +57,7 @@ alias serve="thin -R ~/.static.ru start"
 alias hist="cat ~/.histfile | grep"
 alias zource='source ~/.zshrc'
 alias bx='bundle exec'
+alias bxm='bundle exec middleman'
 alias grep='grep --color=auto'
 alias l='ls'
 alias ls='ls -G'
