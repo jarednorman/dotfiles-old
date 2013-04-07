@@ -121,7 +121,10 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 Bundle 'scrooloose/nerdtree'
 let g:NERDTreeWinSize = 40
 let g:NERDTreeMinimalUI = 1
-nmap <leader>f :NERDTreeToggle<cr>
+Bundle 'jistr/vim-nerdtree-tabs'
+let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_focus_on_files = 1
+nmap <leader>f <plug>NERDTreeTabsToggle<cr>
 
 " Mad split/join skillllz
 Bundle 'AndrewRadev/splitjoin.vim'
@@ -170,9 +173,6 @@ set scrolloff=8
 
 """ Filetype Specific stuff
 """""""""""""""""""""""""""
-
-" Always NERDTree
-au VimEnter *  NERDTree
 
 " Indent Guides
 let g:indent_guides_auto_colors = 0
