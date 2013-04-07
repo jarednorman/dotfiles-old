@@ -96,6 +96,7 @@ Bundle 'L9'
 
 " CtrlP
 Bundle 'kien/ctrlp.vim'
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = '' " Stop messing with the path
 let g:ctrlp_match_window_bottom = 0 " Show at top of window
 let g:ctrlp_mru_files = 2 " Enable Most Recently Used files feature
@@ -118,8 +119,8 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 
 " Not sure if I hate nerdtree or not
 Bundle 'scrooloose/nerdtree'
-let g:NERDTreeWinSize=40
-let g:NERDTreeMinimalUI=1
+let g:NERDTreeWinSize = 40
+let g:NERDTreeMinimalUI = 1
 nmap <leader>f :NERDTreeToggle<cr>
 
 " Mad split/join skillllz
@@ -152,6 +153,8 @@ set foldmethod=manual
 set cursorline
 set cursorcolumn
 " set colorcolumn=80
+set splitright
+set splitbelow
 set cmdheight=2
 set showcmd
 set winwidth=100
@@ -167,6 +170,9 @@ set scrolloff=8
 
 """ Filetype Specific stuff
 """""""""""""""""""""""""""
+
+" Always NERDTree
+au VimEnter *  NERDTree
 
 " Indent Guides
 let g:indent_guides_auto_colors = 0
