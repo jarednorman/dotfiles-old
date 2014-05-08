@@ -1,0 +1,6 @@
+[merge]
+    tool = vimdiff
+[core]
+    excludesfile = ~/.gitignore.global
+[init]
+    templatedir = ~/.git-template
