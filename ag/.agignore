@@ -1,0 +1,5 @@
+vendor/bundle
+tmp
+coverage
+output
+build
