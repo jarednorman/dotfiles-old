@@ -1,17 +1,40 @@
 [init]
   templatedir = ~/.git-template
-[alias]
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-[core]
-  editor = vim
-  excludesfile = ~/.gitignore.global
-[color]
-  ui = true
-[branch]
-  autosetuprebase = always
-[push]
-  default = simple
-[credential]
-  helper = cache --timeout=3600
 [merge]
   tool = vimdiff
+[user]
+    name         = Jared Norman
+    email        = jared@freerunningtechnologies.com
+[github]
+    user = jarednorman
+[alias]
+    head         = !git l -1
+    sup          = "!git status -s && git l -5"
+    d            = diff --color
+    h            = !git head
+    hp           = "!source ~/.githelpers && show_git_head"
+    ff           = merge --ff-only
+    pullff       = pull --ff-only
+    l            = "!source ~/.githelpers && pretty_git_log"
+    stat         = status
+    com          = commit
+    cam          = commit -am
+    ca           = commit -a
+    pom          = push origin master
+[color]
+    branch       = auto
+    diff         = auto
+    status       = auto
+[color "branch"]
+    current      = yellow reverse
+    local        = yellow
+    remote       = green
+[color "diff"]
+    meta         = blue
+    frag         = yellow
+    old          = red
+    new          = green
+[color "status"]
+    added        = blue bold
+    changed      = yellow
+    untracked    = cyan
