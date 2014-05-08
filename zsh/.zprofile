@@ -45,7 +45,7 @@ typeset -gU cdpath fpath mailpath path
 path=(
   $(ruby -rubygems -e "puts Gem.user_dir")/bin
   /usr/local/{bin,sbin}
-  $HOME/.bin
+  $HOME/bin
   $HOME/.luarocks/bin
   /usr/local/share/npm/bin
   $path

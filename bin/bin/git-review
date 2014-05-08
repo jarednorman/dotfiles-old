@@ -1,0 +1,4 @@
+#!/bin/sh
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+git rebase origin/master
+git push origin "HEAD:refs/for/master%topic=$BRANCH"

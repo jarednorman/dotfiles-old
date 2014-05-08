@@ -1,0 +1,2 @@
+#!/bin/sh
+curl -s https://status.github.com/api/messages.json | python -mjson.tool | grep body | sed -e 's/.*body...//' | head -n 1
