@@ -108,6 +108,11 @@ set splitbelow
 set cursorline
 set cursorcolumn
 
+" Allow local vimrc
+set exrc
+set secure
+
+
 nmap <cr> :
 nmap K \<noop>
 vmap K \<noop>
