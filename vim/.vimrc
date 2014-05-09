@@ -105,6 +105,8 @@ set wildmode=list:longest,list:full
 set wildmenu
 set splitright
 set splitbelow
+set cursorline
+set cursorcolumn
 
 nmap <cr> :
 nmap K \<noop>
