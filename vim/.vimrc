@@ -66,7 +66,7 @@ let g:gist_post_private = 1
 
 " vim-colors-solarized
 syntax enable
-set background=light
+set background=dark
 colo solarized
 
 " ctrlp.vim
@@ -78,7 +78,7 @@ let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|coverage\|vendor/bundle\|output'
 
 " vim-airline
-let g:airline_solarized_bg='light'
+let g:airline_solarized_bg='dark'
 let g:airline_theme='solarized'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
