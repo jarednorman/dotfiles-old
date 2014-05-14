@@ -56,6 +56,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'bling/vim-airline'
 Plugin 'zef/vim-cycle'
+Plugin 'camelcasemotion'
 
 call vundle#end()
 filetype plugin indent on
@@ -111,7 +112,6 @@ set cursorcolumn
 " Allow local vimrc
 set exrc
 set secure
-
 
 nmap <cr> :
 nmap K \<noop>
