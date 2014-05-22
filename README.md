@@ -8,6 +8,7 @@ workflow!
 Make sure you have stow installed.
 
 ```sh
+git submodule init
 git submodule update
 stow vim -t ~
 ```
