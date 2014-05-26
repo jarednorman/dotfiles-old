@@ -8,19 +8,6 @@ let g:mapleader = "\<space>"
 
 Plugin 'gmarik/Vundle.vim'
 
-" tool support
-Plugin 'rking/ag.vim'
-Plugin 'int3/vim-extradite'
-Plugin 'sunaku/vim-ruby-minitest'
-Plugin 'Keithbsmiley/rspec.vim'
-
-" language support
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'slim-template/vim-slim'
-Plugin 'nono/vim-handlebars'
-Plugin 'elixir-lang/vim-elixir'
-
 " tpope <3
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-repeat'
@@ -29,7 +16,6 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
@@ -37,6 +23,23 @@ Plugin 'tpope/vim-fugitive'
 
 " jhawthorn/dkendal <3
 Plugin 'Dkendal/fzy-vim'
+
+" The Real tpope magic
+Plugin 'tpope/vim-projectionist'
+Plugin 'tpope/vim-dispatch'
+
+" language support
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'slim-template/vim-slim'
+Plugin 'nono/vim-handlebars'
+Plugin 'elixir-lang/vim-elixir'
+
+" tool support
+Plugin 'rking/ag.vim'
+Plugin 'int3/vim-extradite'
+Plugin 'sunaku/vim-ruby-minitest'
+Plugin 'Keithbsmiley/rspec.vim'
 
 " Other Stuff
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -91,7 +94,6 @@ set noswapfile
 set nobackup
 set noerrorbells visualbell t_vb=
 
-set number
 set expandtab
 set softtabstop=2
 set shiftwidth=2
@@ -106,8 +108,6 @@ set wildmode=list:longest,list:full
 set wildmenu
 set splitright
 set splitbelow
-set cursorline
-set cursorcolumn
 
 " Allow local vimrc
 set exrc
@@ -119,23 +119,37 @@ vmap K \<noop>
 map <c-l> <c-PageDown>
 map <c-h> <c-PageUp>
 
-nmap <leader><cr> :tabnew<cr>
-nmap <leader><leader> :CtrlP<cr>
-nmap <leader><tab> :AE<cr>
-nmap <leader>fa :CtrlP app/assets<cr>
-nmap <leader>fc :CtrlP app/controllers<cr>
-nmap <leader>fm :CtrlP app/models<cr>
-nmap <leader>ft :CtrlPTag<cr>
-nmap <leader>fv :CtrlP app/views<cr>
-nmap <leader>gc :Gcommit -av<cr>
-nmap <leader>gd :Git d<cr>
-nmap <leader>gb :Gblame<cr>
-nmap <leader>gs :Gstatus<cr>
-nmap <leader>h <C-w>h
-nmap <leader>j <C-w>j
-nmap <leader>k <C-w>k
-nmap <leader>l <C-w>l
-nmap <leader>n <Plug>CycleNext
-nmap <leader>p :!mkdir -p %:p:h<cr>
-nmap <leader>s :let @/=""<cr>
-nmap <leader>w :w!<cr>
+nnoremap <leader><cr> :tabnew<cr>
+nnoremap <leader><leader> :CtrlP<cr>
+nnoremap <leader><tab> :AE<cr>
+nnoremap <leader>fa :CtrlP app/assets<cr>
+nnoremap <leader>fc :CtrlP app/controllers<cr>
+nnoremap <leader>fm :CtrlP app/models<cr>
+nnoremap <leader>ft :CtrlPTag<cr>
+nnoremap <leader>fv :CtrlP app/views<cr>
+nnoremap <leader>gc :Gcommit -av<cr>
+nnoremap <leader>gd :Git d<cr>
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+nnoremap <leader>n <Plug>CycleNext
+nnoremap <leader>p :!mkdir -p %:p:h<cr>
+nnoremap <leader>q :ccl<cr>
+nnoremap <leader>r :Start<cr>
+nnoremap <leader>s :let @/=""<cr>
+nnoremap <leader>t :Dispatch<cr>
+nnoremap <leader>w :w!<cr>
+
+" Projectionist
+let g:projectiles= {
+      \  'Gemfile' : {
+      \    '*_spec.rb' : {
+      \      'dispatch': "bundle exec spring rspec {file}",
+      \      'make' : "bundle exec spring rspec spec",
+      \      'start' : "bundle exec rescue rspec {file}"
+      \    }
+      \  }
+      \}
