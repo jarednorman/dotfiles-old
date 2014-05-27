@@ -19,14 +19,11 @@ Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
-
+Plugin 'tpope/vim-projectionist'
+Plugin 'tpope/vim-dispatch'
 
 " jhawthorn/dkendal <3
 Plugin 'Dkendal/fzy-vim'
-
-" The Real tpope magic
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-dispatch'
 
 " language support
 Plugin 'kchmck/vim-coffee-script'
