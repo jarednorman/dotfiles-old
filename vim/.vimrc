@@ -41,20 +41,16 @@ Plugin 'Keithbsmiley/rspec.vim'
 " Other Stuff
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
 Plugin 'sjl/vitality.vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
-Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'L9'
 Plugin 'mattn/gist-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'bling/vim-airline'
-Plugin 'zef/vim-cycle'
-Plugin 'camelcasemotion'
+Plugin 'chriskempson/vim-tomorrow-theme'
 
 call vundle#end()
 filetype plugin indent on
