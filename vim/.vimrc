@@ -11,7 +11,6 @@ Plugin 'gmarik/Vundle.vim'
 " tpope <3
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-bundler'
@@ -21,6 +20,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-rails'
 
 " jhawthorn/dkendal <3
 Plugin 'Dkendal/fzy-vim'
@@ -47,11 +47,9 @@ Plugin 'sjl/vitality.vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
-Plugin 'tomtom/tcomment_vim'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'L9'
 Plugin 'mattn/gist-vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'bling/vim-airline'
@@ -65,10 +63,8 @@ syntax on
 " gist-vim
 let g:gist_post_private = 1
 
-" vim-colors-solarized
 syntax enable
-set background=light
-colo solarized
+colo Tomorrow-Night
 
 " ctrlp.vim
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
@@ -79,8 +75,6 @@ let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|coverage\|vendor/bundle\|output'
 
 " vim-airline
-let g:airline_solarized_bg='light'
-let g:airline_theme='solarized'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
@@ -141,11 +135,11 @@ nnoremap <leader>t :Dispatch<cr>
 nnoremap <leader>w :w!<cr>
 
 " Projectionist
-let g:projectiles= {
-      \  'Gemfile' : {
+let g:projectiles = {
+      \  'Gemfile&Gemfile.lock' : {
       \    '*_spec.rb' : {
-      \      'dispatch': "bundle exec spring rspec {file}",
-      \      'make' : "bundle exec spring rspec spec",
+      \      'dispatch': "bundle exec rspec {file}",
+      \      'make' : "bundle exec rspec spec",
       \      'start' : "bundle exec rescue rspec {file}"
       \    }
       \  }
