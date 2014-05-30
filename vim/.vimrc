@@ -132,11 +132,15 @@ nnoremap <leader>w :w!<cr>
 
 " Projectionist
 let g:projectiles = {
-      \  'Gemfile&Gemfile.lock' : {
-      \    '*_spec.rb' : {
-      \      'dispatch': "bundle exec rspec {file}",
-      \      'make' : "bundle exec rspec spec",
-      \      'start' : "bundle exec rescue rspec {file}"
+      \  'mix.exs' : {
+      \    'lib/*.ex': {
+      \      'alternate' : "test/{}_test.exs"
+      \    },
+      \    'test/*_test.exs' : {
+      \      'alternate' : "lib/{}.ex",
+      \      'dispatch': "mix test",
+      \      'start' : "mix test",
+      \      'make' : "mix compile",
       \    }
       \  }
       \}
