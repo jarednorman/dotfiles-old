@@ -100,15 +100,16 @@ set splitbelow
 set exrc
 set secure
 
-nmap <cr> :
-nmap K \<noop>
-vmap K \<noop>
-map <c-l> <c-PageDown>
-map <c-h> <c-PageUp>
+nnoremap <cr> :
+nnoremap K \<noop>
+vnoremap K \<noop>
+noremap <c-l> <c-PageDown>
+noremap <c-h> <c-PageUp>
 
-nnoremap <leader><cr> :tabnew<cr>
+nnoremap <leader><cr> <cr>
 nnoremap <leader><leader> :CtrlP<cr>
 nnoremap <leader><tab> :AE<cr>
+nnoremap <leader>a :A<cr>
 nnoremap <leader>fa :CtrlP app/assets<cr>
 nnoremap <leader>fc :CtrlP app/controllers<cr>
 nnoremap <leader>fm :CtrlP app/models<cr>
