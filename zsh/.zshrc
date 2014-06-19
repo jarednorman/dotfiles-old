@@ -12,7 +12,7 @@ fi
 
 # Chruby and default ruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
-chruby 2.0
+chruby 2.1.2
 
 # Get to the code.
 c() { cd ~/Codes/$1; }

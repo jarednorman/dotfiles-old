@@ -62,6 +62,9 @@ let g:gist_post_private = 1
 syntax enable
 colo Tomorrow-Night
 
+" airline
+let g:airline#extensions#tabline#enabled = 1
+
 " ctrlp.vim
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -73,10 +76,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|coverage\|vendor/bundl
 " vim-airline
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-
-" vim-cycle
-let g:cycle_no_mappings=1
-
 set noswapfile
 set nobackup
 set noerrorbells visualbell t_vb=
