@@ -22,8 +22,9 @@ compdef _c c
 # functions
 v() { fg || { vim $@ }; }
 
-# TMRUN
+# tmux fun
 tmrun() { tmux split-window -c `pwd` -l 10 "zsh -ic \"$@;read\"" && tmux last-pane }
+tmgem() { tmux new-window -c `bundle show $1` -n "$1" }
 
 # aliases
 alias j=jobs
