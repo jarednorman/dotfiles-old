@@ -31,20 +31,11 @@ alias serve="thin -R ~/.static.ru start"
 alias hist="cat ~/.histfile | egrep"
 alias bx='bundle exec'
 alias grep='grep --color=auto'
-alias l='ls'
 alias ls='ls -G'
 alias sl='ls -G'
-alias ll='ls -lhG'
-alias la='ls -aG'
-alias lla='ls -Gla'
-alias plz=sudo
-alias please=sudo
-alias ':q'=exit
-alias ':wq'=exit
 alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
 alias weechat="ssh jarednorman@boxer.freerunningtech.com -t \"screen -dr\""
-alias japanese="echo '文字化け' | pbcopy"
-alias gist='gist -o -p'
+alias tms="tmux attach -t"
 
 # git aliases
 alias g='git'
