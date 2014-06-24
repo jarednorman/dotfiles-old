@@ -11,7 +11,6 @@ Plugin 'gmarik/Vundle.vim'
 " tpope <3
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rake'
@@ -50,7 +49,8 @@ Plugin 'mattn/gist-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'bling/vim-airline'
-Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Raimondi/delimitMate'
 
 call vundle#end()
 filetype plugin indent on
@@ -60,7 +60,7 @@ syntax on
 let g:gist_post_private = 1
 
 syntax enable
-colo Tomorrow-Night
+colo solarized
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -72,6 +72,11 @@ let g:ctrlp_working_path_mode = '' " Stop messing with the path
 let g:ctrlp_match_window_bottom = 1
 let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|coverage\|vendor/bundle\|output'
+
+" delimitMate
+let g:SuperTabCrMapping = 0
+let g:delimitMate_expand_space = 1
+let g:delimitMate_expand_cr = 2
 
 " vim-airline
 let g:airline_left_sep=''
