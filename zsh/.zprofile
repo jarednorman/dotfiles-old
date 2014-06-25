@@ -47,6 +47,7 @@ path=(
   /usr/local/{bin,sbin}
   $HOME/bin
   $HOME/.luarocks/bin
+  $HOME/Codes/elixir/bin
   /usr/local/share/npm/bin
   $path
 )
