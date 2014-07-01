@@ -60,6 +60,7 @@ syntax on
 let g:gist_post_private = 1
 
 syntax enable
+set background=light
 colo solarized
 
 " airline
@@ -70,6 +71,19 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#tab_min_count = 2
 let g:airline#extensions#tabline#close_symbol = '💩 '
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.linenr = '⭐️ '
+let g:airline_symbols.branch = '🔀 '
+let g:airline_symbols.whitespace = '😡 '
 
 " ctrlp.vim
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
@@ -86,9 +100,6 @@ let g:SuperTabCrMapping = 0
 let g:delimitMate_expand_space = 1
 let g:delimitMate_expand_cr = 2
 
-" vim-airline
-let g:airline_left_sep=''
-let g:airline_right_sep=''
 set noswapfile
 set nobackup
 set noerrorbells visualbell t_vb=
