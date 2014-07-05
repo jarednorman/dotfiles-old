@@ -41,6 +41,10 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
+# Chruby and default ruby
+source /usr/local/share/chruby/chruby.sh
+chruby 2.1.2
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   $(ruby -rubygems -e "puts Gem.user_dir")/bin

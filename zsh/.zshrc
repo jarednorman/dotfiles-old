@@ -10,10 +10,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Chruby and default ruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-chruby 2.1.2
-
 # Get to the code.
 c() { cd ~/Codes/$1; }
 _c() { _files -W ~/Codes ~/; }

@@ -47,7 +47,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'L9'
 Plugin 'mattn/gist-vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Raimondi/delimitMate'
@@ -60,6 +59,7 @@ syntax on
 let g:gist_post_private = 1
 
 syntax enable
+set t_Co=256
 set background=light
 colo solarized
 
@@ -86,7 +86,6 @@ let g:airline_symbols.branch = '🔀 '
 let g:airline_symbols.whitespace = '😡 '
 
 " ctrlp.vim
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = '' " Stop messing with the path
 let g:ctrlp_match_window_bottom = 1
