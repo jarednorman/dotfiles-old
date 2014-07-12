@@ -47,6 +47,7 @@ chruby 2.1.2
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /home/jarednorman/Codes/elixir/bin
   $(ruby -rubygems -e "puts Gem.user_dir")/bin
   /usr/local/{bin,sbin}
   $HOME/bin
