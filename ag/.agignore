@@ -2,3 +2,4 @@ tmp
 coverage
 output
 build
+vendor/bundle
