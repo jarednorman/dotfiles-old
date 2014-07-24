@@ -60,7 +60,7 @@ let g:gist_post_private = 1
 
 syntax enable
 set t_Co=256
-set background=light
+set background=dark
 colo solarized
 
 " airline
@@ -99,8 +99,6 @@ set wildmode=list:longest,list:full
 set wildmenu
 set splitright
 set splitbelow
-set cursorline
-set cursorcolumn
 
 " Allow local vimrc
 set exrc
