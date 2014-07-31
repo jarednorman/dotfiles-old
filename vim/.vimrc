@@ -46,7 +46,7 @@ Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
 Plugin 'L9'
 Plugin 'mattn/gist-vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'Dkendal/fzy-vim'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Raimondi/delimitMate'
@@ -66,15 +66,6 @@ colo solarized
 " airline
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-
-" ctrlp.vim
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_working_path_mode = '' " Stop messing with the path
-let g:ctrlp_match_window_bottom = 1
-let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|coverage\|output'
-set grepprg=ag\ --nogroup\ --nocolor
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " delimitMate
 let g:SuperTabCrMapping = 0
@@ -111,14 +102,10 @@ noremap <c-l> <c-PageDown>
 noremap <c-h> <c-PageUp>
 
 nnoremap <leader><cr> <cr>
-nnoremap <leader><leader> :CtrlP<cr>
+nnoremap <leader><leader> :FzyLsAg<cr>
 nnoremap <leader><tab> :AE<cr>
 nnoremap <leader>a :A<cr>
-nnoremap <leader>fa :CtrlP app/assets<cr>
-nnoremap <leader>fc :CtrlP app/controllers<cr>
-nnoremap <leader>fm :CtrlP app/models<cr>
-nnoremap <leader>ft :CtrlPTag<cr>
-nnoremap <leader>fv :CtrlP app/views<cr>
+nnoremap <leader>fg :FzyGem<cr>
 nnoremap <leader>gc :Gcommit -av<cr>
 nnoremap <leader>gd :Git d<cr>
 nnoremap <leader>gb :Gblame<cr>
