@@ -3,3 +3,5 @@ coverage
 output
 build
 vendor/bundle
+deps
+_build
