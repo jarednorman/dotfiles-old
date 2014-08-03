@@ -1,7 +1,4 @@
-# FreeRunning Technologies Dotfiles
-
-Here is a reasonable starting point for new people integrating into our
-workflow!
+# Jared Norman's Dotfiles
 
 ## Installation
 
