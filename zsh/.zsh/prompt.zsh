@@ -1,12 +1,13 @@
 setopt promptsubst
 
+local the_time='%* '
 local suspended_jobs='%(1j.%j .)'
 local remote_user_host='${SSH_TTY:%n@%m ]}'
 local ruby_version='$(chruby | grep "*" | cut -d" " -f3) '
 local root_prompt='❯root❯'
 local user_prompt='❯❯❯'
 
-export PROMPT="${suspended_jobs}${remote_user_host}${ruby_version}
+export PROMPT="${suspended_jobs}${the_time}${remote_user_host}${ruby_version}
 %(!.${root_prompt}.${user_prompt}) "
 
 function parse_git_dirty {
