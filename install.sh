@@ -1,2 +1,2 @@
-#!/bin/sh
-stow ag bundler git guard tmux vim -t ~
+#!/bin/bash
+stow ag bin bundler git guard tmux vim x zsh -t ~
