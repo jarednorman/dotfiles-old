@@ -1,4 +1,4 @@
-autoload -U compinit promptinit
+autoload -U compinit
 compinit
 
 source ~/.zsh/aliases/*.sh
