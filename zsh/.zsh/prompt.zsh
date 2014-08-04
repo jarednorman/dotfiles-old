@@ -3,13 +3,13 @@ autoload -U colors && colors
 setopt promptsubst
 
 local the_time='%{$fg[white]%}%* %{$reset_color%}'
-local suspended_jobs='%{$fg[magenta]%}%(1j.%j .)%{$reset_color%}'
-local remote_user_host='%{$fg[green]%}${SSH_TTY:%n@%m ]}%{$reset_color%}'
+local suspended_jobs='%{$fg[blue]%}%(1j.%j␣ .)%{$reset_color%}'
+local user_host='%{$fg[magenta]%}%n@%m %{$reset_color%}'
 local ruby_version='%{$fg_bold[magenta]%}$(chruby | grep "*" | cut -d" " -f3) %{$reset_color%}'
 local root_prompt='%{$fg[white]%}❯%{$fg_bold[cyan]%}❯%{$fg_bold[red]%}❯'
 local user_prompt='%{$fg[white]%}❯%{$fg_bold[cyan]%}❯%{$fg[black]%}❯'
 
-export PROMPT="${the_time}${suspended_jobs}${remote_user_host}${ruby_version}
+export PROMPT="${the_time}${suspended_jobs}${user_host}${ruby_version}
 %(!.${root_prompt}.${user_prompt}) %{$reset_color%}"
 
 function parse_git_dirty {

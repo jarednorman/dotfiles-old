@@ -85,7 +85,7 @@ set hlsearch
 set cmdheight=1
 set laststatus=2
 set showcmd
-set list listchars=tab:»·,trail:·
+set list listchars=tab:»→,trail:␣
 set wildmode=list:longest,list:full
 set wildmenu
 set splitright
