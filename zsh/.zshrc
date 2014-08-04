@@ -1,5 +1,5 @@
 autoload -U compinit
-compinit
+compinit -u
 
 source ~/.zsh/aliases/*.sh
 source ~/.zsh/prompt.zsh

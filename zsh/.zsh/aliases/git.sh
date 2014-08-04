@@ -1,6 +1,4 @@
 alias g='git'
-alias gc!='git commit -v --amend'
-alias gca!='git commit -v -a --amend'
 
 function current_branch() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || \
