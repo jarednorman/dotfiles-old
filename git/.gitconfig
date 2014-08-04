@@ -8,13 +8,16 @@
 [github]
     user = jarednorman
 [alias]
-    sup = "!git status -s && git l -5"
-    d   = diff --color
-    hp  = "!. ~/.githelpers && show_git_head"
-    ff  = merge --ff-only
-    l   = "!. ~/.githelpers && pretty_git_log"
+    a   = add
     c   = commit -v
     ca  = commit -v --amend
+    d   = diff --color
+    ds  = diff --color --staged
+    ff  = merge --ff-only
+    hp  = "!. ~/.githelpers && show_git_head"
+    l   = "!. ~/.githelpers && pretty_git_log"
+    s   = status
+    ss  = status -s
 [color]
     branch       = auto
     diff         = auto
@@ -29,6 +32,8 @@
     old          = red
     new          = green
 [color "status"]
-    added        = blue bold
-    changed      = yellow
-    untracked    = cyan
+    header       = magenta bold
+    branch       = magenta
+    added        = green
+    changed      = blue
+    untracked    = cyan bold
