@@ -11,6 +11,8 @@
     a   = add
     c   = commit -v
     ca  = commit -v --amend
+    co  = checkout
+    cb  = checkout -b
     d   = diff --color
     ds  = diff --color --staged
     ff  = merge --ff-only
