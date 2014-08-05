@@ -100,7 +100,7 @@ nnoremap K \<noop>
 vnoremap K \<noop>
 nnoremap <c-l> <c-PageDown>
 nnoremap <c-h> <c-PageUp>
-inoremap jk <esc>
+inoremap kj <esc>
 inoremap <esc> <nop>
 
 nnoremap <leader><cr> <cr>
