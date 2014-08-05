@@ -98,8 +98,10 @@ set secure
 nnoremap <cr> :
 nnoremap K \<noop>
 vnoremap K \<noop>
-noremap <c-l> <c-PageDown>
-noremap <c-h> <c-PageUp>
+nnoremap <c-l> <c-PageDown>
+nnoremap <c-h> <c-PageUp>
+inoremap jk <esc>
+inoremap <esc> <nop>
 
 nnoremap <leader><cr> <cr>
 nnoremap <leader><leader> :FzyLsAg<cr>

@@ -18,6 +18,8 @@
     ff  = merge --ff-only
     hp  = "!. ~/.githelpers && show_git_head"
     l   = "!. ~/.githelpers && pretty_git_log"
+    r   = rebase
+    ri  = rebase -i
     s   = status
     ss  = status -s
 [color]
