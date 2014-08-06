@@ -100,8 +100,6 @@ nnoremap K \<noop>
 vnoremap K \<noop>
 nnoremap <c-l> <c-PageDown>
 nnoremap <c-h> <c-PageUp>
-inoremap kj <esc>
-inoremap <esc> <nop>
 
 nnoremap <leader><cr> <cr>
 nnoremap <leader><leader> :FzyLsAg<cr>
