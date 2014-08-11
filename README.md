@@ -5,10 +5,10 @@ workflow!
 
 ## Installation
 
-Make sure you have stow installed.
+Make sure you have stow installed. Also install [jhawthorn/fzy](https://github.com/jhawthorn/fzy).
 
 ```sh
 git submodule init
 git submodule update
-stow vim -t ~
+./install.sh
 ```

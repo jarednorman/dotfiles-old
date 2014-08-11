@@ -20,6 +20,9 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 
+" jhawthorn/dkendal <3
+Plugin 'Dkendal/fzy-vim'
+
 call vundle#end()
 filetype plugin indent on
 syntax on
