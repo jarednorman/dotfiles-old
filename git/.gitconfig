@@ -20,7 +20,7 @@
     l   = "!. ~/.githelpers && pretty_git_log"
     r   = rebase
     ra  = rebase --abort
-    ra  = rebase --continue
+    rc  = rebase --continue
     ri  = rebase -i
     s   = status
     ss  = status -s

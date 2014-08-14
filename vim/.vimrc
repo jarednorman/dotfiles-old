@@ -95,6 +95,9 @@ set splitbelow
 set exrc
 set secure
 
+" Insert filename without path or extension
+inoremap \fn <C-R>=expand("%:t:r")<CR>
+
 nnoremap <cr> :
 nnoremap K \<noop>
 vnoremap K \<noop>
