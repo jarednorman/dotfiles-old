@@ -6,8 +6,8 @@ local the_time='%{$fg[white]%}%* %{$reset_color%}'
 local suspended_jobs='%{$fg[blue]%}%(1j.[%j] .)%{$reset_color%}'
 local user_host='%{$fg[magenta]%}%n@%m %{$reset_color%}'
 local ruby_version='%{$fg_bold[magenta]%}$(chruby | grep "*" | cut -d" " -f3) %{$reset_color%}'
-local root_prompt='%{$fg[white]%}❯%{$fg_bold[cyan]%}❯%{$fg_bold[red]%}❯'
-local user_prompt='%{$fg[white]%}❯%{$fg_bold[cyan]%}❯%{$fg[black]%}❯'
+local root_prompt='%{$fg[black]%}❯%{$fg_bold[green]%}❯%{$fg_bold[red]%}❯'
+local user_prompt='%{$fg[black]%}❯%{$fg_bold[green]%}❯%{$fg[white]%}❯'
 local current_dir='%{$fg[blue]%}%~%{$reset_color%}'
 
 export PROMPT="${the_time}${ruby_version}${suspended_jobs}${user_host}${current_dir}
