@@ -24,6 +24,7 @@
     ri  = rebase -i
     s   = status
     ss  = status -s
+    zz  = "!git checkout master && git pull --rebase origin master"
 [color]
     branch       = auto
     diff         = auto
