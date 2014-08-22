@@ -9,6 +9,8 @@
     user = jarednorman
 [alias]
     a   = add
+    bx  = branch -d
+    bX  = branch -D
     c   = commit -v
     ca  = commit -v --amend
     co  = checkout
