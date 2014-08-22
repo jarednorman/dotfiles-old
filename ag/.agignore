@@ -2,6 +2,6 @@ tmp
 coverage
 output
 build
-vendor/bundle
+/vendor/bundle
 deps
 _build
