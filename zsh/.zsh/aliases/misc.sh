@@ -2,4 +2,4 @@ alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-
 alias weechat="ssh jarednorman@boxer -t \"tmux attach\""
 alias tms="tmux attach -t"
 
-f(){ ag --nocolor -l -g "$1" . }
+f(){ ag --nocolor -l -g "$1" "${2:-.}"  }
