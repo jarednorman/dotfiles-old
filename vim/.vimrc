@@ -49,11 +49,14 @@ Plugin 'mattn/gist-vim'
 Plugin 'Dkendal/fzy-vim'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Raimondi/delimitMate'
+Plugin 'wikitopian/hardmode'
 
 call vundle#end()
 filetype plugin indent on
 syntax on
+
+" Hard Mode ENGAGE
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " gist-vim
 let g:gist_post_private = 1
