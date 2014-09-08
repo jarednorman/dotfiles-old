@@ -11,6 +11,7 @@
     a   = add
     bx  = branch -d
     bX  = branch -D
+    bl  = branch -a
     c   = commit -v
     ca  = commit -v --amend
     co  = checkout
