@@ -1,5 +1,10 @@
 [init]
   templatedir = ~/.git-template
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore.global
+[credential]
+  helper = cache --timeout=3600
 [merge]
   tool = vimdiff
 [user]
