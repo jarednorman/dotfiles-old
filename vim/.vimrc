@@ -110,6 +110,7 @@ nnoremap <leader>a :A<cr>
 call togglebg#map("") " Solarized doesn't autoload properly
 nnoremap <leader>b :ToggleBG<cr>
 nnoremap <leader>fg :FzyGem<cr>
+nnoremap <leader>ft :TFzyLsAg<cr>
 nnoremap <leader>gc :Gcommit -av<cr>
 nnoremap <leader>gd :Git d<cr>
 nnoremap <leader>gb :Gblame<cr>
