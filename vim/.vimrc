@@ -48,7 +48,6 @@ Plugin 'L9'
 Plugin 'mattn/gist-vim'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Raimondi/delimitMate'
 
 call vundle#end()
 filetype plugin indent on
@@ -89,6 +88,8 @@ set wildmode=list:longest,list:full
 set wildmenu
 set splitright
 set splitbelow
+set cursorcolumn
+set cursorline
 
 " Allow local vimrc
 set exrc
