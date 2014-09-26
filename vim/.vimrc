@@ -88,8 +88,6 @@ set wildmode=list:longest,list:full
 set wildmenu
 set splitright
 set splitbelow
-set cursorcolumn
-set cursorline
 
 " Allow local vimrc
 set exrc
