@@ -8,9 +8,10 @@ fi
 
 typeset -gU cdpath fpath mailpath path
 
-source /usr/local/share/chruby/chruby.sh
+[ -f /usr/local/share/chruby/chruby.sh ] && source /usr/local/share/chruby/chruby.sh
 chruby 2.1.2
 source /usr/local/share/chruby/auto.sh
+[ -f /usr/local/share/chruby/auto.sh ] && source /usr/local/share/chruby/auto.sh
 
 path=(
   /home/jarednorman/Codes/elixir/bin
