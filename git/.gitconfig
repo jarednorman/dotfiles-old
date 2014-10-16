@@ -6,7 +6,10 @@
 [credential]
   helper = cache --timeout=3600
 [merge]
-  tool = vimdiff
+  tool = splice
+[mergetool "splice"]
+  cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
+  trustExitCode = true
 [user]
     name         = Jared Norman
     email        = jared@freerunningtechnologies.com
