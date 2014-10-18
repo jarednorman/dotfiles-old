@@ -6,8 +6,8 @@ export KEYTIMEOUT=1
 bindkey -v
 
 # Those who cannot remember the past...
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.histfile
 
 for file in ~/.zsh/aliases/*.sh; do
