@@ -21,9 +21,6 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-rails'
 
-" jhawthorn/dkendal <3
-Plugin 'Dkendal/fzy-vim'
-
 " language support
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'vim-ruby/vim-ruby'
@@ -104,13 +101,11 @@ nnoremap <c-l> <c-PageDown>
 nnoremap <c-h> <c-PageUp>
 
 nnoremap <leader><cr> <cr>
-nnoremap <leader><leader> :FzyLsAg<cr>
+nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l", ":e")<cr>
 nnoremap <leader><tab> :AE<cr>
 nnoremap <leader>a :A<cr>
 call togglebg#map("") " Solarized doesn't autoload properly
 nnoremap <leader>b :ToggleBG<cr>
-nnoremap <leader>fg :FzyGem<cr>
-nnoremap <leader>ft :TFzyLsAg<cr>
 nnoremap <leader>gc :Gcommit -av<cr>
 nnoremap <leader>gd :Git d<cr>
 nnoremap <leader>gb :Gblame<cr>
@@ -141,3 +136,15 @@ let g:projectiles = {
       \    }
       \  }
       \}
+
+function! FzyCommand(choice_command, vim_command)
+  try
+    let output = system(a:choice_command . " | fzy ")
+  catch /Vim:Interrupt/
+    " Swallow errors from ^C, allow redraw! below
+  endtry
+  redraw!
+  if v:shell_error == 0 && !empty(output)
+    exec a:vim_command . ' ' . output
+  endif
+endfunction
