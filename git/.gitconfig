@@ -7,51 +7,53 @@
   helper = cache --timeout=3600
 [merge]
   tool = splice
+[mergetool]
+  keepBackup = false
 [mergetool "splice"]
   cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
   trustExitCode = true
 [user]
-    name         = Jared Norman
-    email        = jared@freerunningtechnologies.com
+  name         = Jared Norman
+  email        = jared@freerunningtechnologies.com
 [github]
-    user = jarednorman
+  user = jarednorman
 [alias]
-    a   = add
-    bx  = branch -d
-    bX  = branch -D
-    bl  = branch -a
-    c   = commit -v
-    ca  = commit -v --amend
-    co  = checkout
-    cb  = checkout -b
-    d   = diff --color
-    ds  = diff --color --staged
-    ff  = merge --ff-only
-    hp  = "!. ~/.githelpers && show_git_head"
-    l   = "!. ~/.githelpers && pretty_git_log"
-    r   = rebase
-    ra  = rebase --abort
-    rc  = rebase --continue
-    ri  = rebase -i
-    s   = status
-    ss  = status -s
-    zz  = "!git checkout master && git pull --rebase origin master"
+  a   = add
+  bx  = branch -d
+  bX  = branch -D
+  bl  = branch -a
+  c   = commit -v
+  ca  = commit -v --amend
+  co  = checkout
+  cb  = checkout -b
+  d   = diff --color
+  ds  = diff --color --staged
+  ff  = merge --ff-only
+  hp  = "!. ~/.githelpers && show_git_head"
+  l   = "!. ~/.githelpers && pretty_git_log"
+  r   = rebase
+  ra  = rebase --abort
+  rc  = rebase --continue
+  ri  = rebase -i
+  s   = status
+  ss  = status -s
+  zz  = "!git checkout master && git pull --rebase origin master"
 [color]
-    branch       = auto
-    diff         = auto
-    status       = auto
+  branch       = auto
+  diff         = auto
+  status       = auto
 [color "branch"]
-    current      = yellow reverse
-    local        = yellow
-    remote       = green
+  current      = yellow reverse
+  local        = yellow
+  remote       = green
 [color "diff"]
-    meta         = blue
-    frag         = yellow
-    old          = red
-    new          = green
+  meta         = blue
+  frag         = yellow
+  old          = red
+  new          = green
 [color "status"]
-    header       = magenta bold
-    branch       = magenta
-    added        = green
-    changed      = blue
-    untracked    = cyan bold
+  header       = magenta bold
+  branch       = magenta
+  added        = green
+  changed      = blue
+  untracked    = cyan bold
