@@ -45,7 +45,6 @@ Plugin 'L9'
 Plugin 'mattn/gist-vim'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'jarednorman/vim-potato'
 Plugin 'sjl/splice.vim'
 
 call vundle#end()
@@ -57,8 +56,8 @@ let g:gist_post_private = 1
 
 syntax enable
 set t_Co=256
-set background=dark
-colo potato
+set background=light
+colo solarized
 
 " airline
 let g:airline_left_sep=''
