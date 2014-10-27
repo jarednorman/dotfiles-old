@@ -18,7 +18,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-dispatch'
+Plugin 'adammathys/vim-dispatch'
 Plugin 'tpope/vim-rails'
 
 " language support
@@ -137,6 +137,9 @@ let g:projectiles = {
       \    }
       \  }
       \}
+
+"RSpec + Dispatch!
+let g:rspec_command = 'Dispatch rspec {spec}'
 
 function! FzyCommand(choice_command, vim_command)
   try

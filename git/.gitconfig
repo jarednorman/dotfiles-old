@@ -31,6 +31,10 @@
   ff  = merge --ff-only
   hp  = "!. ~/.githelpers && show_git_head"
   l   = "!. ~/.githelpers && pretty_git_log"
+  m   = merge
+  mff = merge --ff-only
+  p   = pull
+  pr  = pull --rebase
   r   = rebase
   ra  = rebase --abort
   rc  = rebase --continue
