@@ -44,7 +44,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'L9'
 Plugin 'mattn/gist-vim'
 Plugin 'bling/vim-airline'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'jarednorman/vim-colors-solarized'
 Plugin 'sjl/splice.vim'
 
 call vundle#end()
