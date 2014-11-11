@@ -9,7 +9,7 @@ fi
 typeset -gU cdpath fpath mailpath path
 
 [ -f /usr/local/share/chruby/chruby.sh ] && source /usr/local/share/chruby/chruby.sh
-chruby 2.1.2
+chruby 2.1.4
 source /usr/local/share/chruby/auto.sh
 [ -f /usr/local/share/chruby/auto.sh ] && source /usr/local/share/chruby/auto.sh
 

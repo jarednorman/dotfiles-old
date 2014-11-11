@@ -27,6 +27,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'slim-template/vim-slim'
 Plugin 'nono/vim-handlebars'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " tool support
 Plugin 'rking/ag.vim'
@@ -44,7 +45,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'L9'
 Plugin 'mattn/gist-vim'
 Plugin 'bling/vim-airline'
-Plugin 'jarednorman/vim-colors-solarized'
 Plugin 'sjl/splice.vim'
 
 call vundle#end()
@@ -57,7 +57,7 @@ let g:gist_post_private = 1
 syntax enable
 set t_Co=256
 set background=dark
-colo solarized
+colo Tomorrow-Night
 
 " airline
 let g:airline_left_sep=''
@@ -76,6 +76,7 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 
+set number
 set nowrap
 set hlsearch
 set cmdheight=1
@@ -104,7 +105,6 @@ nnoremap <leader><cr> <cr>
 nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l", ":e")<cr>
 nnoremap <leader><tab> :AE<cr>
 nnoremap <leader>a :A<cr>
-call togglebg#map("") " Solarized doesn't autoload properly
 nnoremap <leader>b :ToggleBG<cr>
 nnoremap <leader>gc :Gcommit -av<cr>
 nnoremap <leader>gd :Git d<cr>
