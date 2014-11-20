@@ -47,6 +47,9 @@ Plugin 'mattn/gist-vim'
 Plugin 'bling/vim-airline'
 Plugin 'sjl/splice.vim'
 
+" Colors
+Plugin 'morhetz/gruvbox'
+
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -57,7 +60,7 @@ let g:gist_post_private = 1
 syntax enable
 set t_Co=256
 set background=dark
-colo Tomorrow-Night
+colo gruvbox
 
 " airline
 let g:airline_left_sep=''
