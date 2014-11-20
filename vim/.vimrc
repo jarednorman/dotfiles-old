@@ -59,6 +59,9 @@ let g:gist_post_private = 1
 
 syntax enable
 set t_Co=256
+if !has("gui_running")
+  let g:gruvbox_italic=0
+endif
 set background=dark
 colo gruvbox
 
