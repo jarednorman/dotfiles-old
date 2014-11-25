@@ -1,7 +1,6 @@
 autoload -U compinit
 compinit -u
 
-# Vim it.
 export KEYTIMEOUT=1
 bindkey -v
 
