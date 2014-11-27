@@ -48,7 +48,7 @@ Plugin 'bling/vim-airline'
 Plugin 'sjl/splice.vim'
 
 " Colors
-Plugin 'morhetz/gruvbox'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
@@ -62,8 +62,8 @@ set t_Co=256
 if !has("gui_running")
   let g:gruvbox_italic=0
 endif
-set background=dark
-colo gruvbox
+set background=light
+colo solarized
 
 " airline
 let g:airline_left_sep=''
