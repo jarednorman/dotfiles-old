@@ -48,7 +48,7 @@ Plugin 'bling/vim-airline'
 Plugin 'sjl/splice.vim'
 
 " Colors
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'jarednorman/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
