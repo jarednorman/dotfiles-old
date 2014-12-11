@@ -10,6 +10,9 @@ HISTSIZE=100000
 SAVEHIST=100000
 HISTFILE=~/.histfile
 
+# When I'm working on hatred projects
+export LOVE=/Applications/love.app/Contents/MacOS/love
+
 for file in ~/.zsh/aliases/*.sh; do
   source "$file"
 done
