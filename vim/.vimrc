@@ -110,6 +110,7 @@ nnoremap <leader><cr> <cr>
 nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l", ":e")<cr>
 nnoremap <leader><tab> :AE<cr>
 nnoremap <leader>a :A<cr>
+call togglebg#map("") " Make ToggleBG work
 nnoremap <leader>b :ToggleBG<cr>
 nnoremap <leader>gc :Gcommit -av<cr>
 nnoremap <leader>gd :Git d<cr>
