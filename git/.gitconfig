@@ -39,6 +39,7 @@
   ra  = rebase --abort
   rc  = rebase --continue
   ri  = rebase -i
+  rh  = reset --hard
   s   = status
   ss  = status -s
   zz  = "!git checkout master && git pull --rebase origin master"
