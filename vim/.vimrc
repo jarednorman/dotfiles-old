@@ -82,7 +82,8 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 
-set nowrap
+set number
+set wrap
 set hlsearch
 set cmdheight=1
 set laststatus=2
