@@ -62,7 +62,7 @@ set t_Co=256
 if !has("gui_running")
   let g:gruvbox_italic=0
 endif
-set background=dark
+set background=light
 colo solarized
 
 " airline

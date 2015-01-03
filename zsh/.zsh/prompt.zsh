@@ -11,7 +11,7 @@ function parse_git_branch {
 
 local suspended_jobs='%{$fg_bold[green]%}%(1j.%j .)%{$reset_color%}'
 local user_host='%{$fg_bold[green]%}%m %{$reset_color$fg[magenta]%}as %n %{$reset_color%}'
-local ruby_version='%{$fg[black]%}$(chruby | grep "*" | cut -d" " -f3)%{$reset_color%}'
+local ruby_version='%{$fg[white]%}$(chruby | grep "*" | cut -d" " -f3)%{$reset_color%}'
 local root_prompt='%{$fg[red]%}#'
 local user_prompt='%{$fg[magenta]%}$'
 local current_dir='%{$fg_bold[magenta]%}in %~%{$reset_color%}'
