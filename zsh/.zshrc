@@ -18,5 +18,4 @@ for file in ~/.zsh/aliases/*.sh; do
 done
 source ~/.zsh/prompt.zsh
 
-[ -f ~/.vim/bundle/gruvbox/gruvbox_256palette.sh ] && source ~/.vim/bundle/gruvbox/gruvbox_256palette.sh
 [ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
