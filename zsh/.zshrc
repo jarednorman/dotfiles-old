@@ -10,6 +10,8 @@ HISTSIZE=100000
 SAVEHIST=100000
 HISTFILE=~/.histfile
 
+REPORTTIME=10
+
 # When I'm working on hatred projects
 export LOVE=/Applications/love.app/Contents/MacOS/love
 
