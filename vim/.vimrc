@@ -94,6 +94,7 @@ set wildmode=list:longest,list:full
 set wildmenu
 set splitright
 set splitbelow
+set cursorline
 
 " Allow local vimrc
 set exrc

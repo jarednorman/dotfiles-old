@@ -1,20 +1,20 @@
-Xft.dpi:         96
-Xft.antialias:   true
-Xft.hinting:     true
-Xft.hintstyle:   hintslight
-Xft.autohint:    true
-Xft.lcdfilter:   lcddefault
-Xft.rgba:        rgb
+Xft.antialias: 1
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
 
 URxvt.depth:          32
 URxvt.geometry:       90x30
 URxvt.transparent:    false
 URxvt.loginShell:     true
 URxvt.saveLines:      10000
-URxvt.internalBorder: 12
+URxvt.internalBorder: 9
 
-URxvt.font:        xft:Meslo LG M:size=12
-URxvt.boldFont:    xft:Meslo LG M:size=12
+URxvt.font:        xft:DejaVu Sans Mono:size=11
+URxvt.boldFont:    xft:DejaVu Sans Mono:size=11
 URxvt.lineSpace:   0
 
 URxvt.scrollBar: false
@@ -24,26 +24,26 @@ URxvt.cursorUnderline: false
 
 URxvt.pointerBlank: true
 
-URxvt*background:  #fdf6e5
-URxvt*foreground:  #647b82
-URxvt*fading:      25
-URxvt*fadeColor:   #fdf6e5
-URxvt*cursorColor: #647b82
+URxvt.background:  #fdf6e5
+URxvt.foreground:  #647b82
+URxvt.fading:      25
+URxvt.fadeColor:   #fdf6e5
+URxvt.cursorColor: #647b82
 
-URxvt*color0:  #00353f
-URxvt*color1:  #e12e34
-URxvt*color2:  #849830
-URxvt*color3:  #b7882c
-URxvt*color4:  #168dcc
-URxvt*color5:  #d7357f
-URxvt*color6:  #12a198
-URxvt*color7:  #eee8d7
+URxvt.color0:  #00353f
+URxvt.color1:  #e12e34
+URxvt.color2:  #849830
+URxvt.color3:  #b7882c
+URxvt.color4:  #168dcc
+URxvt.color5:  #d7357f
+URxvt.color6:  #12a198
+URxvt.color7:  #eee8d7
 
-URxvt*color8:  #002832
-URxvt*color9:  #cb4b16
-URxvt*color10: #576e74
-URxvt*color11: #647b82
-URxvt*color12: #829496
-URxvt*color13: #6c70c0
-URxvt*color14: #92a1a1
-URxvt*color15: #fdf6e5
+URxvt.color8:  #002832
+URxvt.color9:  #cb4b16
+URxvt.color10: #576e74
+URxvt.color11: #647b82
+URxvt.color12: #829496
+URxvt.color13: #6c70c0
+URxvt.color14: #92a1a1
+URxvt.color15: #fdf6e5
