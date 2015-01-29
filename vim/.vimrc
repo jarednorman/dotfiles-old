@@ -23,10 +23,12 @@ Plugin 'tpope/vim-rails'
 
 " language support
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mintplant/vim-literate-coffeescript'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'elixir-lang/vim-elixir'
+
 Plugin 'slim-template/vim-slim'
 Plugin 'nono/vim-handlebars'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'mustache/vim-mustache-handlebars'
 
 " tool support
