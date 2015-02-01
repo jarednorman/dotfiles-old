@@ -93,6 +93,7 @@ set wildmode=list:longest,list:full
 set wildmenu
 set splitright
 set splitbelow
+set fillchars=vert:\│
 set cursorline
 
 " Allow local vimrc
