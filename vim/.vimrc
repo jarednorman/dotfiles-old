@@ -82,7 +82,6 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 
-set number
 set colorcolumn=81
 set wrap
 set hlsearch

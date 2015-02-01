@@ -11,10 +11,10 @@ URxvt.geometry:       90x30
 URxvt.transparent:    false
 URxvt.loginShell:     true
 URxvt.saveLines:      10000
-URxvt.internalBorder: 9
+URxvt.internalBorder: 4
 
-URxvt.font:        xft:DejaVu Sans Mono:size=11
-URxvt.boldFont:    xft:DejaVu Sans Mono:size=11
+URxvt.font:        xft:Source Code Pro:size=10
+URxvt.boldFont:    xft:Source Code Pro:size=10
 URxvt.lineSpace:   0
 
 URxvt.scrollBar: false
@@ -26,7 +26,6 @@ URxvt.pointerBlank: true
 
 URxvt.background:  #fdf6e5
 URxvt.foreground:  #647b82
-URxvt.fading:      25
 URxvt.fadeColor:   #fdf6e5
 URxvt.cursorColor: #647b82
 
