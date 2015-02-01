@@ -82,9 +82,12 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 
+set hlsearch
+set ignorecase
+set smartcase
+
 set colorcolumn=81
 set wrap
-set hlsearch
 set cmdheight=1
 set list listchars=tab:»→,trail:␣
 set wildmode=list:longest,list:full
