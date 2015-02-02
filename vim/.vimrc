@@ -88,7 +88,6 @@ set hlsearch
 set ignorecase
 set smartcase
 
-set colorcolumn=81
 set wrap
 set cmdheight=1
 set list listchars=tab:»→,trail:␣
@@ -96,6 +95,7 @@ set wildmode=list:longest,list:full
 set splitright
 set splitbelow
 set fillchars+=vert:│
+match Todo '\%>80v.\+'
 
 " Allow local vimrc
 set exrc
