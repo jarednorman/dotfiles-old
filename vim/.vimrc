@@ -95,7 +95,7 @@ set list listchars=tab:»→,trail:␣
 set wildmode=list:longest,list:full
 set splitright
 set splitbelow
-set fillchars=vert:\│
+set fillchars+=vert:│
 
 " Allow local vimrc
 set exrc
