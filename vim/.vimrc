@@ -95,7 +95,7 @@ set wildmode=list:longest,list:full
 set splitright
 set splitbelow
 set fillchars+=vert:│
-match Todo '\%>80v.\+'
+au WinEnter * match Todo '\%>80v.\+'
 
 " Allow local vimrc
 set exrc
