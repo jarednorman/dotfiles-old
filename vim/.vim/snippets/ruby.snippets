@@ -1,0 +1,23 @@
+snippet desc
+	describe "${1:message}" do
+		${0:pending 'Not implemented'}
+	end
+
+snippet cont
+	context "${1:message}" do
+		${0:pending 'Not implemented'}
+	end
+
+snippet bef
+	before do
+		${0}
+	end
+
+snippet let
+	let(:${1:object}) { ${0} }
+
+snippet let!
+	let!(:${1:object}) { ${0} }
+
+snippet subj
+	subject { ${0} }

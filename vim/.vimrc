@@ -48,6 +48,7 @@ Plugin 'L9'
 Plugin 'mattn/gist-vim'
 Plugin 'bling/vim-airline'
 Plugin 'sjl/splice.vim'
+Plugin 'garbas/vim-snipmate'
 
 " Colors
 Plugin 'jarednorman/vim-colors-solarized'
