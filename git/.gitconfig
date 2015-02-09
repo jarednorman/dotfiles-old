@@ -40,8 +40,8 @@
   rc  = rebase --continue
   ri  = rebase -i
   rh  = reset --hard
-  s   = status
-  ss  = status -s
+  s   = status -s
+  ss  = status
   zz  = "!git checkout master && git pull --rebase origin master"
 [color]
   branch       = auto
