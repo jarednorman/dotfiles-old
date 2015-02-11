@@ -118,6 +118,7 @@ nnoremap <leader>a :A<cr>
 call togglebg#map("") " Make ToggleBG work
 nnoremap <leader>b :ToggleBG<cr>
 nnoremap <leader>d :!mkdir -p %:p:h<cr>
+nnoremap <leader>fg :call FzyCommand("ag -g '' $(bundle show $(bundle list \| cut -f 4 -d' ' \| fzy))", ":e")<cr>
 nnoremap <leader>gc :Gcommit -av<cr>
 nnoremap <leader>gd :Git d<cr>
 nnoremap <leader>gb :Gblame<cr>
