@@ -150,9 +150,6 @@ let g:projectiles = {
       \  }
       \}
 
-"RSpec + Dispatch!
-let g:rspec_command = 'Dispatch rspec {spec}'
-
 function! FzyCommand(choice_command, vim_command)
   try
     let output = system(a:choice_command . " | fzy ")
