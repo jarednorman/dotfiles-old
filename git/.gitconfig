@@ -31,7 +31,7 @@
   ds  = diff --color --staged
   ff  = merge --ff-only
   hp  = "!. ~/.githelpers && show_git_head"
-  l   = log --graph --pretty=format:'%C(blue)%h %C(bold red)%cd %C(bold green)%s %C(bold cyan)%an%Creset%C(bold magenta)%d' --abbrev-commit --date=short
+  l   = log --graph --pretty=format:'%C(bold cyan)%h%C(reset) %C(blue)%cd %C(bold green)%s %C(bold cyan)%an%Creset%C(bold red)%d' --abbrev-commit --date=short
   lg  = "!. ~/.githelpers && pretty_git_log"
   m   = merge
   mff = merge --ff-only
