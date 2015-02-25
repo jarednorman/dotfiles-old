@@ -113,8 +113,9 @@ nnoremap <c-h> <c-PageUp>
 
 nnoremap <leader><cr> <cr>
 nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l", ":e")<cr>
-nnoremap <leader><tab> :AE<cr>
-nnoremap <leader>a :A<cr>
+nnoremap <leader><tab> :tabnew<cr>
+nnoremap <leader>[ :tabprev<cr>
+nnoremap <leader>] :tabnext<cr>
 call togglebg#map("") " Make ToggleBG work
 nnoremap <leader>b :ToggleBG<cr>
 nnoremap <leader>d :!mkdir -p %:p:h<cr>
@@ -127,8 +128,6 @@ nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
-nnoremap <leader>n :tabnext<cr>
-nnoremap <leader>p :tabprev<cr>
 nnoremap <leader>q :ccl<cr>
 nnoremap <leader>r :Start<cr>
 nnoremap <leader>s :let @/=""<cr>
