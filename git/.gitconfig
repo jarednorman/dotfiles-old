@@ -41,6 +41,7 @@
   ra  = rebase --abort
   rc  = rebase --continue
   ri  = rebase -i
+  flog = reflog --pretty=format:'%C(bold cyan)%h%C(reset) %C(blue)%cd %C(bold green)%s %C(bold cyan)%an%Creset%C(bold red)%d' --abbrev-commit --date=short
   rh  = reset --hard
   s   = status -s
   ss  = status

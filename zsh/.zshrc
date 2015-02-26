@@ -15,6 +15,9 @@ REPORTTIME=10
 # When I'm working on hatred projects
 export LOVE=/Applications/love.app/Contents/MacOS/love
 
+for file in ~/.zsh/functions/*.sh; do
+  source "$file"
+done
 for file in ~/.zsh/aliases/*.sh; do
   source "$file"
 done
