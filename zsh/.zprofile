@@ -14,6 +14,8 @@ typeset -gU cdpath fpath mailpath path
 [ -f /usr/local/share/chruby/auto.sh ]   && source /usr/local/share/chruby/auto.sh
 [ -f /usr/chruby/auto.sh ]               && source /usr/share/chruby/auto.sh
 
+source ~/.zsh/vendor/bundler-exec.sh
+
 # Hub
 eval "$(hub alias -s)"
 

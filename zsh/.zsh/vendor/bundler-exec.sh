@@ -6,33 +6,28 @@
 
 ## Functions
 
-bundler-installed()
-{
-    which bundle > /dev/null 2>&1
-}
-
 within-bundled-project()
 {
-    local dir="$(pwd)"
-    while [ "$(dirname $dir)" != "/" ]; do
-        [ -f "$dir/Gemfile" ] && return
-        dir="$(dirname $dir)"
-    done
-    false
+  local dir="$(pwd)"
+  while [ "$(dirname $dir)" != "/" ]; do
+    [ -f "$dir/Gemfile" ] && return
+    dir="$(dirname $dir)"
+  done
+  false
 }
 
 run-with-bundler()
 {
-    if bundler-installed && within-bundled-project; then
-        bundle exec "$@"
-    else
-        "$@"
-    fi
+  if within-bundled-project; then
+    bundle exec "$@"
+  else
+    "$@"
+  fi
 }
 
 ## Main program
 
-BUNDLED_COMMANDS="${BUNDLED_COMMANDS:-
+BUNDLED_COMMANDS=(
 berks
 cap
 capify
@@ -50,12 +45,15 @@ html2haml
 jasmine
 kitchen
 knife
+middleman
 pry
+rails
 rackup
 rake
 rake2thor
 rspec
 ruby
+rails
 sass
 sass-convert
 serve
@@ -70,10 +68,8 @@ tt
 turn
 unicorn
 unicorn_rails
-}"
+)
 
 for CMD in $BUNDLED_COMMANDS; do
-    if [[ $CMD != "bundle" && $CMD != "gem" ]]; then
-        alias $CMD="run-with-bundler $CMD"
-    fi
+  alias $CMD="run-with-bundler $CMD"
 done
