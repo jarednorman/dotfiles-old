@@ -46,7 +46,6 @@ Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
 Plugin 'L9'
 Plugin 'mattn/gist-vim'
-Plugin 'bling/vim-airline'
 Plugin 'sjl/splice.vim'
 Plugin 'garbas/vim-snipmate'
 
@@ -68,10 +67,6 @@ endif
 set background=light
 colo solarized
 
-" airline
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-
 " delimitMate
 let g:SuperTabCrMapping = 0
 let g:delimitMate_expand_space = 1
@@ -81,6 +76,7 @@ set noswapfile
 set nobackup
 set noerrorbells visualbell t_vb=
 
+set number
 set expandtab
 set softtabstop=2
 set shiftwidth=2
