@@ -77,9 +77,9 @@ set nobackup
 set noerrorbells visualbell t_vb=
 
 set number
-set expandtab
-set softtabstop=2
-set shiftwidth=2
+set noexpandtab
+set softtabstop=8
+set shiftwidth=8
 
 set hlsearch
 set ignorecase
