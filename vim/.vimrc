@@ -92,7 +92,8 @@ set wildmode=list:longest,list:full
 set splitright
 set splitbelow
 set fillchars+=vert:│
-au WinEnter * match Todo '\%>80v.\+'
+set colorcolumn=81
+set ttyfast
 
 " Allow local vimrc
 set exrc
