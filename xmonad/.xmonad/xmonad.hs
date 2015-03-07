@@ -8,11 +8,12 @@ myLayoutHook = avoidStruts (tall ||| noBorders Full)
                where tall = Tall 1 (1/100) (1/2)
 
 main = xmonad defaultConfig
-              { manageHook = manageDocks <+> manageHook defaultConfig
-              , terminal   = "urxvt"
-              , borderWidth = 3
-              , logHook    = ewmhDesktopsLogHook
-              , layoutHook = myLayoutHook
-              , handleEventHook = ewmhDesktopsEventHook
-              , startupHook = ewmhDesktopsStartup
+              { manageHook         = manageDocks <+> manageHook defaultConfig
+              , terminal           = "urxvt"
+              , borderWidth        = 2
+              , normalBorderColor  = "#eee8d7"
+              , focusedBorderColor = "#168dcc"
+              , layoutHook         = myLayoutHook
+              , handleEventHook    = ewmhDesktopsEventHook
+              , startupHook        = ewmhDesktopsStartup
               }
