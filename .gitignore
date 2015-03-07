@@ -1,5 +1,6 @@
 /vim/.vim/bundle
 /bin/bin/fzy
+/bin/bin/fix-audio.py
 /vim/.vim/.netrwhist
 /zsh/.zsh/local.zsh
 /xmonad/.xmonad/xmonad-x86_64-linux
