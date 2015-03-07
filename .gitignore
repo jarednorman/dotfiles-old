@@ -1,4 +1,7 @@
-vim/.vim/bundle
-bin/bin/fzy
-vim/.vim/.netrwhist
-zsh/.zsh/local.zsh
+/vim/.vim/bundle
+/bin/bin/fzy
+/vim/.vim/.netrwhist
+/zsh/.zsh/local.zsh
+/xmonad/.xmonad/xmonad-x86_64-linux
+/xmonad/.xmonad/xmonad.errors
+/xmonad/.xmonad/xmonad.hi
