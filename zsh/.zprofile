@@ -11,19 +11,21 @@ typeset -gU cdpath fpath mailpath path
 
 source $HOME/.zsh/vendor/chruby/chruby.sh && chruby 2.1.4
 source $HOME/.zsh/vendor/chruby/auto.sh
+source $HOME/.zsh/vendor/bundler-exec.sh
 
-source ~/.zsh/vendor/bundler-exec.sh
-
-# Hub
+# hub
 eval "$(hub alias -s)"
 
+# golang
+export GOPATH=$HOME/Codes/go
+
 path=(
-  /home/jarednorman/Codes/elixir/bin
+  $HOME/Codes/elixir/bin
   $(ruby -rubygems -e "puts Gem.user_dir")/bin
   /usr/local/{bin,sbin}
   $HOME/bin
   $HOME/.luarocks/bin
-  $HOME/Codes/elixir/bin
   /usr/local/share/npm/bin
+  $GOPATH/bin
   $path
 )

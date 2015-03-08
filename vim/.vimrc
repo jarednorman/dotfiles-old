@@ -26,6 +26,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mintplant/vim-literate-coffeescript'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'fatih/vim-go'
 
 Plugin 'slim-template/vim-slim'
 Plugin 'nono/vim-handlebars'
