@@ -1,8 +1,6 @@
-/vim/.vim/bundle
-/bin/bin/fzy
-/bin/bin/fix-audio.py
-/bin/bin/audio-codec.py
+/bin/bin/local/*
 /vim/.vim/.netrwhist
+/vim/.vim/bundle
 /zsh/.zsh/local.zsh
 /xmonad/.xmonad/xmonad-x86_64-linux
 /xmonad/.xmonad/xmonad.errors
