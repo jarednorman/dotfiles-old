@@ -106,14 +106,12 @@ inoremap \fn <C-R>=expand("%:t:r")<CR>
 nnoremap <cr> :
 nnoremap K \<noop>
 vnoremap K \<noop>
-nnoremap <c-l> <c-PageDown>
-nnoremap <c-h> <c-PageUp>
+nnoremap <left> :tabprev<cr>
+nnoremap <right> :tabnext<cr>
 
 nnoremap <leader><cr> <cr>
 nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l //", ":e")<cr>
 nnoremap <leader><tab> :tabnew<cr>
-nnoremap <leader>[ :tabprev<cr>
-nnoremap <leader>] :tabnext<cr>
 call togglebg#map("") " Make ToggleBG work
 nnoremap <leader>b :ToggleBG<cr>
 nnoremap <leader>d :!mkdir -p %:p:h<cr>
