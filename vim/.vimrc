@@ -110,7 +110,7 @@ nnoremap <left> :tabprev<cr>
 nnoremap <right> :tabnext<cr>
 
 nnoremap <leader><cr> <cr>
-nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l", ":e")<cr>
+nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l --hidden --ignore /.git", ":e")<cr>
 nnoremap <leader><tab> :tabnew<cr>
 call togglebg#map("") " Make ToggleBG work
 nnoremap <leader>b :ToggleBG<cr>
