@@ -23,4 +23,5 @@ for file in ~/.zsh/aliases/*.sh; do
 done
 source ~/.zsh/prompt.zsh
 
-[ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
+# hub
+eval "$(hub alias -s)"
