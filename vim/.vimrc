@@ -110,7 +110,7 @@ nnoremap <c-l> <c-PageDown>
 nnoremap <c-h> <c-PageUp>
 
 nnoremap <leader><cr> <cr>
-nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l", ":e")<cr>
+nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l //", ":e")<cr>
 nnoremap <leader><tab> :tabnew<cr>
 nnoremap <leader>[ :tabprev<cr>
 nnoremap <leader>] :tabnext<cr>
