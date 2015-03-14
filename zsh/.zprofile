@@ -8,7 +8,7 @@ fi
 
 typeset -gU cdpath fpath mailpath path
 
-source $HOME/.zsh/vendor/chruby/chruby.sh && chruby 2.1.4
+source $HOME/.zsh/vendor/chruby/chruby.sh && chruby 2.2.1
 source $HOME/.zsh/vendor/chruby/auto.sh
 source $HOME/.zsh/vendor/bundler-exec.sh
 
