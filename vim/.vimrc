@@ -87,7 +87,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
-set wrap
+set nowrap
 set cmdheight=1
 set list listchars=tab:»→,trail:␣
 set wildmode=list:longest,list:full
