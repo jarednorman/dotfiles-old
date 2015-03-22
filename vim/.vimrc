@@ -89,6 +89,7 @@ set smartcase
 
 set nowrap
 set cmdheight=1
+set statusline=%f\ %y
 set list listchars=tab:»→,trail:␣
 set wildmode=list:longest,list:full
 set splitright
