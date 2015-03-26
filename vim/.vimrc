@@ -63,10 +63,7 @@ let g:gist_post_private = 1
 
 syntax enable
 set t_Co=256
-if !has("gui_running")
-  let g:gruvbox_italic=0
-endif
-set background=light
+set background=dark
 colo solarized
 
 " delimitMate
@@ -90,7 +87,7 @@ set smartcase
 set nowrap
 set cmdheight=1
 set statusline=%f\ %y
-set list listchars=tab:»→,trail:␣
+set list listchars=tab:»─,trail:─
 set wildmode=list:longest,list:full
 set splitright
 set splitbelow
