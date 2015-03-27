@@ -38,6 +38,7 @@ Plugin 'rking/ag.vim'
 Plugin 'int3/vim-extradite'
 Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'Keithbsmiley/rspec.vim'
+Plugin 'scrooloose/syntastic'
 
 " Other Stuff
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -66,10 +67,14 @@ set t_Co=256
 set background=dark
 colo solarized-modified
 
-" delimitMate
-let g:SuperTabCrMapping = 0
-let g:delimitMate_expand_space = 1
-let g:delimitMate_expand_cr = 2
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_mode_map = { "mode": "passive" }
 
 set noswapfile
 set nobackup
@@ -107,6 +112,7 @@ nnoremap K \<noop>
 vnoremap K \<noop>
 nnoremap <left> :tabprev<cr>
 nnoremap <right> :tabnext<cr>
+nnoremap <leader>/ :let @/=""<cr>
 
 nnoremap <leader><cr> <cr>
 nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l --hidden --ignore /.git", ":e")<cr>
@@ -125,7 +131,8 @@ nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 nnoremap <leader>q :ccl<cr>
 nnoremap <leader>r :Start<cr>
-nnoremap <leader>s :let @/=""<cr>
+nnoremap <leader>sc :SyntasticCheck<cr>
+nnoremap <leader>sr :SyntasticReset<cr>
 nnoremap <leader>t :Dispatch<cr>
 nnoremap <leader>w :w!<cr>
 
