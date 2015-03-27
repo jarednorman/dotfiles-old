@@ -52,7 +52,7 @@ Plugin 'sjl/splice.vim'
 Plugin 'garbas/vim-snipmate'
 
 " Colors
-Plugin 'jarednorman/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,7 +64,7 @@ let g:gist_post_private = 1
 syntax enable
 set t_Co=256
 set background=dark
-colo solarized
+colo solarized-modified
 
 " delimitMate
 let g:SuperTabCrMapping = 0
