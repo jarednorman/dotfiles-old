@@ -24,4 +24,6 @@ done
 source ~/.zsh/prompt.zsh
 
 # hub
-eval "$(hub alias -s)"
+if type hub > /dev/null; then
+  eval "$(hub alias -s)"
+fi
