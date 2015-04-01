@@ -133,6 +133,7 @@ nnoremap <leader>q :ccl<cr>
 nnoremap <leader>r :Start<cr>
 nnoremap <leader>sc :SyntasticCheck<cr>
 nnoremap <leader>sr :SyntasticReset<cr>
+nnoremap <leader>st :SyntasticToggleMode<cr>
 nnoremap <leader>t :Dispatch<cr>
 nnoremap <leader>w :w!<cr>
 
