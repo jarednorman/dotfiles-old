@@ -7,4 +7,5 @@ Mechanize.
   map(&:text).
   map(&:strip).
   reject(&:empty?).
-  each { |beer| puts beer }
+  sample.
+  tap { |beer_list| puts beer_list }
