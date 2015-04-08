@@ -607,7 +607,7 @@ elseif  (g:solarized_visibility=="low")
     exe "hi! NonText"    .s:fmt_bold   .s:fg_base02 .s:bg_none
 else
     exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base00 .s:bg_base02
-    exe "hi! NonText"    .s:fmt_bold   .s:fg_base00 .s:bg_none
+    exe "hi! NonText"    .s:fmt_none   .s:fg_base02 .s:bg_none
 endif
 exe "hi! StatusLine"     .s:fmt_none   .s:fg_base03 .s:bg_cyan
 exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base02 .s:bg_base01
