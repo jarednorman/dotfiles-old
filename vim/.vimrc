@@ -80,7 +80,7 @@ set noswapfile
 set nobackup
 set noerrorbells visualbell t_vb=
 
-set number
+set nonumber
 set expandtab
 set softtabstop=2
 set shiftwidth=2
