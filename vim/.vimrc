@@ -97,7 +97,6 @@ set wildmode=list:longest,list:full
 set splitright
 set splitbelow
 set fillchars+=vert:│
-set colorcolumn=81
 set ttyfast
 
 " Allow local vimrc
