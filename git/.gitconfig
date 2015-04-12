@@ -13,8 +13,8 @@
   cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
   trustExitCode = true
 [user]
-	name = Jared Norman
-	email = jared@freerunningtechnologies.com
+  name = Jared Norman
+  email = jared@freerunningtechnologies.com
 [github]
   user = jarednorman
 [alias]
@@ -34,7 +34,6 @@
   l   = log --graph --pretty=format:'%C(bold cyan)%h%C(reset) %C(blue)%cd %C(bold green)%s %C(bold cyan)%an%Creset%C(bold red)%d' --abbrev-commit --date=short
   lg  = "!. ~/.githelpers && pretty_git_log"
   m   = merge
-  mff = merge --ff-only
   p   = pull
   pr  = pull --rebase
   r   = rebase
@@ -45,7 +44,6 @@
   rh  = reset --hard
   s   = status -s
   ss  = status
-  zz  = "!git checkout master && git pull --rebase origin master"
 [color]
   branch       = auto
   diff         = auto
