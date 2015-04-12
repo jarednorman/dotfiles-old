@@ -8,52 +8,45 @@ let g:mapleader = "\<space>"
 
 Plugin 'gmarik/Vundle.vim'
 
-" tpope <3
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-projectionist'
-Plugin 'adammathys/vim-dispatch'
-Plugin 'tpope/vim-rails'
-
-" language support
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mintplant/vim-literate-coffeescript'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'fatih/vim-go'
-
-Plugin 'slim-template/vim-slim'
-Plugin 'nono/vim-handlebars'
-Plugin 'mustache/vim-mustache-handlebars'
-
-" tool support
-Plugin 'rking/ag.vim'
-Plugin 'int3/vim-extradite'
-Plugin 'sunaku/vim-ruby-minitest'
-Plugin 'Keithbsmiley/rspec.vim'
-Plugin 'scrooloose/syntastic'
-
-" Other Stuff
+" General
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'sjl/vitality.vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'ervandew/supertab'
-Plugin 'godlygeek/tabular'
 Plugin 'L9'
 Plugin 'mattn/gist-vim'
 Plugin 'sjl/splice.vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'rking/ag.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'scrooloose/syntastic'
 
-" Colors
+" Languages
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'fatih/vim-go'
+Plugin 'slim-template/vim-slim'
+Plugin 'mustache/vim-mustache-handlebars'
+
+" Colours
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'rking/vim-detailed'
+
+" tpope
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-projectionist'
+Plugin 'adammathys/vim-dispatch'
+Plugin 'tpope/vim-rails'
 
 call vundle#end()
 filetype plugin indent on
@@ -67,6 +60,7 @@ set t_Co=256
 set background=light
 colo solarized-modified
 
+set statusline=%f\ %y
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -75,6 +69,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_mode_map = { "mode": "passive" }
+
+
+" RSpec + Dispatch!
+let g:rspec_command = 'Dispatch bundle exec rspec {spec}'
+
+" Dispatch compilers
+let g:dispatch_compilers = { 'rspec-fast' : 'rspec',
+                           \ 'bundle exec': '' }
 
 set noswapfile
 set nobackup
@@ -91,7 +93,6 @@ set smartcase
 
 set nowrap
 set cmdheight=1
-set statusline=%f\ %y
 set list listchars=tab:»─,trail:─
 set wildmode=list:longest,list:full
 set splitright
@@ -99,9 +100,10 @@ set splitbelow
 set fillchars+=vert:│
 set ttyfast
 
-" Allow local vimrc
-set exrc
-set secure
+set undofile                " Save undo's after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
 
 " Insert filename without path or extension
 inoremap \fn <C-R>=expand("%:t:r")<CR>
@@ -116,7 +118,7 @@ nnoremap <leader>/ :let @/=""<cr>
 nnoremap <leader><cr> <cr>
 nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l --hidden --ignore /.git", ":e")<cr>
 nnoremap <leader><tab> :tabnew<cr>
-call togglebg#map("") " Make ToggleBG work
+" call togglebg#map("") " Make ToggleBG work
 nnoremap <leader>b :ToggleBG<cr>
 nnoremap <leader>d :!mkdir -p %:p:h<cr>
 nnoremap <leader>fg :call FzyCommand("ag -g '' $(bundle show $(bundle list \| cut -f 4 -d' ' \| fzy))", ":e")<cr>
@@ -135,21 +137,6 @@ nnoremap <leader>sr :SyntasticReset<cr>
 nnoremap <leader>st :SyntasticToggleMode<cr>
 nnoremap <leader>t :Dispatch<cr>
 nnoremap <leader>w :w!<cr>
-
-" Projectionist
-let g:projectiles = {
-      \  'mix.exs' : {
-      \    'lib/*.ex': {
-      \      'alternate' : "test/{}_test.exs"
-      \    },
-      \    'test/*_test.exs' : {
-      \      'alternate' : "lib/{}.ex",
-      \      'dispatch': "mix test",
-      \      'start' : "mix test",
-      \      'make' : "mix compile",
-      \    }
-      \  }
-      \}
 
 function! FzyCommand(choice_command, vim_command)
   try
