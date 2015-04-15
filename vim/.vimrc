@@ -8,9 +8,6 @@ let g:mapleader = "\<space>"
 
 Plugin 'gmarik/Vundle.vim'
 
-" Be Better at Vim
-Plugin 'wikitopian/hardmode'
-
 " General
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -54,9 +51,6 @@ Plugin 'tpope/vim-rails'
 call vundle#end()
 filetype plugin indent on
 syntax on
-
-" Hard.
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " gist-vim
 let g:gist_post_private = 1
