@@ -8,6 +8,9 @@ let g:mapleader = "\<space>"
 
 Plugin 'gmarik/Vundle.vim'
 
+" Be Better at Vim
+Plugin 'wikitopian/hardmode'
+
 " General
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -45,13 +48,15 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-projectionist'
 Plugin 'adammathys/vim-dispatch'
 Plugin 'tpope/vim-rails'
 
 call vundle#end()
 filetype plugin indent on
 syntax on
+
+" Hard.
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " gist-vim
 let g:gist_post_private = 1
@@ -70,14 +75,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_mode_map = { "mode": "passive" }
-
-
-" RSpec + Dispatch!
-let g:rspec_command = 'Dispatch bundle exec rspec {spec}'
-
-" Dispatch compilers
-let g:dispatch_compilers = { 'rspec-fast' : 'rspec',
-                           \ 'bundle exec': '' }
 
 set noswapfile
 set nobackup
@@ -138,6 +135,7 @@ nnoremap <leader>sr :SyntasticReset<cr>
 nnoremap <leader>st :SyntasticToggleMode<cr>
 nnoremap <leader>t :Dispatch<cr>
 nnoremap <leader>w :w!<cr>
+nnoremap <leader>x <Esc>:call ToggleHardMode()<CR>
 
 function! FzyCommand(choice_command, vim_command)
   try

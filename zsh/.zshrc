@@ -27,3 +27,10 @@ source ~/.zsh/prompt.zsh
 if type hub > /dev/null; then
   eval "$(hub alias -s)"
 fi
+
+chruby_auto
+source $HOME/.zsh/vendor/bundler-exec.sh
+path=(
+  $(ruby -rubygems -e "puts Gem.user_dir")/bin
+  $path
+)
