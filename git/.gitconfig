@@ -44,6 +44,8 @@
   rh  = reset --hard
   s   = status -s
   ss  = status
+[rebase]
+  autosquash = true
 [color]
   branch       = auto
   diff         = auto
