@@ -13,8 +13,8 @@ URxvt.loginShell:     true
 URxvt.saveLines:      10000
 URxvt.internalBorder: 8
 
-URxvt.font:        xft:Terminus:size=10
-URxvt.boldFont:    xft:Terminus:size=10
+URxvt.font:        xft:Terminus:size=12
+URxvt.boldFont:    xft:Terminus:bold:size=12
 URxvt.lineSpace:   0
 
 URxvt.scrollBar: false
