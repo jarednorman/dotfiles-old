@@ -11,10 +11,10 @@ URxvt.geometry:       90x30
 URxvt.transparent:    false
 URxvt.loginShell:     true
 URxvt.saveLines:      10000
-URxvt.internalBorder: 4
+URxvt.internalBorder: 9
 
-URxvt.font:        xft:Terminus:size=12
-URxvt.boldFont:    xft:Terminus:bold:size=12
+URxvt.font:        xft:Terminus:size=14
+URxvt.boldFont:    xft:Terminus:bold:size=14
 URxvt.lineSpace:   0
 
 URxvt.scrollBar: false
