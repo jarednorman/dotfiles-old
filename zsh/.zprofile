@@ -17,4 +17,5 @@ path=(
   $HOME/.luarocks/bin
   /usr/local/share/npm/bin
   $path
+  $HOME/.rvm/bin
 )
