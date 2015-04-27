@@ -10,12 +10,13 @@
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
-   dotspacemacs-configuration-layers '(better-defaults
-                                       auto-completion
-                                       (git :variables git-gutter-use-fringe t)
-                                       ruby
+   dotspacemacs-configuration-layers '(auto-completion
+                                       better-defaults
                                        chruby
-                                       haskell)
+                                       (git :variables git-gutter-use-fringe t)
+                                       haskell
+                                       javascript
+                                       ruby)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -34,7 +35,7 @@ before layers configuration."
   (autoload 'haskell-indentation-disable-show-indentations "haskell-indentation")
   ;; Good Ruby/Rails support
   (setq-default ruby-enable-ruby-on-rails-support t)
-  (setq-default ruby-version-manager 'rbenv)
+  (setq-default ruby-version-manager 'rvm)
   ;; Fix Ruby formatting styles.
   (setq-default ruby-deep-indent-paren nil)
   (setq-default enh-ruby-hanging-brace-deep-indent-level 1)
