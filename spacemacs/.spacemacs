@@ -32,8 +32,13 @@ before layers configuration."
   (add-to-list 'exec-path "~/.cabal/bin/")
   (autoload 'haskell-indentation-enable-show-indentations "haskell-indentation")
   (autoload 'haskell-indentation-disable-show-indentations "haskell-indentation")
-  ;; Rails support
+  ;; Good Ruby/Rails support
   (setq-default ruby-enable-ruby-on-rails-support t)
+  (setq-default ruby-version-manager 'rbenv)
+  ;; Fix Ruby formatting styles.
+  (setq-default ruby-deep-indent-paren nil)
+  (setq-default enh-ruby-hanging-brace-deep-indent-level 1)
+  (setq-default enh-ruby-hanging-paren-deep-indent-level 1)
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
@@ -63,7 +68,7 @@ before layers configuration."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
