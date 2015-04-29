@@ -13,6 +13,7 @@
    dotspacemacs-configuration-layers '(auto-completion
                                        better-defaults
                                        chruby
+                                       erlang-elixir
                                        (git :variables git-gutter-use-fringe t)
                                        haskell
                                        javascript
