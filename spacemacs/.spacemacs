@@ -14,6 +14,7 @@
                                        better-defaults
                                        chruby
                                        erlang-elixir
+                                       evil-commentary
                                        (git :variables git-gutter-use-fringe t)
                                        haskell
                                        javascript
