@@ -1,2 +1,2 @@
 #!/bin/bash
-stow ag bin git spacemacs tmux vim x xmonad zsh -t ~
+stow ag bin ruby git tmux vim x xmonad zsh -t ~

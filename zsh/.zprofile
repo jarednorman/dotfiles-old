@@ -8,8 +8,10 @@ fi
 
 typeset -gU cdpath fpath mailpath path
 
+source $HOME/.zsh/vendor/chruby/chruby.sh
+source $HOME/.zsh/vendor/chruby/auto.sh
+
 path=(
-  $HOME/.cabal/bin
   $HOME/Codes/elixir/bin
   /usr/local/{bin,sbin}
   $HOME/bin
@@ -17,5 +19,4 @@ path=(
   $HOME/.luarocks/bin
   /usr/local/share/npm/bin
   $path
-  $HOME/.rvm/bin
 )
