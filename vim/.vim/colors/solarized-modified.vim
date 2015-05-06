@@ -806,6 +806,18 @@ exe "hi! rubyDefine"     . s:fg_base1  .s:bg_back   .s:fmt_bold
 "hi! link rubyClassVariable     Identifier
 "hi! link rubyConstant          Type
 "}}}
+" YARD syntax highlighting "{{{
+" ---------------------------------------------------------------------
+hi link yardGenericTag Underlined
+hi link yardDuckType Todo
+hi link yardType Todo
+hi link yardLiteral Todo
+hi link yardOrderDependentList Todo
+hi link yardParametricType Todo
+hi link yardTypeList Todo
+hi link yardHashAngle Todo
+hi link yardHashCurly Todo
+"}}}
 " haskell syntax highlighting"{{{
 " ---------------------------------------------------------------------
 " For use with syntax/haskell.vim : Haskell Syntax File

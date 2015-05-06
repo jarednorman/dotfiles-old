@@ -28,6 +28,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'fatih/vim-go'
 Plugin 'slim-template/vim-slim'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'noprompt/vim-yardoc'
 
 " Colours
 Plugin 'altercation/vim-colors-solarized'
@@ -74,7 +75,6 @@ set noswapfile
 set nobackup
 set noerrorbells visualbell t_vb=
 
-set number
 set expandtab
 set softtabstop=2
 set shiftwidth=2
