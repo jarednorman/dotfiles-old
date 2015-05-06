@@ -59,7 +59,7 @@ let g:gist_post_private = 1
 syntax enable
 set t_Co=256
 set background=light
-colo solarized-modified
+colo jaredized
 
 set statusline=%f\ %y
 set statusline+=%#warningmsg#
