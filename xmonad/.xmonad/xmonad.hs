@@ -4,7 +4,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.NoBorders
 
-myLayoutHook = avoidStruts (tall ||| twoTall ||| threeTall ||| noBorders threeTall ||| noBorders Full)
+myLayoutHook = avoidStruts (noBorders Full ||| tall ||| twoTall ||| threeTall ||| noBorders threeTall)
                where
                   tall      = Tall 1 (1/100) (1/2)
                   twoTall   = Tall 2 (1/100) (1/2)
@@ -13,9 +13,9 @@ myLayoutHook = avoidStruts (tall ||| twoTall ||| threeTall ||| noBorders threeTa
 main = xmonad defaultConfig
               { manageHook         = manageDocks <+> manageHook defaultConfig
               , terminal           = "urxvt"
-              , borderWidth        = 3
+              , borderWidth        = 5
               , normalBorderColor  = "#eee8d7"
-              , focusedBorderColor = "#168dcc"
+              , focusedBorderColor = "#cb4b16"
               , layoutHook         = myLayoutHook
               , handleEventHook    = ewmhDesktopsEventHook
               , startupHook        = ewmhDesktopsStartup

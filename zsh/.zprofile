@@ -9,11 +9,10 @@ fi
 typeset -gU cdpath fpath mailpath path
 
 path=(
-  $HOME/Codes/elixir/bin
-  /usr/local/{bin,sbin}
   $HOME/bin
   $HOME/bin/local
-  $HOME/.luarocks/bin
+  $HOME/Codes/elixir/bin
+  /usr/local/{bin,sbin}
   /usr/local/share/npm/bin
   $path
 )

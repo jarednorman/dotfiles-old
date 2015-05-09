@@ -18,36 +18,30 @@ Plugin 'mattn/gist-vim'
 Plugin 'sjl/splice.vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'rking/ag.vim'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'scrooloose/syntastic'
-
-" Languages
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'fatih/vim-go'
 Plugin 'slim-template/vim-slim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'noprompt/vim-yardoc'
-
-" Colours
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'rking/vim-detailed'
-
-" tpope
 Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
 filetype plugin indent on

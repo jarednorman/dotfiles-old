@@ -13,8 +13,11 @@ HISTFILE=~/.histfile
 # Apparently this reports time info for long running jobs.
 REPORTTIME=10
 
-# For when I'm working on hatred projects.
-export LOVE=/Applications/love.app/Contents/MacOS/love
+# Chruby up, and get the gems into my path.
+source $HOME/.zsh/vendor/chruby/chruby.sh
+source $HOME/.zsh/vendor/chruby/auto.sh
+source $HOME/.zsh/vendor/bundler-exec.sh
+chruby_auto
 
 # The source of my power.
 for file in ~/.zsh/functions/*.sh; do
@@ -29,13 +32,3 @@ source ~/.zsh/prompt.zsh
 if type hub > /dev/null; then
   eval "$(hub alias -s)"
 fi
-
-# Chruby up, and get the gems into my path.
-source $HOME/.zsh/vendor/chruby/chruby.sh
-source $HOME/.zsh/vendor/chruby/auto.sh
-chruby_auto
-source $HOME/.zsh/vendor/bundler-exec.sh
-path=(
-  $(ruby -rubygems -e "puts Gem.user_dir")/bin
-  $path
-)
