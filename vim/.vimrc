@@ -46,7 +46,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
-Plugin 'adammathys/vim-dispatch'
+Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-rails'
 
 call vundle#end()
@@ -65,6 +65,8 @@ set statusline=%f\ %y
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+set shell=$SHELL
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -137,15 +139,8 @@ nnoremap <leader>sc :SyntasticCheck<cr>
 nnoremap <leader>sr :SyntasticReset<cr>
 nnoremap <leader>st :SyntasticToggleMode<cr>
 
-" Toggles
-call togglebg#map("") " Make ToggleBG work
-nnoremap <leader>tb :ToggleBG<cr>
-
 " Windows
 nnoremap <leader>wh <C-w>h
 nnoremap <leader>wj <C-w>j
 nnoremap <leader>wk <C-w>k
 nnoremap <leader>wl <C-w>l
-nnoremap <leader>tc :tabnew<cr>
-nnoremap <leader>tn :tabnext<cr>
-nnoremap <leader>tp :tabprev<cr>

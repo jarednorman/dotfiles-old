@@ -8,9 +8,6 @@ fi
 
 typeset -gU cdpath fpath mailpath path
 
-source $HOME/.zsh/vendor/chruby/chruby.sh
-source $HOME/.zsh/vendor/chruby/auto.sh
-
 path=(
   $HOME/Codes/elixir/bin
   /usr/local/{bin,sbin}
