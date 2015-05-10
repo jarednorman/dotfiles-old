@@ -4,7 +4,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.NoBorders
 
-myLayoutHook = avoidStruts (noBorders Full ||| tall ||| twoTall ||| threeTall ||| noBorders threeTall)
+myLayoutHook = avoidStruts (Full ||| noBorders Full ||| tall ||| twoTall ||| threeTall ||| noBorders threeTall)
                where
                   tall      = Tall 1 (1/100) (1/2)
                   twoTall   = Tall 2 (1/100) (1/2)
