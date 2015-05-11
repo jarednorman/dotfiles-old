@@ -9,10 +9,10 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1%s$(parse_git_dirty))/"
 }
 
-local suspended_jobs='%{$fg_bold[green]%}%(1j.<%j>.)%{$reset_color%}'
+local suspended_jobs='%{$fg_bold[green]%}%(1j.(%j).)%{$reset_color%}'
 local ruby_version='%{$fg_bold[cyan]%}$(chruby | grep "*" | cut -d" " -f3)%{$reset_color%}'
 local root_prompt='%{$fg[red]%}(YOU ARE ROOT)%{$fg_bold[red]%}#'
-local user_prompt='%{$fg[blue]%}$'
+local user_prompt='%{$fg[blue]%}>'
 local current_dir='%{$fg[cyan]%}%1d%{$reset_color%}'
 local git_current_branch='%{$fg[blue]%}$(parse_git_branch)%{$reset_color%}'
 
