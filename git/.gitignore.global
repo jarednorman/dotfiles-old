@@ -48,5 +48,6 @@ tags
 # Other Stuff #
 ###############
 **/vendor/bundle
+vendor/bundle
 .bundle/config
 .vimrc
