@@ -79,6 +79,8 @@ set hlsearch
 set ignorecase
 set smartcase
 
+set number
+set colorcolumn=81
 set wrap
 set cmdheight=1
 set list listchars=tab:»─,trail:─
@@ -132,6 +134,12 @@ nnoremap <leader>pt :Dispatch<cr>
 nnoremap <leader>sc :SyntasticCheck<cr>
 nnoremap <leader>sr :SyntasticReset<cr>
 nnoremap <leader>st :SyntasticToggleMode<cr>
+
+" Tabs
+nnoremap <leader>tc :tabnew<cr>
+nnoremap <leader>tn :tabnext<cr>
+nnoremap <leader>tp :tabprev<cr>
+nnoremap <leader>tx :tabclose<cr>
 
 " Windows
 nnoremap <leader>wh <C-w>h
