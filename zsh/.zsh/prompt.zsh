@@ -12,13 +12,7 @@ local root_prompt="%F{red}%#%f "
 local user_prompt="%F{cyan}>%f "
 PROMPT='${current_dir}${vcs_info_msg_0_}%(!.${root_prompt}.${user_prompt})'
 
-# I don't know what this does... stolen from Adam. I'll look into it one day. :D
-function zle-line-init zle-keymap-select {
-  local vim_prompt="%K{cyan}%F{white}%B NORMAL %b%f%k"
-  RPROMPT="${${KEYMAP/vicmd/${vim_prompt}}/(main|viins)/}"
-  zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
+local ruby_version="%B%F{cyan}$(chruby | grep "*" | cut -d" " -f3)%f%b"
+export RPROMPT="${ruby_version}"
 
 setopt promptsubst
