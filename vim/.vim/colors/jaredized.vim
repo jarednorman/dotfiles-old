@@ -526,8 +526,8 @@ else
     exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base00 .s:bg_base02
     exe "hi! NonText"    .s:fmt_none   .s:fg_base02 .s:bg_none
 endif
-exe "hi! StatusLine"     .s:fmt_none   .s:fg_base03 .s:bg_blue
-exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base02  .s:bg_base01
+exe "hi! StatusLine"     .s:fmt_none   .s:fg_base03 .s:bg_base1
+exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base01 .s:bg_base02
 exe "hi! Visual"         .s:fmt_none   .s:fg_base01 .s:bg_base03 .s:fmt_revbb
 exe "hi! Directory"      .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ErrorMsg"       .s:fmt_revr   .s:fg_red    .s:bg_none
@@ -535,12 +535,12 @@ exe "hi! IncSearch"      .s:fmt_none   .s:fg_base03 .s:bg_orange
 exe "hi! Search"         .s:fmt_none   .s:fg_base03 .s:bg_green
 exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
-exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02
+exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_none
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
 if ( has("gui_running") || &t_Co > 8 )
-    exe "hi! VertSplit"  .s:fmt_none   .s:fg_base01 .s:bg_base01
+    exe "hi! VertSplit"  .s:fmt_none   .s:fg_base01 .s:bg_none
 else
-    exe "hi! VertSplit"  .s:fmt_revbb  .s:fg_base01 .s:bg_base01
+    exe "hi! VertSplit"  .s:fmt_revbb  .s:fg_base01 .s:bg_none
 endif
 exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
 exe "hi! VisualNOS"      .s:fmt_stnd   .s:fg_none   .s:bg_base02 .s:fmt_revbb

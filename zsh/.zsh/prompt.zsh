@@ -13,7 +13,7 @@ local root_prompt="%F{red}%#%f "
 local user_prompt="%F{cyan}>%f "
 PROMPT='${current_dir}${vcs_info_msg_0_}${suspended_jobs}%(!.${root_prompt}.${user_prompt})'
 
-local ruby_version="%B%F{cyan}$(chruby | grep "*" | cut -d" " -f3)%f%b"
-export RPROMPT="${ruby_version}"
+local ruby_version='%B%F{cyan}$(chruby | grep "*" | cut -d" " -f3)%f%b'
+RPROMPT="${ruby_version}"
 
 setopt promptsubst
