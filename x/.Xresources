@@ -11,11 +11,10 @@ URxvt.geometry:       90x30
 URxvt.transparent:    false
 URxvt.loginShell:     true
 URxvt.saveLines:      10000
-URxvt.internalBorder: 8
+URxvt.internalBorder: 7
 
-URxvt.font:        xft:Terminus:size=12
-URxvt.boldFont:    xft:Terminus:bold:size=12
-URxvt.lineSpace:   0
+URxvt.font:        xft:Office Code Pro:regular:size=11
+URxvt.boldFont:    xft:Office Code Pro:medium:size=11
 
 URxvt.scrollBar: false
 
