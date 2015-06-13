@@ -8,7 +8,6 @@ let g:mapleader = "\<space>"
 
 Plugin 'gmarik/Vundle.vim'
 
-" General
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'mattn/webapi-vim'
@@ -42,6 +41,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'itchyny/lightline.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -66,6 +66,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_mode_map = { "mode": "passive" }
+
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
 
 set noswapfile
 set nobackup
