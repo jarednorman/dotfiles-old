@@ -114,37 +114,21 @@ nnoremap K \<noop>
 vnoremap K \<noop>
 nnoremap <leader>/ :let @/=""<cr>
 nnoremap <leader><cr> <cr>
+nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l --hidden --ignore /.git", ":e")<cr>
 
-" Buffer
-nnoremap <leader>bd :!mkdir -p %:p:h<cr>
 
-" Project
-nnoremap <leader>pf :call FzyCommand("ag --nocolor -l --hidden --ignore /.git", ":e")<cr>
-nnoremap <leader>pgf :call FzyCommand("ag -g '' $(bundle show $(bundle list \| cut -f 4 -d' ' \| fzy))", ":e")<cr>
-
-" Git
+nnoremap <leader>fg :call FzyCommand("ag -g '' $(bundle show $(bundle list \| cut -f 4 -d' ' \| fzy))", ":e")<cr>
+nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gc :Gcommit -av<cr>
 nnoremap <leader>gd :Git d<cr>
-nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+nnoremap <leader>mk :!mkdir -p %:p:h<cr>
+nnoremap <leader>r :Start<cr>
+nnoremap <leader>t :Dispatch<cr>
 
-" Project
-nnoremap <leader>pr :Start<cr>
-nnoremap <leader>pt :Dispatch<cr>
 
-" Syntastic
-nnoremap <leader>sc :SyntasticCheck<cr>
-nnoremap <leader>sr :SyntasticReset<cr>
-nnoremap <leader>st :SyntasticToggleMode<cr>
 
-" Tabs
-nnoremap <leader>tc :tabnew<cr>
-nnoremap <leader>tn :tabnext<cr>
-nnoremap <leader>tp :tabprev<cr>
-nnoremap <leader>tx :tabclose<cr>
-
-" Windows
-nnoremap <leader>wh <C-w>h
-nnoremap <leader>wj <C-w>j
-nnoremap <leader>wk <C-w>k
-nnoremap <leader>wl <C-w>l
