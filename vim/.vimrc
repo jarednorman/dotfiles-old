@@ -69,6 +69,8 @@ let g:syntastic_mode_map = { "mode": "passive" }
 
 let g:lightline = {
       \ 'colorscheme': 'solarized',
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '✕', 'right': '✕' }
       \ }
 
 set noswapfile
