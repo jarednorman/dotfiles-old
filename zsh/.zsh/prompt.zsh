@@ -10,7 +10,7 @@ precmd() { vcs_info }
 local suspended_jobs="%F{blue}%(1j.(%j) .)%f"
 local current_dir="%F{13}%~%f%b "
 local root_prompt="%F{red}%#%f "
-local user_prompt="%F{cyan}>%f "
+local user_prompt="%F{cyan}$%f "
 PROMPT='${current_dir}${vcs_info_msg_0_}${suspended_jobs}%(!.${root_prompt}.${user_prompt})'
 
 local ruby_version='%B%F{cyan}$(chruby | grep "*" | cut -d" " -f3)%f%b'
