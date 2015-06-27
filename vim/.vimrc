@@ -68,9 +68,9 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_mode_map = { "mode": "passive" }
 
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'jaredized',
       \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '✕', 'right': '✕' }
+      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
 set noswapfile
@@ -116,6 +116,8 @@ nnoremap K \<noop>
 vnoremap K \<noop>
 nnoremap <leader>/ :let @/=""<cr>
 nnoremap <leader><cr> <cr>
+nnoremap <leader><tab> :tabn<cr>
+nnoremap <leader><s-tab> :tabp<cr>
 nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l --hidden --ignore /.git", ":e")<cr>
 
 
