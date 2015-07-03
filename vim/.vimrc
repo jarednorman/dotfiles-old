@@ -42,7 +42,6 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'itchyny/lightline.vim'
-Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
