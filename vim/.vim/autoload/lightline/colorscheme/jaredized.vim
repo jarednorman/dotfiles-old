@@ -59,9 +59,9 @@ let [s:base01, s:base1] = [s:base1, s:base01]
 let [s:base00, s:base0] = [s:base0, s:base00]
 
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
-let s:p.normal.left = [ [ s:base03, s:blue ], [ s:base03, s:base2 ] ]
-let s:p.normal.middle = [ [ s:base02, s:base2 ] ]
-let s:p.normal.right = [ [ s:base02, s:base2 ], [ s:base02, s:base2 ] ]
+let s:p.normal.left = [ [ s:base03, s:blue ], [ s:base02, s:base2 ] ]
+let s:p.normal.middle = [ [ s:base00, s:base02 ] ]
+let s:p.normal.right = [ [ s:base02, s:base0 ], [ s:base02, s:base01 ] ]
 let s:p.inactive.right = [ [ s:base01, s:base02 ], [ s:base01, s:base02 ] ]
 let s:p.inactive.middle = [ [ s:base01, s:base02 ] ]
 let s:p.inactive.left =  [ [ s:base01, s:base02 ], [ s:base01, s:base02 ] ]
