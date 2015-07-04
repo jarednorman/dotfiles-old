@@ -27,7 +27,7 @@ main = do
                                           }
            , manageHook         = manageDocks <+> manageHook defaultConfig
            , terminal           = "urxvt"
-           , borderWidth        = 4
+           , borderWidth        = 3
            , normalBorderColor  = "#fdf6e3"
            , focusedBorderColor = "#eee8d5"
            , layoutHook         = myLayoutHook
