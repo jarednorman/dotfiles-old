@@ -23,7 +23,7 @@ main = do
                                           , ppHidden = xmobarColor "#93a1a1" ""
                                           , ppHiddenNoWindows = xmobarColor "#eee8d5" ""
                                           , ppLayout = xmobarColor "#859900" ""
-                                          , ppSep = "  ×  "
+                                          , ppSep = " × "
                                           }
            , manageHook         = manageDocks <+> manageHook defaultConfig
            , terminal           = "urxvt"
