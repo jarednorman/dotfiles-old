@@ -6,7 +6,7 @@ hcl = HCl::App.new
 entry = HCl::DayEntry.with_timer(hcl.http)
 
 if entry
-  puts "#{entry.formatted_hours} - #{entry.task} (#{entry.project})"
+  puts "<fc=#fdf6e3,#268bd2> #{entry.project}: #{entry.task} (#{entry.formatted_hours}) </fc>"
 else
-  puts 'NO TIMER RUNNING'
+  puts '<fc=#fdf6e3,#dc322f> NO TIMER RUNNING </fc>'
 end
