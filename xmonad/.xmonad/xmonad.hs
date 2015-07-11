@@ -9,8 +9,8 @@ import XMonad.Util.Run(spawnPipe)
 
 myLayoutHook = avoidStruts (Full ||| noBorders Full ||| tall ||| twoTall)
                where
-                  tall      = Tall 1 (1/100) (1/2)
-                  twoTall   = Tall 2 (1/100) (1/2)
+                  tall      = Tall 1 (1/500) (1/2)
+                  twoTall   = Tall 2 (1/500) (1/2)
 
 main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar.hs"

@@ -1,4 +1,4 @@
-Config { font = "xft:Office Code Pro:regular:size=11"
+Config { font = "xft:Office Code Pro:regular:size=12.5"
        , border = NoBorder
        , bgColor = "#fdf6e5"
        , fgColor = "#93a1a1"
