@@ -122,6 +122,7 @@ nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l --hidden --ignore /.
 
 
 nnoremap <leader>fg :call FzyCommand("ag -g '' $(bundle show $(bundle list \| cut -f 4 -d' ' \| fzy))", ":e")<cr>
+nnoremap <leader>fp :call FzyCommand("ag --nocolor -l --hidden --ignore /.git -g '' ~/Codes/$(ls ~/Codes \| fzy)", ":e")<cr>
 nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gc :Gcommit -av<cr>
 nnoremap <leader>gd :Git d<cr>
