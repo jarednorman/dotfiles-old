@@ -1,4 +1,4 @@
-Config { font = "xft:Roboto Mono:medium:size=9"
+Config { font = "xft:Roboto Mono:medium:size=11"
        , border = NoBorder
        , borderColor = "#fdf6e5"
        , bgColor = "#fdf6e5"
