@@ -19,6 +19,9 @@ source $HOME/.zsh/vendor/chruby/auto.sh
 source $HOME/.zsh/vendor/bundler-exec.sh
 chruby_auto
 
+# FIXME: this kills my completions
+# which hub > /dev/null && eval "$(hub alias -s)"
+
 # The source of my power.
 for file in ~/.zsh/functions/*.sh; do
   source "$file"

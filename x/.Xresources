@@ -14,7 +14,7 @@ URxvt.saveLines:      10000
 URxvt.internalBorder: 0
 
 URxvt.font:        xft:Roboto Mono:regular:size=9
-URxvt.boldFont:    xft:Roboto Mono:bold:size=9
+URxvt.boldFont:    xft:Roboto Mono:medium:size=9
 
 URxvt.scrollBar: false
 
