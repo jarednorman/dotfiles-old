@@ -13,8 +13,8 @@ URxvt.loginShell:     true
 URxvt.saveLines:      10000
 URxvt.internalBorder: 0
 
-URxvt.font:        xft:Roboto Mono:regular:size=11
-URxvt.boldFont:    xft:Roboto Mono:bold:size=11
+URxvt.font:        xft:Roboto Mono:regular:size=10.5
+URxvt.boldFont:    xft:Roboto Mono:bold:size=10.5
 
 URxvt.scrollBar: false
 
