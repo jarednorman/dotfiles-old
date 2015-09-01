@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+action = ARGV.first
+filename = ARGV.last
+success = false
+
+define_method :task do |a, &block|
+  break unless a == action
+  block.call
+end
+
+define_method :match do |regex, &block|
+  regex.match(filename) do |m|
+    success = true
+    run_command block.call(m)
+  end
+end
+
+def run_command(command)
+  window = new_window
+  `tmux send-keys -t #{window} 'clear && #{command} && exit\n'`
+  exit
+end
+
+def new_window
+  close_windows
+  window = `tmux split-window -l 10 -d -P`.strip
+  save_window(window)
+  window
+end
+
+def save_window(window)
+  File.open(".jfwin", "a") << "#{window}\n"
+end
+
+def close_windows
+  return unless File.exists?(".jfwin")
+  File.open(".jfwin").each_line do |line|
+    `tmux kill-pane -t #{line.strip}`
+  end
+  File.delete(".jfwin")
+end
+
+load "./.jf"
+
+unless success
+  puts %(Failed to match action "#{action}" for "#{filename}")
+end

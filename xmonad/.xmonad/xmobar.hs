@@ -1,7 +1,7 @@
 Config { font = "xft:Roboto Mono:medium:size=11"
        , border = NoBorder
-       , borderColor = "#fdf6e5"
-       , bgColor = "#fdf6e5"
+       , borderColor = "#eee8d5"
+       , bgColor = "#eee8d5"
        , fgColor = "#93a1a1"
        , position = TopW L 100
        , commands = [ Run StdinReader

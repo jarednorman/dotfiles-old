@@ -51,3 +51,5 @@ tags
 vendor/bundle
 .bundle/config
 .vimrc
+.jf
+.jfwin

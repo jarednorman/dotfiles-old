@@ -38,8 +38,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-dispatch'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'itchyny/lightline.vim'
 
@@ -132,8 +130,7 @@ nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 nnoremap <leader>mk :!mkdir -p %:p:h<cr>
-nnoremap <leader>r :Start<cr>
-nnoremap <leader>t :Dispatch<cr>
+nnoremap <leader>t :!jf test %:.<cr><cr>
 
 
 
