@@ -6,21 +6,18 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 
-URxvt.depth:          32
-URxvt.geometry:       90x30
-URxvt.transparent:    false
-URxvt.loginShell:     true
-URxvt.saveLines:      10000
-URxvt.internalBorder: 0
+URxvt.font:     xft:Roboto Mono:regular:size=12px
+URxvt.boldFont: xft:Roboto Mono:bold:size=12px
 
-URxvt.font:        xft:Roboto Mono:regular:size=12px
-URxvt.boldFont:    xft:Roboto Mono:bold:size=12px
-
+URxvt.depth: 32
+URxvt.geometry: 90x30
+URxvt.transparent: false
+URxvt.loginShell: true
+URxvt.saveLines: 10000
+URxvt.internalBorder: 1
 URxvt.scrollBar: false
-
-URxvt.cursorBlink:     true
+URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
-
 URxvt.pointerBlank: true
 
 URxvt.background:  #fdf6e5
