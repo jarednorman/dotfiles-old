@@ -17,7 +17,7 @@ Plugin 'mattn/gist-vim'
 Plugin 'sjl/splice.vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'rking/ag.vim'
-Plugin 'scrooloose/syntastic'
+Plugin 'jarednorman/syntastic'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'fatih/vim-go'
@@ -62,7 +62,8 @@ set shell=$SHELL
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = { "mode": "passive" }
 
 let g:lightline = {
@@ -119,12 +120,9 @@ nnoremap <leader><s-tab> :tabp<cr>
 nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l --hidden --ignore /.git", ":e")<cr>
 
 
+nnoremap <leader>c :SyntasticCheck<cr>
 nnoremap <leader>fg :call FzyCommand("ag -g '' $(bundle show $(bundle list \| cut -f 4 -d' ' \| fzy))", ":e")<cr>
 nnoremap <leader>fp :call FzyCommand("ag --nocolor -l --hidden --ignore /.git -g '' ~/Codes/$(ls ~/Codes \| fzy)", ":e")<cr>
-nnoremap <leader>gb :Gblame<cr>
-nnoremap <leader>gc :Gcommit -av<cr>
-nnoremap <leader>gd :Git d<cr>
-nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k

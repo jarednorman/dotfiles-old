@@ -7,7 +7,7 @@ Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 
 URxvt.font:     xft:Roboto Mono:regular:size=12px
-URxvt.boldFont: xft:Roboto Mono:bold:size=12px
+URxvt.boldFont: xft:Roboto Mono:medium:size=12px
 
 URxvt.depth: 32
 URxvt.geometry: 90x30
