@@ -11,8 +11,7 @@ local suspended_jobs="%F{blue}%(1j. (%j).)%f"
 local current_dir="%F{13}%~%f%b "
 local root_prompt="%F{red}%#%f "
 local user_prompt="%F{cyan}$%f "
-local ruby_version="%B%F{cyan}$(chruby | grep "*" | cut -d" " -f3)%f%b"
-PROMPT='${current_dir}${vcs_info_msg_0_}${ruby_version}${suspended_jobs}
+PROMPT='${current_dir}${vcs_info_msg_0_}%B%F{cyan}$RUBY_VERSION%f%b${suspended_jobs}
 %(!.${root_prompt}.${user_prompt})'
 
 setopt promptsubst
