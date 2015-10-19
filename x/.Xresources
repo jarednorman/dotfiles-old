@@ -6,15 +6,15 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 
-URxvt.font:     xft:Office Code Pro:regular:size=14px
-URxvt.boldFont: xft:Office Code Pro:medium:size=14px
+URxvt.font:     xft:Roboto Mono:regular:size=14.75px
+URxvt.boldFont: xft:Roboto Mono:medium:size=14.75px
 
 URxvt.depth: 32
 URxvt.geometry: 90x30
 URxvt.transparent: false
 URxvt.loginShell: true
 URxvt.saveLines: 10000
-URxvt.internalBorder: 2
+URxvt.internalBorder: 0
 URxvt.scrollBar: false
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
