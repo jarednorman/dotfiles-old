@@ -528,11 +528,11 @@ else
 endif
 exe "hi! StatusLine"     .s:fmt_none   .s:fg_base03 .s:bg_base1
 exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base01 .s:bg_base02
-exe "hi! Visual"         .s:fmt_none   .s:fg_base01 .s:bg_base03 .s:fmt_revbb
+exe "hi! Visual"         .s:fmt_none   .s:fg_none   .s:bg_base02
 exe "hi! Directory"      .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ErrorMsg"       .s:fmt_revr   .s:fg_red    .s:bg_none
-exe "hi! IncSearch"      .s:fmt_none   .s:fg_base03 .s:bg_orange
-exe "hi! Search"         .s:fmt_none   .s:fg_base03 .s:bg_green
+exe "hi! IncSearch"      .s:fmt_bold   .s:fg_base02 .s:bg_blue
+exe "hi! Search"         .s:fmt_bold   .s:fg_base02 .s:bg_blue
 exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! LineNr"         .s:fmt_none   .s:fg_base02 .s:bg_none

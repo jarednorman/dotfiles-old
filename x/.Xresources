@@ -4,8 +4,8 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintfull
 
-URxvt.font:     xft:Roboto Mono:regular:size=14.75px
-URxvt.boldFont: xft:Roboto Mono:medium:size=14.75px
+URxvt.font:     xft:Roboto Mono:regular:size=13.5px
+URxvt.boldFont: xft:Roboto Mono:medium:size=13.5px
 
 URxvt.depth: 32
 URxvt.geometry: 90x30
