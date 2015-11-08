@@ -13,6 +13,7 @@ main = do
   xmonad $ defaultConfig
            { manageHook         = manageDocks <+> manageHook defaultConfig
            , terminal           = "urxvt"
+           , modMask            = mod4Mask
            , borderWidth        = 4
            , normalBorderColor  = "#fdf6e5"
            , focusedBorderColor = "#eee8d5"
