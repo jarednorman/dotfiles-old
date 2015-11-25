@@ -84,6 +84,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
+set cursorline
 set number
 set wrap
 set cmdheight=1
@@ -124,10 +125,6 @@ nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l --hidden --ignore /.
 nnoremap <leader>c :SyntasticCheck<cr>
 nnoremap <leader>fg :call FzyCommand("ag -g '' $(bundle show $(bundle list \| cut -f 4 -d' ' \| fzy))", ":e")<cr>
 nnoremap <leader>fp :call FzyCommand("ag --nocolor -l --hidden --ignore /.git -g '' ~/Codes/$(ls ~/Codes \| fzy)", ":e")<cr>
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
 nnoremap <leader>mk :!mkdir -p %:p:h<cr>
 nnoremap <leader>t :!jf test %:.<cr><cr>
 
