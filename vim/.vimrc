@@ -39,7 +39,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'itchyny/lightline.vim'
+Plugin 'bling/vim-airline'
 
 call vundle#end()
 filetype plugin indent on
@@ -58,6 +58,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:airline_theme = 'solarized'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
 set shell=$SHELL
 
 let g:syntastic_always_populate_loc_list = 1
@@ -65,12 +69,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = { "mode": "passive" }
-
-let g:lightline = {
-      \ 'colorscheme': 'jaredized',
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
 
 set noswapfile
 set nobackup
