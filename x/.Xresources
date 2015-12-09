@@ -4,15 +4,15 @@ Xft.rgba:       rgb
 Xft.hinting:    false
 Xft.hintstyle:  hintslight
 
-URxvt.font:     xft:Roboto Mono:regular:size=14.5px
-URxvt.boldFont: xft:Roboto MonO:medium:size=14.5px
+URxvt.font:     xft:Roboto Mono:regular:size=12px
+URxvt.boldFont: xft:Roboto MonO:medium:size=12px
 
 URxvt.depth: 32
 URxvt.geometry: 90x30
 URxvt.transparent: false
 URxvt.loginShell: true
 URxvt.saveLines: 10000
-URxvt.internalBorder: 0
+URxvt.internalBorder: 1
 URxvt.scrollBar: false
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
@@ -22,7 +22,7 @@ URxvt.background:  #fdf6e5
 URxvt.foreground:  #647b82
 URxvt.fadeColor:   #fdf6e5
 URxvt.cursorColor: #647b82
-URxvt.borderColor: #eee8d7
+URxvt.borderColor: #000000
 
 URxvt.color0:  #00353f
 URxvt.color1:  #e12e34
