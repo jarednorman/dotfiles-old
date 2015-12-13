@@ -582,9 +582,9 @@ exe "hi! Pmenu"          .s:fmt_none   .s:fg_base0  .s:bg_base02  .s:fmt_revbb
 exe "hi! PmenuSel"       .s:fmt_none   .s:fg_base01 .s:bg_base2   .s:fmt_revbb
 exe "hi! PmenuSbar"      .s:fmt_none   .s:fg_base2  .s:bg_base0   .s:fmt_revbb
 exe "hi! PmenuThumb"     .s:fmt_none   .s:fg_base0  .s:bg_base03  .s:fmt_revbb
-exe "hi! TabLine"        .s:fmt_undr   .s:fg_base0  .s:bg_base02  .s:sp_base0
-exe "hi! TabLineFill"    .s:fmt_undr   .s:fg_base0  .s:bg_base02  .s:sp_base0
-exe "hi! TabLineSel"     .s:fmt_undr   .s:fg_base01 .s:bg_base2   .s:sp_base0  .s:fmt_revbbu
+exe "hi! TabLine"        .s:fmt_none   .s:fg_base02 .s:bg_base1   .s:sp_base0
+exe "hi! TabLineFill"    .s:fmt_none   .s:fg_base02 .s:bg_base1   .s:sp_base0
+exe "hi! TabLineSel"     .s:fmt_none   .s:fg_base1  .s:bg_base03  .s:sp_base0
 exe "hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base02
 exe "hi! CursorLine"     .s:fmt_none   .s:fg_none   .s:bg_none
 exe "hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base02

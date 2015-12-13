@@ -26,7 +26,12 @@ def new_window
   close_windows
   window = `tmux split-window -l 16 -d -P`.strip
   save_window(window)
+  zoom_window(window)
   window
+end
+
+def zoom_window(window)
+  `tmux resize-pane -Z -t "#{window}"`
 end
 
 def save_window(window)
