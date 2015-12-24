@@ -50,7 +50,7 @@ let g:gist_post_private = 1
 
 syntax enable
 set t_Co=256
-set background=light
+set background=dark
 colo jaredized
 
 set statusline=%f\ %y
@@ -117,12 +117,8 @@ nnoremap <leader><tab> :tabn<cr>
 nnoremap <leader><s-tab> :tabp<cr>
 nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l --hidden --ignore /.git", ":e")<cr>
 
-
 nnoremap <leader>c :SyntasticCheck<cr>
 nnoremap <leader>fg :call FzyCommand("ag -g '' $(bundle show $(bundle list \| cut -f 4 -d' ' \| fzy))", ":e")<cr>
 nnoremap <leader>fp :call FzyCommand("ag --nocolor -l --hidden --ignore /.git -g '' ~/Codes/$(ls ~/Codes \| fzy)", ":e")<cr>
 nnoremap <leader>mk :!mkdir -p %:p:h<cr>
 nnoremap <leader>t :!jf test %:.<cr><cr>
-
-
-
