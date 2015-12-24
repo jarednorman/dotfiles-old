@@ -58,9 +58,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:airline_theme = 'solarized'
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+" vim-airline
+let g:airline_theme = 'term'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 
 set shell=$SHELL
 
