@@ -4,8 +4,8 @@ Xft.rgba:       rgb
 Xft.hinting:    false
 Xft.hintstyle:  hintslight
 
-URxvt.font:     xft:Office Code Pro:regular:size=12.5px
-URxvt.boldFont: xft:Office Code Pro:medium:size=12.5px
+URxvt.font:     xft:Office Code Pro:regular:size=14px
+URxvt.boldFont: xft:Office Code Pro:medium:size=14px
 
 URxvt.depth: 32
 URxvt.geometry: 90x30
