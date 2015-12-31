@@ -11,8 +11,8 @@ main = do
   xmonad $ xfceConfig
            { terminal           = "urxvt"
            , modMask            = mod4Mask
-           , borderWidth        = 4
-           , normalBorderColor  = "#fdf6e5"
-           , focusedBorderColor = "#eee8d5"
+           , borderWidth        = 7
+           , normalBorderColor  = "#073642"
+           , focusedBorderColor = "#002b36"
            , layoutHook         = myLayoutHook
            }
