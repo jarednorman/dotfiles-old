@@ -6,7 +6,7 @@ hcl = HCl::App.new
 entry = HCl::DayEntry.with_timer(hcl.http)
 
 if entry
-  puts " #{entry.project}, #{entry.task}: #{entry.formatted_hours} "
+  puts "#{entry.project}, #{entry.task}: #{entry.formatted_hours} /"
 else
   puts ""
 end
