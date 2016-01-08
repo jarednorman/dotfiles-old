@@ -12,7 +12,7 @@ URxvt.geometry: 90x30
 URxvt.transparent: false
 URxvt.loginShell: true
 URxvt.saveLines: 10000
-URxvt.internalBorder: 0
+URxvt.internalBorder: 1
 URxvt.scrollBar: false
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
