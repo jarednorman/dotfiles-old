@@ -32,7 +32,7 @@
   f   = fetch
   ff  = merge --ff-only
   hp  = "!. ~/.githelpers && show_git_head"
-  l   = log --graph --pretty=format:'%C(bold cyan)%h%C(reset) %C(blue)%cd %C(bold green)%s %C(bold cyan)%an%Creset%C(bold red)%d' --abbrev-commit --date=short
+  l   = log --graph --pretty=format:'%C(green)%h%C(reset) %C(bold cyan)%s %C(bold green)%an%C(reset) %cd%C(blue)%d' --abbrev-commit --date=short
   m   = merge
   p   = pull
   pr  = pull --rebase
