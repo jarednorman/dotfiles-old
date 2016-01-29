@@ -9,9 +9,9 @@ myLayoutHook = avoidStruts (noBorders Full ||| Full)
 
 main = do
   xmonad $ xfceConfig
-           { terminal           = "urxvt"
+           { terminal           = "st"
            , modMask            = mod4Mask
-           , borderWidth        = 5
+           , borderWidth        = 2
            , normalBorderColor  = "#eee8df"
            , focusedBorderColor = "#fdf6e3"
            , layoutHook         = myLayoutHook

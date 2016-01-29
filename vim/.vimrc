@@ -88,7 +88,7 @@ set smartcase
 
 set wrap
 set cmdheight=1
-set list listchars=tab:»─,trail:─
+set list listchars=tab:◀―,trail:•
 set wildmode=list:longest,list:full
 set splitright
 set splitbelow
@@ -126,3 +126,4 @@ nnoremap <leader>fg :call FzyCommand("ag -g '' $(bundle show $(bundle list \| cu
 nnoremap <leader>fp :call FzyCommand("ag --nocolor -l --hidden --ignore /.git -g '' ~/Codes/$(ls ~/Codes \| fzy)", ":e")<cr>
 nnoremap <leader>mk :!mkdir -p %:p:h<cr>
 nnoremap <leader>t :!jf test %:.<cr><cr>
+nnoremap <leader>r :!jf run %:.<cr><cr>
