@@ -11,7 +11,7 @@ main = do
   xmonad $ xfceConfig
            { terminal           = "st"
            , modMask            = mod4Mask
-           , borderWidth        = 2
+           , borderWidth        = 6
            , normalBorderColor  = "#eee8df"
            , focusedBorderColor = "#fdf6e3"
            , layoutHook         = myLayoutHook
