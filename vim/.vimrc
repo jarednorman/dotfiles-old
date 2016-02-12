@@ -127,3 +127,4 @@ nnoremap <leader>fp :call FzyCommand("ag --nocolor -l --hidden --ignore /.git -g
 nnoremap <leader>mk :!mkdir -p %:p:h<cr>
 nnoremap <leader>t :!jf test %:.<cr><cr>
 nnoremap <leader>r :!jf run %:.<cr><cr>
+nnoremap <leader>p o<cr>[Finishes <esc>"*pA]
