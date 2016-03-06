@@ -37,6 +37,7 @@ values."
            ruby-enable-enh-ruby-mode t
            ruby-version-manager 'chruby
            ruby-test-runner 'rspec)
+     ruby-on-rails
      spell-checking
      ;; syntax-checking
      (version-control :variables
