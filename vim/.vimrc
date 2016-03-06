@@ -62,6 +62,8 @@ set statusline+=%*
 let g:airline_theme = 'jardo'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_alt_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
@@ -86,6 +88,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
+set number
 set wrap
 set cmdheight=1
 set list listchars=tab:◀―,trail:•
