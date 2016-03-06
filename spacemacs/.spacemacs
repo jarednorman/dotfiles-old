@@ -27,6 +27,7 @@ values."
      ;; better-defaults
      emacs-lisp
      git
+     github
      ;; markdown
      ;; org
      ;; (shell :variables
@@ -34,7 +35,7 @@ values."
      ;;        shell-default-position 'bottom)
      spell-checking
      ;; syntax-checking
-     ;; version-control
+     version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -106,7 +107,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("Office Code Pro"
                                :size 13
                                :weight normal
                                :width normal
@@ -244,7 +245,7 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  )
+  (setq powerline-default-separator 'nil))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
