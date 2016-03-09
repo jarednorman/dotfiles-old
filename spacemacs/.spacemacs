@@ -43,8 +43,7 @@ values."
      spell-checking
      ;; syntax-checking
      (version-control :variables
-                      version-control-global-margin t
-                      version-control-diff-tool 'git-gutter)
+                      version-control-global-margin t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -64,6 +63,7 @@ This function is called at the very startup of Spacemacs initialization
 before layers configuration.
 You should not put any user code in there besides modifying the variable
 values."
+  (setq evil-toggle-key "C-`")
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
@@ -117,7 +117,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Office Code Pro"
-                               :size 13
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -243,6 +243,8 @@ values."
    dotspacemacs-whitespace-cleanup nil
    ;; Javascript 2 space indent
    js2-basic-offset 2
+   ;; CSS 2 space indent
+   css-indent-offset 2
    ))
 
 (defun dotspacemacs/user-init ()
