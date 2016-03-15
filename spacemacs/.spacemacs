@@ -1,5 +1,4 @@
-;; -*- mode: emacs-lisp -*-
-;; This file is loaded by Spacemacs at startup.
+;; -*- mode: emacs-lisp -*- ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
 (defun dotspacemacs/layers ()
@@ -25,6 +24,9 @@ values."
      ;; ----------------------------------------------------------------
      auto-completion
      ;; better-defaults
+     (colors :variables
+             colors-enable-rainbow-identifiers t
+             colors-enable-nyan-cat-progress-bar t)
      emacs-lisp
      git
      github
@@ -35,6 +37,9 @@ values."
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
+     (ranger :variables
+             ranger-show-preview t)
+     react
      (ruby :variables
            ruby-enable-enh-ruby-mode t
            ruby-version-manager 'chruby
@@ -116,8 +121,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Roboto Mono"
-                               :size 14
+   dotspacemacs-default-font '("Office Code Pro"
+                               :size 13
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -216,10 +221,10 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers t
+   dotspacemacs-line-numbers nil
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
-   dotspacemacs-smartparens-strict-mode t
+   dotspacemacs-smartparens-strict-mode nil
    ;; Select a scope to highlight delimiters. Possible values are `any',
    ;; `current', `all' or `nil'. Default is `all' (highlight any scope and
    ;; emphasis the current one). (default 'all)
@@ -245,6 +250,10 @@ values."
    js2-basic-offset 2
    ;; CSS 2 space indent
    css-indent-offset 2
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-attr-indent-offset 2
    ))
 
 (defun dotspacemacs/user-init ()
