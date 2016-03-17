@@ -272,3 +272,7 @@ clear Lock
 !keycode 253 =
 !keycode 254 =
 !keycode 255 =
+
+! Set capslock to escape
+clear Lock
+keycode 0x42 = Escape
