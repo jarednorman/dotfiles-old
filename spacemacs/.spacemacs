@@ -25,7 +25,6 @@ values."
      auto-completion
      ;; better-defaults
      (colors :variables
-             colors-enable-rainbow-identifiers t
              colors-enable-nyan-cat-progress-bar t)
      emacs-lisp
      git
@@ -122,7 +121,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Office Code Pro"
-                               :size 13
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
