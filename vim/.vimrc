@@ -88,7 +88,6 @@ set hlsearch
 set ignorecase
 set smartcase
 
-set number
 set wrap
 set cmdheight=1
 set list listchars=tab:◀―,trail:•
