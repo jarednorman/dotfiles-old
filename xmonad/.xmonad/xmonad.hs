@@ -13,7 +13,7 @@ myLayoutHook = avoidStruts (Full)
 
 main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar.hs"
-  xmonad $ defaultConfig
+  xmonad $ ewmh defaultConfig
          { manageHook         = manageDocks <+> manageHook defaultConfig
          , terminal           = "st"
          , modMask            = mod4Mask
