@@ -35,9 +35,9 @@ main = do
                      }
          }
          `additionalKeys`
-         [ ((0,        xF86XK_AudioLowerVolume ), spawn "pactl set-sink-volume 1 -5%")
-         , ((0,        xF86XK_AudioRaiseVolume ), spawn "pactl set-sink-volume 1 +5%")
-         , ((0,        xF86XK_AudioMute        ), spawn "pactl set-sink-mute 1 toggle")
+         [ ((0,        xF86XK_AudioLowerVolume ), spawn "pactl set-sink-volume 0 -5%")
+         , ((0,        xF86XK_AudioRaiseVolume ), spawn "pactl set-sink-volume 0 +5%")
+         , ((0,        xF86XK_AudioMute        ), spawn "pactl set-sink-mute 0 toggle")
          , ((0,        xF86XK_MonBrightnessUp  ), spawn "xbacklight +5")
          , ((0,        xF86XK_MonBrightnessDown), spawn "xbacklight -5")
          , ((0,        xF86XK_Explorer         ), spawn "xdotool key XF86AudioPlay")
