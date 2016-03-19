@@ -9,7 +9,7 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Hooks.EwmhDesktops
 
-myLayoutHook = avoidStruts (noBorders Full ||| Full)
+myLayoutHook = avoidStruts (Full)
 
 main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar.hs"
@@ -17,11 +17,11 @@ main = do
          { manageHook         = manageDocks <+> manageHook defaultConfig
          , terminal           = "st"
          , modMask            = mod4Mask
-         , borderWidth        = 2
+         , borderWidth        = 0
          , normalBorderColor  = "#eee8df"
          , focusedBorderColor = "#fdf6e3"
          , layoutHook         = myLayoutHook
-         , handleEventHook    = ewmhDesktopsEventHook
+         , handleEventHook = handleEventHook defaultConfig <+> fullscreenEventHook
          , startupHook        = ewmhDesktopsStartup
          , logHook = dynamicLogWithPP $ xmobarPP
                      { ppOutput          = hPutStrLn xmproc
