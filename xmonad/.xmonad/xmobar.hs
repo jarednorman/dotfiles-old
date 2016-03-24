@@ -1,9 +1,8 @@
-Config { font = "xft:Office Code Pro:medium:size=9"
+Config { font = "xft:Office Code Pro:medium:size=12.5"
        , border = NoBorder
-       , borderColor = "#00e8d5"
-       , bgColor = "#eee8d5"
+       , bgColor = "#fdf6e5"
        , fgColor = "#93a1a1"
-       , position = BottomW L 100
+       , position = TopW L 100
        , commands = [ Run StdinReader
                     , Run Com "/home/jared/bin/timer_status.sh" [] "timer" 50
                     , Run Date "<fc=#839496>%d %B %Y</fc>, <fc=#586e75>%H:%M</fc>        " "date" 10

@@ -29,7 +29,7 @@ main = do
                      , ppCurrent         = xmobarColor "#cb4b16" ""
                      , ppVisible         = xmobarColor "#586e75" ""
                      , ppHidden          = xmobarColor "#93a1a1" ""
-                     , ppHiddenNoWindows = xmobarColor "#fdf6e5" ""
+                     , ppHiddenNoWindows = xmobarColor "#eee8d5" ""
                      , ppLayout          = xmobarColor "#859900" ""
                      , ppSep             = " × "
                      }
