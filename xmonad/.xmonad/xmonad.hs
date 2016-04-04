@@ -5,12 +5,18 @@ import XMonad.Layout.NoBorders
 import XMonad.Util.EZConfig
 import Graphics.X11.ExtraTypes.XF86
 import XMonad.Hooks.EwmhDesktops
+import qualified XMonad.StackSet as W
 
 myLayoutHook = avoidStruts (Full)
 
+myManageHook = composeAll
+    [ className =? "Xfce4-notifyd" --> doF W.focusDown
+    , manageDocks
+    ]
+
 main = do
   xmonad $ ewmh defaultConfig
-         { manageHook         = manageDocks <+> manageHook defaultConfig
+         { manageHook         = myManageHook <+> manageHook defaultConfig
          , terminal           = "st"
          , modMask            = mod4Mask
          , borderWidth        = 0
