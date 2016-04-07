@@ -6,8 +6,9 @@ import XMonad.Util.EZConfig
 import Graphics.X11.ExtraTypes.XF86
 import XMonad.Hooks.EwmhDesktops
 import qualified XMonad.StackSet as W
+import XMonad.Layout.Grid
 
-myLayoutHook = avoidStruts (Full)
+myLayoutHook = avoidStruts (Full ||| Grid)
 
 myManageHook = composeAll
     [ className =? "Xfce4-notifyd" --> doF W.focusDown
