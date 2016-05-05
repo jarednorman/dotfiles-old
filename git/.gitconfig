@@ -3,7 +3,7 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore.global
-	pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
+  pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
 [credential]
   helper = cache --timeout=3600
 [merge]
@@ -21,18 +21,15 @@
 [alias]
   a = add
   b = branch
-  bx = branch -d
-  bX = branch -D
-  bl = branch -a
   c = commit -v
   ca = commit -v --amend
   co = checkout
   cb = checkout -b
-  d = diff --color
-  ds = diff --color --staged
+  d = diff
+  ds = diff --staged
   f = fetch
   ff = merge --ff-only
-  hp = "!. ~/.githelpers && show_git_head"
+  ignore = update-index --assume-unchanged
   l = "!clear && git ll -n 15"
   ll = log --graph --pretty=format:'%C(green)%h%C(reset) %C(bold cyan)%s %C(bold green)%an%C(reset) %cd%C(blue)%d' --abbrev-commit --date=short
   m = merge
@@ -43,9 +40,9 @@
   rc = rebase --continue
   ri = rebase -i
   flog = reflog --pretty=format:'%C(bold cyan)%h%C(reset) %C(blue)%cd %C(bold green)%s %C(bold cyan)%an%Creset%C(bold red)%d' --abbrev-commit --date=short
-  rh = reset --hard
   s = status -s
   ss = status
+  unignore = update-index --no-assume-unchanged
 [rebase]
   autosquash = true
 [color]
