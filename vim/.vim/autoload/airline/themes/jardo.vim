@@ -1,24 +1,24 @@
 " vim-airline 'jardo' theme
 
 " Normal mode
-let s:N1 = [1, 1, 'black', 13]
-let s:N2 = [1, 1, 13, 'black']
-let s:N3 = [1, 1, 13, 'black']
+let s:N1 = [1, 1, 'black', 14]
+let s:N2 = [1, 1, 0, 10]
+let s:N3 = [1, 1, 14, 0]
 
 " Insert mode
-let s:I1 = [1, 1, 'black', 6]
-let s:I2 = [1, 1, 6, 'black']
-let s:I3 = [1, 1, 6, 'black']
+let s:I1 = [1, 1, 'black', 4]
+let s:I2 = [1, 1, 0, 10]
+let s:I3 = [1, 1, 14, 0]
 
 " Visual mode
-let s:V1 = [1, 1, 'black', 5]
-let s:V2 = [1, 1, 5, 'black']
-let s:V3 = [1, 1, 5, 'black']
+let s:V1 = [1, 1, 'black', 13]
+let s:V2 = [1, 1, 0, 10]
+let s:V3 = [1, 1, 14, 0]
 
 " Replace mode
-let s:R1 = [1, 1, 'black', 1]
-let s:R2 = [1, 1, 1, 'black']
-let s:R3 = [1, 1, 1, 'black']
+let s:R1 = [1, 1, 'black', 6]
+let s:R2 = [1, 1, 0, 10]
+let s:R3 = [1, 1, 14, 0]
 
 " Paste mode
 let s:PA = [1, 6]

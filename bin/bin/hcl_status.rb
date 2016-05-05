@@ -8,5 +8,5 @@ entry = HCl::DayEntry.with_timer(hcl.http)
 if entry
   puts " #{entry.project} (#{entry.task}) #{entry.formatted_hours}"
 else
-  puts " No timer running. "
+  puts " NO TIMER"
 end
