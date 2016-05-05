@@ -7,8 +7,10 @@ import Graphics.X11.ExtraTypes.XF86
 import XMonad.Hooks.EwmhDesktops
 import qualified XMonad.StackSet as W
 import XMonad.Layout.Grid
+import XMonad.Layout.Spiral
+import XMonad.Layout.LayoutHints
 
-myLayoutHook = avoidStruts (Full ||| Grid)
+myLayoutHook = layoutHints (avoidStruts (Grid ||| spiral (4/5) ||| noBorders Full))
 
 myManageHook = composeAll
     [ className =? "Xfce4-notifyd" --> doF W.focusDown
@@ -20,9 +22,9 @@ main = do
          { manageHook         = myManageHook <+> manageHook defaultConfig
          , terminal           = "st"
          , modMask            = mod4Mask
-         , borderWidth        = 0
+         , borderWidth        = 1
          , normalBorderColor  = "#eee8df"
-         , focusedBorderColor = "#fdf6e3"
+         , focusedBorderColor = "#93a1a1"
          , layoutHook         = myLayoutHook
          , handleEventHook    = handleEventHook defaultConfig <+> fullscreenEventHook
          , startupHook        = ewmhDesktopsStartup
