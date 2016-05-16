@@ -88,6 +88,10 @@ let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = { "mode": "passive" }
 
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
 set noswapfile
 set nobackup
 set noerrorbells visualbell t_vb=
