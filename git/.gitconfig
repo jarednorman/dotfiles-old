@@ -23,6 +23,7 @@
   b = branch
   c = commit -v
   ca = commit -v --amend
+  cf = commit --fixup
   co = checkout
   cb = checkout -b
   d = diff
