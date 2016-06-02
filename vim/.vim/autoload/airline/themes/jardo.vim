@@ -1,24 +1,24 @@
 " vim-airline 'jardo' theme
 
 " Normal mode
-let s:N1 = [1, 1, 'black', 14]
-let s:N2 = [1, 1, 0, 10]
-let s:N3 = [1, 1, 14, 0]
+let s:N1 = [1, 1, 7, 6]
+let s:N2 = [1, 1, 20, 18]
+let s:N3 = [1, 1, 20, 0]
 
 " Insert mode
-let s:I1 = [1, 1, 'black', 4]
-let s:I2 = [1, 1, 0, 10]
-let s:I3 = [1, 1, 14, 0]
+let s:I1 = [1, 1, 7, 5]
+let s:I2 = [1, 1, 20, 18]
+let s:I3 = [1, 1, 20, 0]
 
 " Visual mode
-let s:V1 = [1, 1, 'black', 13]
-let s:V2 = [1, 1, 0, 10]
-let s:V3 = [1, 1, 14, 0]
+let s:V1 = [1, 1, 7, 3]
+let s:V2 = [1, 1, 20, 18]
+let s:V3 = [1, 1, 20, 0]
 
 " Replace mode
-let s:R1 = [1, 1, 'black', 6]
-let s:R2 = [1, 1, 0, 10]
-let s:R3 = [1, 1, 14, 0]
+let s:R1 = [1, 1, 7, 4]
+let s:R2 = [1, 1, 20, 18]
+let s:R3 = [1, 1, 20, 0]
 
 " Paste mode
 let s:PA = [1, 6]
@@ -27,9 +27,9 @@ let s:PA = [1, 6]
 let s:IM = [1, 238]
 
 " Inactive mode
-let s:IA1 = [1, 1, 10, 'black', '']
-let s:IA2 = [1, 1, 10, 'black', '']
-let s:IA3 = [1, 1, 10, 'black', '']
+let s:IA1 = [1, 1, 19, 0, '']
+let s:IA2 = [1, 1, 19, 0, '']
+let s:IA3 = [1, 1, 19, 0, '']
 
 let g:airline#themes#jardo#palette = {}
 
