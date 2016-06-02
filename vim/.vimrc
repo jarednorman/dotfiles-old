@@ -24,8 +24,6 @@ Plugin 'fatih/vim-go'
 Plugin 'slim-template/vim-slim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'noprompt/vim-yardoc'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'rking/vim-detailed'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
@@ -48,10 +46,12 @@ syntax on
 " gist-vim
 let g:gist_post_private = 1
 
+
 syntax enable
+let g:base16_shell_path = '~/bin/'
 set t_Co=256
 set background=dark
-colo jaredized
+colo creepywizard
 
 set statusline=%f\ %y
 set statusline+=%#warningmsg#
