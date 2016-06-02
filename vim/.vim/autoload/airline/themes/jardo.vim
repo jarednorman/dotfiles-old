@@ -27,9 +27,9 @@ let s:PA = [1, 6]
 let s:IM = [1, 238]
 
 " Inactive mode
-let s:IA1 = [1, 1, 19, 0, '']
-let s:IA2 = [1, 1, 19, 0, '']
-let s:IA3 = [1, 1, 19, 0, '']
+let s:IA1 = [1, 1, 19, 18, '']
+let s:IA2 = [1, 1, 19, 18, '']
+let s:IA3 = [1, 1, 19, 18, '']
 
 let g:airline#themes#jardo#palette = {}
 
