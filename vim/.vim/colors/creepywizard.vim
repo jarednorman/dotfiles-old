@@ -277,6 +277,53 @@ call <sid>hi("rubySymbol",                  s:gui0B, "", s:cterm0B, "", "")
 call <sid>hi("rubyStringDelimiter",         s:gui0B, "", s:cterm0B, "", "")
 call <sid>hi("rubyCurlyBlockDelimiter",     s:gui0B, "", s:cterm0D, "", "")
 
+" Yard highlighting
+call <sid>hi("yardReturn",      s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardGenericTag",  s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardAbstract",    s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardApi",         s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardAttr",        s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardAttrReader",  s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardAttrWriter",  s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardAuthor",      s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardDeprecated",  s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardExample",     s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardNote",        s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardOption",      s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardOverload",    s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardParam",       s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardParamName",   s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardPrivate",     s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardRaise",       s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardReturn",      s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardSee",         s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardSince",       s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardTodo",        s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardVersion",     s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardYield",       s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardYieldParam",  s:gui0B, "", s:cterm0C, "", "")
+call <sid>hi("yardYieldReturn", s:gui0B, "", s:cterm0C, "", "")
+" Other Yard groups:
+"   yardGenericDirective
+"   yardAttribute
+"   yardEndGroup
+"   yardGroup
+"   yardMacro
+"   yardMethod
+"   yardParse
+"   yardScope
+"   yardVisibility
+"   yardDuckType
+"   yardType
+"   yardLiteral
+"   yardOrderDependentList
+"   yardParametricType
+"   yardTypeList
+"   yardHashAngle
+"   yardHashCurly
+"   yardComma
+"   yardArrow
+
 " SASS highlighting
 call <sid>hi("sassidChar",     s:gui08, "", s:cterm08, "", "")
 call <sid>hi("sassClassChar",  s:gui09, "", s:cterm09, "", "")
