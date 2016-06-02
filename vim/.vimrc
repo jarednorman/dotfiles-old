@@ -146,3 +146,6 @@ nnoremap <leader>mk :!mkdir -p %:p:h<cr>
 nnoremap <leader>t :!jf test %:.<cr><cr>
 nnoremap <leader>r :!jf run %:.<cr><cr>
 nnoremap <leader>p o<cr>[Finishes <esc>"*pA]<esc>:wq
+map <leader>x :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
