@@ -2,8 +2,8 @@
 
 " Normal mode
 let s:N1 = [1, 1, 7, 6]
-let s:N2 = [1, 1, 20, 18]
-let s:N3 = [1, 1, 20, 0]
+let s:N2 = [1, 1, 20, 19]
+let s:N3 = [1, 1, 20, 18]
 
 " Insert mode
 let s:I1 = [1, 1, 7, 5]

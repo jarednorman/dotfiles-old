@@ -48,7 +48,6 @@ let g:gist_post_private = 1
 
 
 syntax enable
-let g:base16_shell_path = '~/bin/'
 set t_Co=256
 set background=dark
 colo creepywizard

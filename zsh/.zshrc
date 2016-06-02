@@ -19,6 +19,9 @@ source $HOME/.zsh/vendor/chruby/auto.sh
 source $HOME/.zsh/vendor/bundler-exec.sh
 chruby_auto
 
+# Get colours right.
+source $HOME/bin/base16-bright.dark.sh
+
 # The source of my power.
 for file in ~/.zsh/functions/*.sh; do
   source "$file"
