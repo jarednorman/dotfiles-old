@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set wallpaper.
-feh --bg-scale $HOME/.wallpaper
+xsetroot -solid '#000000'
 
 # Disable touchpad.
 synclient TouchpadOff=1
