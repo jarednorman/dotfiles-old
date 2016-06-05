@@ -10,7 +10,7 @@ import XMonad.Layout.Grid
 import XMonad.Layout.Spiral
 import XMonad.Layout.LayoutHints
 
-myLayoutHook = layoutHints (avoidStruts (Grid ||| spiral (4/5) ||| noBorders Full))
+myLayoutHook = layoutHints (avoidStruts (noBorders Full ||| Grid ||| spiral (4/5)))
 
 myManageHook = composeAll
     [ className =? "Xfce4-notifyd" --> doF W.focusDown
