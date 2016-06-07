@@ -276,6 +276,7 @@ call <sid>hi("rubyRegexp",                  s:gui0C, "", s:cterm0C, "", "")
 call <sid>hi("rubySymbol",                  s:gui0B, "", s:cterm0B, "", "")
 call <sid>hi("rubyStringDelimiter",         s:gui0B, "", s:cterm0B, "", "")
 call <sid>hi("rubyCurlyBlockDelimiter",     s:gui0B, "", s:cterm0D, "", "")
+call <sid>hi("rubyTodo",                    s:gui0B, "", s:cterm08, "", "bold")
 
 " Yard highlighting
 call <sid>hi("yardReturn",      s:gui0B, "", s:cterm0C, "", "")
