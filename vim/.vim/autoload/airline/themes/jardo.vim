@@ -7,18 +7,18 @@ let s:N3 = [1, 1, 20, 18]
 
 " Insert mode
 let s:I1 = [1, 1, 7, 5]
-let s:I2 = [1, 1, 20, 18]
-let s:I3 = [1, 1, 20, 0]
+let s:I2 = [1, 1, 20, 19]
+let s:I3 = [1, 1, 20, 18]
 
 " Visual mode
 let s:V1 = [1, 1, 7, 3]
-let s:V2 = [1, 1, 20, 18]
-let s:V3 = [1, 1, 20, 0]
+let s:V2 = [1, 1, 20, 19]
+let s:V3 = [1, 1, 20, 18]
 
 " Replace mode
-let s:R1 = [1, 1, 7, 4]
-let s:R2 = [1, 1, 20, 18]
-let s:R3 = [1, 1, 20, 0]
+let s:R1 = [1, 1, 7, 2]
+let s:R2 = [1, 1, 20, 19]
+let s:R3 = [1, 1, 20, 18]
 
 " Paste mode
 let s:PA = [1, 6]

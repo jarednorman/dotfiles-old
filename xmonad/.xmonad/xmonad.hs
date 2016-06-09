@@ -37,4 +37,5 @@ main = do
          , ((0,        xF86XK_MonBrightnessDown), spawn "xbacklight -5")
          , ((0,        xF86XK_Explorer         ), spawn "xdotool key XF86AudioPlay")
          , ((mod4Mask, xK_b                    ), sendMessage ToggleStruts)
+         , ((mod4Mask, xK_m                    ), spawn "st -f \"Office Code Pro:pixelsize=15:weight=normal\"")
          ]
