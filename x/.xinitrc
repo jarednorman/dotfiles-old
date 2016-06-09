@@ -9,6 +9,9 @@ synclient TouchpadOff=1
 # Setup X stuff.
 {
   xmodmap $HOME/.Xmodmap
+  if [ $(hostname -s) = "baburuman" ]; then
+    xmodmap $HOME/.Xmodmap.norman
+  fi
   xset r rate 300 65
   sleep 4
   bash $HOME/.xrandr.sh
