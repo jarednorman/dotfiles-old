@@ -1,40 +1,41 @@
 #!/bin/sh
-# Base16 Solarized - Shell color setup script
-# Ethan Schoonover (http://ethanschoonover.com/solarized)
+# base16-shell (https://github.com/chriskempson/base16-shell)
+# Base16 Shell template by Chris Kempson (http://chriskempson.com)
+# Solarized Light scheme by Ethan Schoonover (http://ethanschoonover.com/solarized)
 
+# This script doesn't support linux console (use 'vconsole' template instead)
 if [ "${TERM%%-*}" = 'linux' ]; then
-    # This script doesn't support linux console (use 'vconsole' template instead)
     return 2>/dev/null || exit 0
 fi
 
-color00="00/2b/36" # Base 00 - Black
+color00="fd/f6/e3" # Base 00 - Black
 color01="dc/32/2f" # Base 08 - Red
 color02="85/99/00" # Base 0B - Green
 color03="b5/89/00" # Base 0A - Yellow
 color04="26/8b/d2" # Base 0D - Blue
 color05="6c/71/c4" # Base 0E - Magenta
 color06="2a/a1/98" # Base 0C - Cyan
-color07="93/a1/a1" # Base 05 - White
-color08="65/7b/83" # Base 03 - Bright Black
+color07="58/6e/75" # Base 05 - White
+color08="83/94/96" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
 color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
-color15="fd/f6/e3" # Base 07 - Bright White
+color15="00/2b/36" # Base 07 - Bright White
 color16="cb/4b/16" # Base 09
 color17="d3/36/82" # Base 0F
-color18="07/36/42" # Base 01
-color19="58/6e/75" # Base 02
-color20="83/94/96" # Base 04
-color21="ee/e8/d5" # Base 06
-color_foreground="58/6e/75" # Base 02
-color_background="fd/f6/e3" # Base 07
-color_cursor="58/6e/75" # Base 02
+color18="ee/e8/d5" # Base 01
+color19="93/a1/a1" # Base 02
+color20="65/7b/83" # Base 04
+color21="07/36/42" # Base 06
+color_foreground="58/6e/75" # Base 05
+color_background="fd/f6/e3" # Base 00
+color_cursor="58/6e/75" # Base 05
 
 if [ -n "$TMUX" ]; then
-  # tell tmux to pass the escape sequences through
+  # Tell tmux to pass the escape sequences through
   # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
   printf_template="\033Ptmux;\033\033]4;%d;rgb:%s\007\033\\"
   printf_template_var="\033Ptmux;\033\033]%d;rgb:%s\007\033\\"
