@@ -133,6 +133,8 @@ endfunction
 nnoremap <cr> :
 nnoremap K \<noop>
 vnoremap K \<noop>
+nnoremap <c-w>o \<noop>
+vnoremap <c-w>o \<noop>
 nnoremap <leader>/ :let @/=""<cr>
 nnoremap <leader><cr> <cr>
 nnoremap <leader><tab> :tabn<cr>
