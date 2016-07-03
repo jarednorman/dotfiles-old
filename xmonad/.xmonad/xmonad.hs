@@ -9,7 +9,7 @@ import qualified XMonad.StackSet as W
 import XMonad.Hooks.DynamicLog
 import XMonad.Util.Run(spawnPipe)
 
-myLayoutHook = avoidStruts Full ||| Full
+myLayoutHook = avoidStruts Full
 
 myManageHook = composeAll
     [ className =? "Xfce4-notifyd" --> doF W.focusDown
