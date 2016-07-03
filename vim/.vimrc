@@ -47,10 +47,10 @@ syntax on
 " gist-vim
 let g:gist_post_private = 1
 
-
 syntax enable
 set t_Co=256
 set background=light
+let base16colorspace=256
 colo creepywizard
 
 set statusline=%f\ %y
