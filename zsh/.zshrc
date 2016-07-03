@@ -20,7 +20,7 @@ source $HOME/.zsh/vendor/bundler-exec.sh
 chruby_auto
 
 # Get colours right.
-source $HOME/bin/base16-bright.dark.sh
+source $HOME/bin/base16-solarized.light.sh
 
 # The source of my power.
 for file in ~/.zsh/functions/*.sh; do
