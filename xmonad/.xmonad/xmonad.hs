@@ -1,16 +1,15 @@
+import System.IO
 import XMonad
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
-import XMonad.Layout.NoBorders
 import XMonad.Util.EZConfig
 import Graphics.X11.ExtraTypes.XF86
 import XMonad.Hooks.EwmhDesktops
 import qualified XMonad.StackSet as W
-import XMonad.Layout.Grid
-import XMonad.Layout.Spiral
-import XMonad.Layout.LayoutHints
+import XMonad.Hooks.DynamicLog
+import XMonad.Util.Run(spawnPipe)
 
-myLayoutHook = layoutHints (avoidStruts (noBorders Full ||| Grid ||| spiral (4/5)))
+myLayoutHook = avoidStruts Full ||| Full
 
 myManageHook = composeAll
     [ className =? "Xfce4-notifyd" --> doF W.focusDown
@@ -18,16 +17,27 @@ myManageHook = composeAll
     ]
 
 main = do
+  xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar.hs"
   xmonad $ ewmh defaultConfig
          { manageHook         = myManageHook <+> manageHook defaultConfig
          , terminal           = "st"
          , modMask            = mod4Mask
-         , borderWidth        = 2
+         , borderWidth        = 0
          , normalBorderColor  = "#F2F0F1"
          , focusedBorderColor = "#173B59"
          , layoutHook         = myLayoutHook
          , handleEventHook    = handleEventHook defaultConfig <+> fullscreenEventHook
          , startupHook        = ewmhDesktopsStartup
+         , logHook = dynamicLogWithPP $ xmobarPP
+                     { ppOutput          = hPutStrLn xmproc
+                     , ppTitle           = xmobarColor "#d0d0d0" ""
+                     , ppCurrent         = xmobarColor "#fb0120" ""
+                     , ppVisible         = xmobarColor "#d0d0d0" ""
+                     , ppHidden          = xmobarColor "#d0d0d0" ""
+                     , ppHiddenNoWindows = xmobarColor "#505050" ""
+                     , ppLayout          = xmobarColor "#d0d0d0" ""
+                     , ppSep             = " × "
+                     }
          }
          `additionalKeys`
          [ ((0,        xF86XK_AudioLowerVolume ), spawn "pactl set-sink-volume 0 -5%")
