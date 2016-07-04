@@ -30,12 +30,12 @@ main = do
          , startupHook        = ewmhDesktopsStartup
          , logHook = dynamicLogWithPP $ xmobarPP
                      { ppOutput          = hPutStrLn xmproc
-                     , ppTitle           = xmobarColor "#d0d0d0" ""
-                     , ppCurrent         = xmobarColor "#fb0120" ""
-                     , ppVisible         = xmobarColor "#d0d0d0" ""
-                     , ppHidden          = xmobarColor "#d0d0d0" ""
-                     , ppHiddenNoWindows = xmobarColor "#505050" ""
-                     , ppLayout          = xmobarColor "#d0d0d0" ""
+                     , ppTitle           = xmobarColor "#93a1a1" ""
+                     , ppCurrent         = xmobarColor "#dc322f" ""
+                     , ppVisible         = xmobarColor "#073642" ""
+                     , ppHidden          = xmobarColor "#eee8d5" ""
+                     , ppHiddenNoWindows = xmobarColor "#586e75" ""
+                     , ppLayout          = xmobarColor "#93a1a1" ""
                      , ppSep             = " × "
                      }
          }
