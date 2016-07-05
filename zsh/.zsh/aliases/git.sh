@@ -6,6 +6,7 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
-alias ggpull='git pull origin $(current_branch)'
-alias ggpur='git pull --rebase origin $(current_branch)'
-alias ggpush='git push origin $(current_branch)'
+alias gpl='git pull origin $(current_branch)'
+alias gplr='git pull --rebase origin $(current_branch)'
+alias gp='git push origin $(current_branch)'
+alias gpf='git push --force-with-lease origin $(current_branch)'
