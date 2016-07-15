@@ -104,9 +104,10 @@ set hlsearch
 set ignorecase
 set smartcase
 
+set number
 set wrap
 set cmdheight=1
-set list listchars=tab:◀―,trail:•
+set list listchars=tab:·_,trail:·
 set wildmode=list:longest,list:full
 set splitright
 set splitbelow
@@ -117,6 +118,8 @@ set undofile                " Save undo's after file closes
 set undodir=$HOME/.vim/undo " where to save undo histories
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
+
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 function! FzyCommand(choice_command, vim_command)
   try

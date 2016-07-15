@@ -5,7 +5,7 @@ Config { font = "xft:Office Code Pro:medium:pixelsize=13"
        , position = BottomSize L 100 29
        , commands = [ Run StdinReader
                     , Run Com "/home/jared/bin/timer_status.sh" [] "timer" 50
-                    , Run Date "<fc=#839496>%d %B %Y</fc> <fc=#93a1a1>%H:%M</fc>" "date" 10
+                    , Run Date "<fc=#839496>%d %B %Y</fc>, <fc=#93a1a1>%I:%M %p</fc>" "date" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
