@@ -20,10 +20,5 @@ source $HOME/.zsh/vendor/bundler-exec.sh
 chruby_auto
 
 # The source of my power.
-for file in ~/.zsh/functions/*.sh; do
-  source "$file"
-done
-for file in ~/.zsh/aliases/*.sh; do
-  source "$file"
-done
+source ~/.zsh/utils.zsh
 source ~/.zsh/prompt.zsh
