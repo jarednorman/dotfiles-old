@@ -9,5 +9,5 @@ Config { font = "xft:Office Code Pro:medium:size=10"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ <fc=#6C71C4>%timer%</fc> %date%       "
+       , template = " %StdinReader% }{ <fc=#6C71C4>%timer%</fc> %date%           "
        }
