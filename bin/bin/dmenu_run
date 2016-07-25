@@ -1,2 +1,9 @@
 #!/bin/bash
-/usr/bin/dmenu_run -fn "Terminus:medium:size=8" -sb '#6fb3d2' -sf '#000000' -nb '#303030' -nf '#b0b0b0' -b -l 5
+/usr/bin/dmenu_run \
+  -fn "Office Code Pro:medium:size=10" \
+  -sb '#268BD2' \
+  -sf '#FDF6E3' \
+  -nb '#002B36' \
+  -nf '#657B83' \
+  -b \
+  -l 3

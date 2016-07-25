@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set wallpaper.
-xsetroot -solid '#000000'
+xsetroot -solid '#002B36'
 
 # Disable touchpad.
 synclient TouchpadOff=1
@@ -17,7 +17,7 @@ synclient TouchpadOff=1
   bash $HOME/.xrandr.sh
 
   # Start up things.
-  trayer --widthtype request --transparent true --alpha 255 --tint 0xB7D2ED --align right --edge top --height 32 --padding 0 --monitor primary &
+  trayer --widthtype request --transparent true --alpha 0 --tint 0x073642 --align right --edge bottom --height 26 --padding 0 --monitor primary &
   nm-applet &
   redshift-gtk &
 } &
