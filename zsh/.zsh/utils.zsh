@@ -16,6 +16,15 @@ function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
 # Find and replace using sed and silver!
 function replace() { ag -l --nocolor "$1" "${3:-.}" | xargs sed -i -e "s/$1/$2/g" }
 
+function fix-keyboard() {
+  setxkbmap us
+  xmodmap $HOME/.Xmodmap
+  if [ $(hostname -s) = "baburuman" ]; then
+    xmodmap $HOME/.Xmodmap.norman
+  fi
+  xset r rate 300 65
+}
+
 ###########
 # Aliases #
 ###########
@@ -28,7 +37,6 @@ alias ls='ls -G'
 alias c='cd ~/Codes/$(ls ~/Codes | fzy)'
 alias tms="tmux attach -t"
 alias tm='tmux switch -t "`tmux list-sessions | cut -d':' -f1 | fzy`"'
-alias fix-keyboard="xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' && xset r rate 300 65"
 alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
 
 # Git

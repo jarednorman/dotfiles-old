@@ -17,7 +17,6 @@ synclient TouchpadOff=1
   bash $HOME/.xrandr.sh
 
   # Start up things.
-  trayer --widthtype request --transparent true --alpha 0 --tint 0x073642 --align right --edge bottom --height 26 --padding 0 --monitor primary &
   nm-applet &
   redshift-gtk &
 } &
@@ -26,4 +25,4 @@ synclient TouchpadOff=1
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
-exec xmonad
+exec awesome

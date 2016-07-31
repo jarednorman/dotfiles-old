@@ -31,9 +31,9 @@ main = do
          , logHook = dynamicLogWithPP $ xmobarPP
                      { ppOutput          = hPutStrLn xmproc
                      , ppTitle           = xmobarColor "#859900" ""
-                     , ppCurrent         = xmobarColor "#EEE8D5" ""
-                     , ppVisible         = xmobarColor "#073642" ""
-                     , ppHidden          = xmobarColor "#268BD2" ""
+                     , ppCurrent         = xmobarColor "#CB4B16" ""
+                     , ppVisible         = xmobarColor "#268BD2" ""
+                     , ppHidden          = xmobarColor "#93A1A1" ""
                      , ppHiddenNoWindows = xmobarColor "#586E75" ""
                      , ppLayout          = xmobarColor "#93A1A1" ""
                      , ppSep             = " / "
@@ -45,7 +45,8 @@ main = do
          , ((0,        xF86XK_AudioMute        ), spawn "pactl set-sink-mute 0 toggle")
          , ((0,        xF86XK_MonBrightnessUp  ), spawn "xbacklight +5")
          , ((0,        xF86XK_MonBrightnessDown), spawn "xbacklight -5")
-         , ((0,        xF86XK_Explorer         ), spawn "xdotool key XF86AudioPlay")
+         , ((0,        xF86XK_Explorer         ), spawn "mpc toggle")
+         , ((0,        xF86XK_AudioPlay        ), spawn "mpc toggle")
          , ((mod4Mask, xK_b                    ), sendMessage ToggleStruts)
          , ((mod4Mask, xK_m                    ), spawn "st -f \"Office Code Pro:pixelsize=15:weight=normal\"")
          ]
