@@ -256,8 +256,7 @@ clientkeys = awful.util.table.join(
   awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end),
   awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),
   awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
-  awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
-  awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end)
+  awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        )
 )
 
 -- Bind all key numbers to tags.
@@ -286,34 +285,34 @@ for i = 1, 9 do
 end
 
 clientbuttons = awful.util.table.join(
-    awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
-    awful.button({ modkey }, 1, awful.mouse.client.move),
-    awful.button({ modkey }, 3, awful.mouse.client.resize))
+  awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
+  awful.button({ modkey }, 1, awful.mouse.client.move),
+  awful.button({ modkey }, 3, awful.mouse.client.resize)
+)
 
 -- Set keys
 root.keys(globalkeys)
--- }}}
 
--- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
-    -- All clients will match this rule.
-    { rule = { },
-      properties = { border_width = beautiful.border_width,
-                     border_color = beautiful.border_normal,
-                     focus = awful.client.focus.filter,
-                     raise = true,
-                     keys = clientkeys,
-                     buttons = clientbuttons } },
-    { rule = { class = "MPlayer" },
-      properties = { floating = true } },
-    { rule = { class = "pinentry" },
-      properties = { floating = true } },
-    { rule = { class = "gimp" },
-      properties = { floating = true } },
-    -- Set Firefox to always map on tags number 2 of screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { tag = tags[1][2] } },
+  -- All clients will match this rule.
+  { rule = { },
+    properties = { border_width = beautiful.border_width,
+                   border_color = beautiful.border_normal,
+                   focus = awful.client.focus.filter,
+                   raise = true,
+                   keys = clientkeys,
+                   buttons = clientbuttons } },
+  { rule = { class = "MPlayer" },
+    properties = { floating = true } },
+  { rule = { class = "pinentry" },
+    properties = { floating = true } },
+  { rule = { class = "gimp" },
+    properties = { floating = true } },
+  -- FIXME: Use this for default tags for things.
+  -- Set Firefox to always map on tags number 2 of screen 1.
+  -- { rule = { class = "Firefox" },
+  --   properties = { tag = tags[1][2] } },
 }
 -- }}}
 
