@@ -39,7 +39,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'jarednorman/vim-colors-jaredized'
 
 call vundle#end()
 filetype plugin indent on
@@ -50,8 +49,7 @@ let g:gist_post_private = 1
 
 syntax enable
 set t_Co=256
-set background=dark
-colo solarized
+colo creepywizard
 
 set statusline=%f\ %y
 set statusline+=%#warningmsg#
