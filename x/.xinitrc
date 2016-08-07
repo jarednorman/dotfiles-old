@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Set wallpaper.
-xsetroot -solid '#002B36'
-
 # Disable touchpad.
 synclient TouchpadOff=1
 
