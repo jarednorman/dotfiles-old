@@ -1,3 +1,13 @@
+-- Figure out where we are.
+function getHostname()
+  local f = io.popen ("/bin/hostname")
+  local hostname = f:read("*a") or ""
+  f:close()
+  hostname =string.gsub(hostname, "\n$", "")
+  return hostname
+end
+local isLaptop = getHostname() == "baburuman"
+
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -40,7 +50,7 @@ do
 end
 
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("~/.config/awesome/theme.lua")
+beautiful.init("~/.config/awesome/theme.luk")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "st"
@@ -77,12 +87,7 @@ mytextclock = awful.widget.textclock()
 mywibox = {}
 mytaglist = {}
 mytaglist.buttons = awful.util.table.join(
-  awful.button({ }, 1, awful.tag.viewonly),
-  awful.button({ modkey }, 1, awful.client.movetotag),
-  awful.button({ }, 3, awful.tag.viewtoggle),
-  awful.button({ modkey }, 3, awful.client.toggletag),
-  awful.button({ }, 4, function(t) awful.tag.viewnext(awful.tag.getscreen(t)) end),
-  awful.button({ }, 5, function(t) awful.tag.viewprev(awful.tag.getscreen(t)) end)
+  awful.button({ }, 1, awful.tag.viewonly)
 )
 
 for s = 1, screen.count() do

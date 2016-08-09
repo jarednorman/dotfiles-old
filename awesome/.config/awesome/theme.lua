@@ -1,8 +1,22 @@
+-- Figure out where we are.
+function getHostname()
+  local f = io.popen ("/bin/hostname")
+  local hostname = f:read("*a") or ""
+  f:close()
+  hostname =string.gsub(hostname, "\n$", "")
+  return hostname
+end
+local isLaptop = getHostname() == "baburuman"
+
 theme = {}
 
 theme.wallpaper_cmd = { "xsetroot -solid '#002B36'" }
 
-theme.font          = "Andale Mono Bold 9"
+if isLaptop then
+  theme.font = "DejaVu Sans Mono Bold 10"
+else
+  theme.font = "DejaVu Sans Mono Bold 9"
+end
 
 theme.bg_normal     = "#002b36"
 theme.bg_focus      = "#002b36"
@@ -15,7 +29,11 @@ theme.fg_focus      = "#eee8d5"
 theme.fg_urgent     = "#dc322f"
 theme.fg_minimize   = "#93a1a1"
 
-theme.border_width  = 2
+if isLaptop then
+  theme.border_width = 4
+else
+  theme.border_width = 2
+end
 
 theme.border_normal = "#002b36"
 theme.border_focus  = "#586e75"
