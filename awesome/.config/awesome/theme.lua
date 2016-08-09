@@ -2,7 +2,7 @@ theme = {}
 
 theme.wallpaper_cmd = { "xsetroot -solid '#002B36'" }
 
-theme.font          = "Office Code Pro Bold 9"
+theme.font          = "Andale Mono Bold 9"
 
 theme.bg_normal     = "#002b36"
 theme.bg_focus      = "#002b36"
@@ -15,7 +15,7 @@ theme.fg_focus      = "#eee8d5"
 theme.fg_urgent     = "#dc322f"
 theme.fg_minimize   = "#93a1a1"
 
-theme.border_width  = 4
+theme.border_width  = 2
 
 theme.border_normal = "#002b36"
 theme.border_focus  = "#586e75"

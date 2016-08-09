@@ -90,7 +90,7 @@ for s = 1, screen.count() do
   mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, mytaglist.buttons)
 
   -- Create the wibox
-  mywibox[s] = awful.wibox({ position = "bottom", screen = s, height = "21" })
+  mywibox[s] = awful.wibox({ position = "top", screen = s, height = "22" })
 
   -- Widgets that are aligned to the left
   local left_layout = wibox.layout.fixed.horizontal()
@@ -101,7 +101,7 @@ for s = 1, screen.count() do
   if s == 1 then
     right_layout:add(mytextclock)
     local systray = wibox.widget.systray()
-    systray:set_base_size(16)
+    systray:set_base_size(20)
     right_layout:add(systray)
   end
 
