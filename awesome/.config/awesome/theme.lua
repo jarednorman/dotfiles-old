@@ -10,7 +10,10 @@ local isLaptop = getHostname() == "baburuman"
 
 theme = {}
 
+-- This doesn't seem to work so...
 theme.wallpaper_cmd = { "xsetroot -solid '#002B36'" }
+-- I'll just do this:
+io.popen(theme.wallpaper_cmd[1])
 
 if isLaptop then
   theme.font = "DejaVu Sans Mono Bold 10"
