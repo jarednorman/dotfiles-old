@@ -11,10 +11,14 @@ synclient TouchpadOff=1
   fi
   xset r rate 300 65
   sleep 4
-  bash $HOME/.xrandr.sh
 
   # Start up things.
   nm-applet &
+  unclutter &
+
+  # Redshift has been starting before I get a network connection and can't
+  # handle that gracefully... so.
+  sleep 15
   redshift-gtk &
 } &
 
