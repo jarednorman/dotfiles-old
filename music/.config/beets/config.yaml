@@ -1,0 +1,5 @@
+directory: ~/Music
+library: ~/Music/library.blb
+import:
+  move: yes
+plugins: fetchart
