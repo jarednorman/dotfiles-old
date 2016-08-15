@@ -164,8 +164,8 @@ globalkeys = awful.util.table.join(
   awful.key({ modkey,           }, "p", function () awful.util.spawn("dmenu_run") end),
 
   awful.key({ }, "Print", function () awful.util.spawn("mpc toggle") end),
-  awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -20") end),
-  awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight +20") end)
+  awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -10") end),
+  awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight +10") end)
   
 )
 
