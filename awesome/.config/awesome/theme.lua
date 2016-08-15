@@ -16,7 +16,7 @@ theme.wallpaper_cmd = { "xsetroot -solid '#002B36'" }
 io.popen(theme.wallpaper_cmd[1])
 
 if isLaptop then
-  theme.font = "DejaVu Sans Mono Bold 10"
+  theme.font = "DejaVu Sans Mono Bold 9"
 else
   theme.font = "DejaVu Sans Mono Bold 9"
 end
@@ -33,7 +33,7 @@ theme.fg_urgent     = "#dc322f"
 theme.fg_minimize   = "#93a1a1"
 
 if isLaptop then
-  theme.border_width = 4
+  theme.border_width = 1
 else
   theme.border_width = 2
 end

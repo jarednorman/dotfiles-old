@@ -53,7 +53,11 @@ end
 beautiful.init("~/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "st"
+if isLaptop then
+  terminal = "st -f 'DejaVu Sans Mono:size=14'"
+else
+  terminal = "st"
+end
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -95,7 +99,11 @@ for s = 1, screen.count() do
   mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, mytaglist.buttons)
 
   -- Create the wibox
-  mywibox[s] = awful.wibox({ position = "top", screen = s, height = "22" })
+  if isLaptop then
+    mywibox[s] = awful.wibox({ position = "top", screen = s, height = "16" })
+  else
+    mywibox[s] = awful.wibox({ position = "top", screen = s, height = "22" })
+  end
 
   -- Widgets that are aligned to the left
   local left_layout = wibox.layout.fixed.horizontal()
