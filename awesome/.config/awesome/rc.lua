@@ -153,7 +153,12 @@ globalkeys = awful.util.table.join(
   awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
 
   awful.key({ modkey, "Control" }, "n", awful.client.restore),
-  awful.key({ modkey,           }, "p", function () awful.util.spawn("dmenu_run") end)
+  awful.key({ modkey,           }, "p", function () awful.util.spawn("dmenu_run") end),
+
+  awful.key({ }, "Print", function () awful.util.spawn("mpc toggle") end),
+  awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -20") end),
+  awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight +20") end)
+  
 )
 
 clientkeys = awful.util.table.join(

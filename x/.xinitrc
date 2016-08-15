@@ -20,6 +20,9 @@ synclient TouchpadOff=1
   # handle that gracefully... so.
   sleep 15
   redshift-gtk &
+
+  autocutsel -fork
+  autocutsel -selection PRIMARY -fork
 } &
 
 # Gnome Keyring is nice.

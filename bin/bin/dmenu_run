@@ -1,6 +1,6 @@
 #!/bin/bash
 /usr/bin/dmenu_run \
-  -fn "Office Code Pro:medium:size=10" \
+  -fn "DejaVu Sans Mono:medium:size=10" \
   -sb '#268BD2' \
   -sf '#FDF6E3' \
   -nb '#002B36' \
