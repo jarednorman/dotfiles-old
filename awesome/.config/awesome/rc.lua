@@ -85,7 +85,7 @@ end
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
+mytextclock = awful.widget.textclock("%d %B %Y, %I:%M%P ")
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -163,10 +163,13 @@ globalkeys = awful.util.table.join(
   awful.key({ modkey, "Control" }, "n", awful.client.restore),
   awful.key({ modkey,           }, "p", function () awful.util.spawn("dmenu_run") end),
 
-  awful.key({ }, "Print", function () awful.util.spawn("mpc toggle") end),
+  -- FIXME: Add screenshot something?
+  -- awful.key({ }, "Print", function () awful.util.spawn("mpc toggle") end),
   awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -10") end),
-  awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight +10") end)
-  
+  awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight +10") end),
+  awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("mpc toggle") end),
+  awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -20") end),
+  awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight +20") end)
 )
 
 clientkeys = awful.util.table.join(
