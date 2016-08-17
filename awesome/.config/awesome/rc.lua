@@ -56,7 +56,7 @@ beautiful.init("~/.config/awesome/theme.lua")
 if isLaptop then
   terminal = "st -f 'Input:size=15'"
 else
-  terminal = "st"
+  terminal = "st -f 'Input:size=13'"
 end
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
