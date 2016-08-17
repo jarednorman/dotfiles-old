@@ -18,7 +18,7 @@ io.popen(theme.wallpaper_cmd[1])
 if isLaptop then
   theme.font = "Input Medium 12"
 else
-  theme.font = "DejaVu Sans Mono Bold 9"
+  theme.font = "Input Medium 12"
 end
 
 theme.bg_normal     = "#002b36"
@@ -32,7 +32,11 @@ theme.fg_focus      = "#eee8d5"
 theme.fg_urgent     = "#dc322f"
 theme.fg_minimize   = "#93a1a1"
 
-theme.border_width = 2
+if isLaptop then
+  theme.border_width = 2
+else
+  theme.border_width = 0
+end
 
 theme.border_normal = "#002b36"
 theme.border_focus  = "#586e75"

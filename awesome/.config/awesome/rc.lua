@@ -102,7 +102,7 @@ for s = 1, screen.count() do
   if isLaptop then
     mywibox[s] = awful.wibox({ position = "top", screen = s, height = "31" })
   else
-    mywibox[s] = awful.wibox({ position = "top", screen = s, height = "22" })
+    mywibox[s] = awful.wibox({ position = "top", screen = s, height = "29" })
   end
 
   -- Widgets that are aligned to the left
@@ -117,7 +117,7 @@ for s = 1, screen.count() do
     if isLaptop then
       systray:set_base_size(30)
     else
-      systray:set_base_size(20)
+      systray:set_base_size(28)
     end
     right_layout:add(systray)
   end
