@@ -57,6 +57,12 @@ function git_time_since_commit() {
   fi
 }
 
+function ruby_version_maybe() {
+  if [[ -a ./Gemfile ]]; then
+    echo " ruby-$RUBY_VERSION "
+  fi
+}
+
 # Just add $(git_time_since_commit) to your ZSH PROMPT and you're set
 
 autoload -Uz vcs_info
@@ -67,11 +73,11 @@ zstyle ':vcs_info:*' stagedstr "%F{8}+"
 zstyle ':vcs_info:*' unstagedstr "%F{8}×"
 precmd() { vcs_info }
 
-local suspended_jobs="%F{6}%(1j.(%j).)%f"
+local suspended_jobs="%K{6}%F{8}%B%(1j. %j suspended .)%f%k%b"
 local current_dir=" %~%f %b"
 local root_prompt="%F{9}%#%f%b "
 local user_prompt="%F{5}$%f%b "
-PROMPT='${vcs_info_msg_0_}$(git_time_since_commit)%F{8}%K{11}${current_dir}%K{0}%F{10} ruby-$RUBY_VERSION 
-%f%b${suspended_jobs}%(!.${root_prompt}.${user_prompt})'
+PROMPT='%K{9}%F{8}%B%(?.. %? )%b${vcs_info_msg_0_}$(git_time_since_commit)%F{8}%K{11}${current_dir}${suspended_jobs}%K{0}%F{10}$(ruby_version_maybe)
+%f%b%(!.${root_prompt}.${user_prompt})'
 
 setopt promptsubst
