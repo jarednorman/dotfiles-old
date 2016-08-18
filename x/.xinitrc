@@ -23,6 +23,8 @@ synclient TouchpadOff=1
 
   autocutsel -fork
   autocutsel -selection PRIMARY -fork
+
+  mpd $HOME/.config/mpd/mpd.conf
 } &
 
 # Gnome Keyring is nice.
