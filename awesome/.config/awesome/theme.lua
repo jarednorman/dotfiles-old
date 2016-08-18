@@ -18,7 +18,7 @@ io.popen(theme.wallpaper_cmd[1])
 if isLaptop then
   theme.font = "Input Medium 12"
 else
-  theme.font = "Input Medium 12"
+  theme.font = "Input Bold 7"
 end
 
 theme.bg_normal     = "#002b36"
