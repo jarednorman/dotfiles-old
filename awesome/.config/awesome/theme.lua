@@ -33,7 +33,7 @@ theme.fg_urgent     = "#dc322f"
 theme.fg_minimize   = "#93a1a1"
 
 if isLaptop then
-  theme.border_width = 2
+  theme.border_width = 0
 else
   theme.border_width = 0
 end

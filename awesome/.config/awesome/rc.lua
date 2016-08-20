@@ -54,7 +54,7 @@ beautiful.init("~/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 if isLaptop then
-  terminal = "st -f 'Input:size=15'"
+  terminal = "st -f 'Input:size=13'"
 else
   terminal = "st -f 'Input:size=14'"
 end
@@ -100,7 +100,7 @@ for s = 1, screen.count() do
 
   -- Create the wibox
   if isLaptop then
-    mywibox[s] = awful.wibox({ position = "top", screen = s, height = "31" })
+    mywibox[s] = awful.wibox({ position = "top", screen = s, height = "26" })
   else
     mywibox[s] = awful.wibox({ position = "top", screen = s, height = "12" })
   end
@@ -115,7 +115,7 @@ for s = 1, screen.count() do
     right_layout:add(mytextclock)
     local systray = wibox.widget.systray()
     if isLaptop then
-      systray:set_base_size(30)
+      systray:set_base_size(24)
     else
       systray:set_base_size(11)
     end
