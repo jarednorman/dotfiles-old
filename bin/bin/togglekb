@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+function resetkb() { setxkbmap us && xmodmap $HOME/.Xmodmap }
+function applynorman() { xmodmap $HOME/.Xmodmap.norman }
+function setrepeat() { xset r rate 300 65 }
+
+function qwerty() {
+  resetkb
+  setrepeat
+  echo "QWERTY" > $HOME/.kb
+}
+
+function norman() {
+  resetkb
+  applynorman
+  setrepeat
+  echo "NORMAN" > $HOME/.kb
+}
+
+if [ $1 = 'toggle' ]; then
+  if grep -q NORMAN $HOME/.kb; then
+    qwerty
+  else
+    norman
+  fi
+elif [ $1 = 'norman' ]; then
+  norman
+elif [ $1 = 'qwerty' ]; then
+  qwerty
+else
+  echo "unknown command, idiot"
+  exit 1
+fi

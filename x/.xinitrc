@@ -1,18 +1,7 @@
 #!/bin/bash
 
-# Disable touchpad.
-synclient TouchpadOff=1
-
-# Setup X stuff.
+# Stuff I don't care about waiting for
 {
-  xmodmap $HOME/.Xmodmap
-  if [ $(hostname -s) = "baburuman" ]; then
-    xmodmap $HOME/.Xmodmap.norman
-  fi
-  xset r rate 300 65
-  sleep 4
-
-  # Start up things.
   nm-applet &
   unclutter &
 
@@ -20,14 +9,21 @@ synclient TouchpadOff=1
   # handle that gracefully... so.
   sleep 15
   redshift-gtk &
-
-  autocutsel -fork
-  autocutsel -selection PRIMARY -fork
-
-  mpd $HOME/.config/mpd/mpd.conf
 } &
 
-# Gnome Keyring is nice.
+synclient TouchpadOff=1
+
+if [ $(hostname -s) = "baburuman" ]; then
+  togglekb norman
+else
+  togglekb qwerty
+fi
+
+autocutsel -fork
+autocutsel -selection PRIMARY -fork
+
+mpd $HOME/.config/mpd/mpd.conf
+
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 

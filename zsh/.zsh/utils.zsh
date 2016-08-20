@@ -16,15 +16,6 @@ function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
 # Find and replace using sed and silver!
 function replace() { ag -l --nocolor "$1" "${3:-.}" | xargs sed -i -e "s/$1/$2/g" }
 
-function fix-keyboard() {
-  setxkbmap us
-  xmodmap $HOME/.Xmodmap
-  if [ $(hostname -s) = "baburuman" ]; then
-    xmodmap $HOME/.Xmodmap.norman
-  fi
-  xset r rate 300 65
-}
-
 ###########
 # Aliases #
 ###########
