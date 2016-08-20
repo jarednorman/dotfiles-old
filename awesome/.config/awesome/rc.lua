@@ -2,7 +2,6 @@ local hostname = require('hostname')
 local isLaptop = hostname() == "baburuman"
 
 -- Standard awesome library
-local gears = require("gears")
 local awful = require("awful")
 awful.rules = require("awful.rules")
 require("awful.autofocus")
@@ -86,9 +85,9 @@ vicious.register(
   mpdwidget,
   vicious.widgets.mpd,
   function (mpdwidget, args)
-    if args["{state}"] == "Stop" then 
+    if args["{state}"] == "Stop" then
       return " - "
-    else 
+    else
       return args["{Artist}"]..' - '..args["{Title}"]..' | '
     end
   end,
