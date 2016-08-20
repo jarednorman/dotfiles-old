@@ -174,7 +174,10 @@ globalkeys = awful.util.table.join(
   awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("mpc toggle") end),
   awful.key({ }, "XF86Explorer", function () awful.util.spawn("mpc toggle") end),
   awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -20") end),
-  awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight +20") end)
+  awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight +20") end),
+  awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume 0 +5%") end),
+  awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume 0 -5%") end),
+  awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pactl set-sink-mute 0 toggle") end)
 )
 
 clientkeys = awful.util.table.join(
