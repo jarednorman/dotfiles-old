@@ -25,7 +25,7 @@ local layouts = {
 }
 
 -- Define a tag table which hold all screen tags.
-tags = {}
+local tags = {}
 for s = 1, screen.count() do
   tags[s] = awful.tag({ "C", "R", "E", "E", "P", "Y" }, s, layouts[1])
 end
@@ -38,33 +38,21 @@ mytaglist.buttons = awful.util.table.join(
 )
 
 for s = 1, screen.count() do
-  -- Create a taglist widget
-  mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, mytaglist.buttons)
-
-  -- Create the wibox
   if isLaptop then
     mywibox[s] = awful.wibox({ position = "top", screen = s, height = "26" })
   else
     mywibox[s] = awful.wibox({ position = "top", screen = s, height = "12" })
   end
 
-  -- Widgets that are aligned to the left
   local left_layout = wibox.layout.fixed.horizontal()
+  mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, mytaglist.buttons)
   left_layout:add(mytaglist[s])
 
-  -- Widgets that are aligned to the right
   local right_layout = wibox.layout.fixed.horizontal()
   if s == 1 then
     right_layout:add(require('mpdwidget'))
     right_layout:add(require('datewidget'))
-
-    local systray = wibox.widget.systray()
-    if isLaptop then
-      systray:set_base_size(24)
-    else
-      systray:set_base_size(11)
-    end
-    right_layout:add(systray)
+    right_layout:add(require('systray'))
   end
 
   -- Now bring it all together (with the tasklist in the middle)
@@ -200,7 +188,7 @@ client.connect_signal("manage", function (c, startup)
   end)
 
   if not startup then
-    -- Put windows in a smart way, only if they does not set an initial position.
+    -- Put windows in a smart way, only if they do not set an initial position.
     if not c.size_hints.user_position and not c.size_hints.program_position then
       awful.placement.no_overlap(c)
       awful.placement.no_offscreen(c)
