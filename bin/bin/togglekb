@@ -8,6 +8,7 @@ function qwerty() {
   resetkb
   setrepeat
   echo "QWERTY" > $HOME/.kb
+  cat $HOME/.kb
 }
 
 function norman() {
@@ -15,6 +16,7 @@ function norman() {
   applynorman
   setrepeat
   echo "NORMAN" > $HOME/.kb
+  cat $HOME/.kb
 }
 
 if [ $1 = 'toggle' ]; then
