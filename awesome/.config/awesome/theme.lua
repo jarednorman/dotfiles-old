@@ -1,12 +1,5 @@
--- Figure out where we are.
-function getHostname()
-  local f = io.popen ("/bin/hostname")
-  local hostname = f:read("*a") or ""
-  f:close()
-  hostname =string.gsub(hostname, "\n$", "")
-  return hostname
-end
-local isLaptop = getHostname() == "baburuman"
+local hostname = require('hostname')
+local isLaptop = hostname() == "baburuman"
 
 theme = {}
 
@@ -16,7 +9,7 @@ theme.wallpaper_cmd = { "xsetroot -solid '#002B36'" }
 io.popen(theme.wallpaper_cmd[1])
 
 if isLaptop then
-  theme.font = "Input Medium 12"
+  theme.font = "Input Bold 9"
 else
   theme.font = "Input Bold 7"
 end
