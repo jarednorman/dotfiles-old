@@ -87,12 +87,31 @@ end
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 
--- Create a textclock widget
-mytextclock = awful.widget.textclock("%d %B %Y, %I:%M%P ")
+-- MPD
+local mpdwidget = wibox.widget.textbox()
+vicious.register(
+  mpdwidget,
+  vicious.widgets.mpd,
+  function (mpdwidget, args)
+    if args["{state}"] == "Stop" then 
+      return " - "
+    else 
+      return args["{Artist}"]..' - '..args["{Title}"]..' | '
+    end
+  end,
+  10
+)
+mpdwidget:buttons(awful.util.table.join(
+  awful.button({ }, 1, function() awful.util.spawn("mpc toggle") end)
+))
+
+-- Date widget
+local datewidget = wibox.widget.textbox()
+vicious.register(datewidget, vicious.widgets.date, "%d %B %Y, %I:%M%P ", 60)
 
 -- Create a wibox for each screen and add it
-mywibox = {}
-mytaglist = {}
+local mywibox = {}
+local mytaglist = {}
 mytaglist.buttons = awful.util.table.join(
   awful.button({ }, 1, awful.tag.viewonly)
 )
@@ -115,7 +134,9 @@ for s = 1, screen.count() do
   -- Widgets that are aligned to the right
   local right_layout = wibox.layout.fixed.horizontal()
   if s == 1 then
-    right_layout:add(mytextclock)
+    right_layout:add(mpdwidget)
+    right_layout:add(datewidget)
+
     local systray = wibox.widget.systray()
     if isLaptop then
       systray:set_base_size(24)
