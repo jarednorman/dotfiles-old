@@ -79,24 +79,6 @@ end
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 
--- MPD
-local mpdwidget = wibox.widget.textbox()
-vicious.register(
-  mpdwidget,
-  vicious.widgets.mpd,
-  function (mpdwidget, args)
-    if args["{state}"] == "Stop" then
-      return " - "
-    else
-      return args["{Artist}"]..' - '..args["{Title}"]..' | '
-    end
-  end,
-  10
-)
-mpdwidget:buttons(awful.util.table.join(
-  awful.button({ }, 1, function() awful.util.spawn("mpc toggle") end)
-))
-
 -- Date widget
 local datewidget = wibox.widget.textbox()
 vicious.register(datewidget, vicious.widgets.date, "%d %B %Y, %I:%M%P ", 60)
@@ -126,7 +108,7 @@ for s = 1, screen.count() do
   -- Widgets that are aligned to the right
   local right_layout = wibox.layout.fixed.horizontal()
   if s == 1 then
-    right_layout:add(mpdwidget)
+    right_layout:add(require('mpdwidget'))
     right_layout:add(datewidget)
 
     local systray = wibox.widget.systray()
