@@ -79,10 +79,6 @@ end
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 
--- Date widget
-local datewidget = wibox.widget.textbox()
-vicious.register(datewidget, vicious.widgets.date, "%d %B %Y, %I:%M%P ", 60)
-
 -- Create a wibox for each screen and add it
 local mywibox = {}
 local mytaglist = {}
@@ -109,7 +105,7 @@ for s = 1, screen.count() do
   local right_layout = wibox.layout.fixed.horizontal()
   if s == 1 then
     right_layout:add(require('mpdwidget'))
-    right_layout:add(datewidget)
+    right_layout:add(require('datewidget'))
 
     local systray = wibox.widget.systray()
     if isLaptop then
