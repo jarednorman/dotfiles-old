@@ -16,3 +16,7 @@ path=(
   /usr/local/share/npm/bin
   $path
 )
+
+if hash luarocks 2>/dev/null; then
+  eval `luarocks path --bin`
+fi
