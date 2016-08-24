@@ -9,6 +9,8 @@ require("awful.autofocus")
 
 require("errorhandling")
 
+require("notifications")
+
 local hostname = require('hostname')
 local isLaptop = hostname() == "baburuman"
 
