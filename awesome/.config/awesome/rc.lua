@@ -39,9 +39,9 @@ mytaglist.buttons = awful.util.table.join(
 
 for s = 1, screen.count() do
   if isLaptop then
-    mywibox[s] = awful.wibox({ position = "top", screen = s, height = "26" })
+    mywibox[s] = awful.wibox({ position = "bottom", screen = s, height = "26" })
   else
-    mywibox[s] = awful.wibox({ position = "top", screen = s, height = "29" })
+    mywibox[s] = awful.wibox({ position = "bottom", screen = s, height = "29" })
   end
 
   local left_layout = wibox.layout.fixed.horizontal()
