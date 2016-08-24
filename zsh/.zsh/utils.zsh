@@ -16,6 +16,22 @@ function f() { ag --nocolor -l -g "$1" "${2:-.}"  }
 # Find and replace using sed and silver!
 function replace() { ag -l --nocolor "$1" "${3:-.}" | xargs sed -i -e "s/$1/$2/g" }
 
+# Switch to first awesome tag. Only switches current active display.
+function first_tag { echo 'local awful = require("awful"); awful.tag.viewonly(awful.tag.gettags(mouse.screen)[1])' | awesome-client }
+
+function jftest() {
+  clear
+  eval "$1"
+  local retval=$?
+  first_tag
+  if [ $retval -eq 0 ]; then
+    notify-send "Tests passed!"
+    exit
+  else
+    notify-send "Tests failed!"
+  fi
+}
+
 ###########
 # Aliases #
 ###########

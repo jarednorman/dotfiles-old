@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'shellwords'
+
 action = ARGV.first
 filename = ARGV.last
 success = false
@@ -18,7 +20,7 @@ end
 
 def run_command(command)
   window = new_window
-  `tmux send-keys -t "#{window}" 'clear && #{command} && exit\n'`
+  `tmux send-keys -t "#{window}" 'jftest #{Shellwords.escape command}\n'`
   exit
 end
 
