@@ -9,7 +9,7 @@ theme.wallpaper_cmd = { "xsetroot -solid '#002B36'" }
 io.popen(theme.wallpaper_cmd[1])
 
 if isLaptop then
-  theme.font = "Input Bold 9"
+  theme.font = "Input Bold 8"
 else
   theme.font = "Input Medium 12"
 end
