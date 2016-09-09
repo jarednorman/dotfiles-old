@@ -1,17 +1,26 @@
-#!/bin/bash
+#!/bin/zsh
+
+set -e
+
+source $HOME/.zsh/vendor/chruby/chruby.sh
+source $HOME/.zsh/vendor/chruby/auto.sh
+chruby_auto
 
 # Stuff I don't care about waiting for
 {
   nm-applet &
   unclutter &
 
+  sleep 5
+  pomme_status &
+
   # Redshift has been starting before I get a network connection and can't
   # handle that gracefully... so.
-  sleep 15
+  sleep 10
   redshift-gtk &
 } &
 
-synclient TouchpadOff=1
+synclient TouchpadOff=2
 
 if [ $(hostname -s) = "baburuman" ]; then
   togglekb norman
@@ -20,9 +29,9 @@ else
 fi
 
 autocutsel -fork
-autocutsel -selection PRIMARY -fork
+autocutsel -selection PRIMARY -fork &
 
-mpd $HOME/.config/mpd/mpd.conf
+mpd $HOME/.config/mpd/mpd.conf &
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
