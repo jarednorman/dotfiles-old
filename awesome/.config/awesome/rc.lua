@@ -18,7 +18,7 @@ beautiful.init("~/.config/awesome/theme.lua")
 
 local terminal
 if isLaptop then
-  terminal = "st -f 'Input:size=15'"
+  terminal = "st -f 'Input:size=16'"
 else
   terminal = "st -f 'Input:size=13'"
 end
@@ -46,7 +46,7 @@ mytaglist.buttons = awful.util.table.join(
 
 for s = 1, screen.count() do
   if isLaptop then
-    mywibox[s] = awful.wibox({ position = "bottom", screen = s, height = "16" })
+    mywibox[s] = awful.wibox({ position = "bottom", screen = s, height = "30" })
   else
     mywibox[s] = awful.wibox({ position = "bottom", screen = s, height = "29" })
   end
