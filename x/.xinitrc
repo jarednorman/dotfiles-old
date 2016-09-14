@@ -20,10 +20,11 @@ chruby_auto
   redshift-gtk &
 } &
 
-synclient TouchpadOff=2
+xset m 0 0
 
 if [ $(hostname -s) = "baburuman" ]; then
   togglekb norman
+  synclient TouchpadOff=1
 else
   togglekb qwerty
 fi
