@@ -20,7 +20,7 @@ local terminal
 if isLaptop then
   terminal = "st -f 'Input:size=16'"
 else
-  terminal = "st -f 'Input:size=13'"
+  terminal = "st -f 'Input:size=15'"
 end
 
 local modkey = "Mod4"
@@ -48,7 +48,7 @@ for s = 1, screen.count() do
   if isLaptop then
     mywibox[s] = awful.wibox({ position = "bottom", screen = s, height = "30" })
   else
-    mywibox[s] = awful.wibox({ position = "bottom", screen = s, height = "29" })
+    mywibox[s] = awful.wibox({ position = "bottom", screen = s, height = "33" })
   end
 
   local left_layout = wibox.layout.fixed.horizontal()
