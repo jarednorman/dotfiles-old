@@ -1,10 +1,10 @@
 # Add this to your .oh-my-zsh theme if you're using those, or directly to your zsh theme :)
 
 # Colors vary depending on time lapsed.
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%K{2}%F{8}"
-ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%K{3}%F{8}"
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%K{9}%F{8}%B"
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%K{14}%F{8}"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%F{2}"
+ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%F{3}"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%F{9}%B"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%F{11}"
 
 #Customized git status, oh-my-zsh currently does not allow render dirty status before branch
 # git_custom_status() {
@@ -47,11 +47,11 @@ function git_time_since_commit() {
       fi
 
       if [ "$HOURS" -gt 24 ]; then
-        echo "$COLOR ${DAYS}d${SUB_HOURS}h${SUB_MINUTES}m %{$reset_color%}%b"
+        echo "%k$COLOR${DAYS}d${SUB_HOURS}h${SUB_MINUTES}m%{$reset_color%}%b"
       elif [ "$MINUTES" -gt 60 ]; then
-        echo "$COLOR ${HOURS}h${SUB_MINUTES}m %{$reset_color%}%b"
+        echo "%k$COLOR${HOURS}h${SUB_MINUTES}m%{$reset_color%}%b"
       else
-        echo "$COLOR ${MINUTES}m %{$reset_color%}%b"
+        echo "%k$COLOR${MINUTES}m%{$reset_color%}%b"
       fi
     fi
   fi
@@ -59,7 +59,7 @@ function git_time_since_commit() {
 
 function ruby_version_maybe() {
   if [[ -a ./Gemfile ]]; then
-    echo " ruby-$RUBY_VERSION "
+    echo " ruby-$RUBY_VERSION"
   fi
 }
 
@@ -68,16 +68,16 @@ function ruby_version_maybe() {
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git*' formats "%F{8}%K{4} %b%f%u%c%f "
-zstyle ':vcs_info:*' stagedstr "%F{8}+"
-zstyle ':vcs_info:*' unstagedstr "%F{8}×"
+zstyle ':vcs_info:git*' formats "%F{11}%b%f%u%c%f"
+zstyle ':vcs_info:*' stagedstr "%F{4}+"
+zstyle ':vcs_info:*' unstagedstr "%F{1}×"
 precmd() { vcs_info }
 
-local suspended_jobs="%K{6}%F{8}%B%(1j. %j suspended .)%f%k%b"
-local current_dir=" %~%f %b"
+local suspended_jobs="%F{4}%(1j.[%j].)"
+local current_dir="%F{14}%n%F{11}@%F{14}%m%F{11}:%F{14}%~%f%b"
 local root_prompt="%F{9}%#%f%k%b "
-local user_prompt="%F{5}$%f%k%b "
-PROMPT='%K{9}%F{8}%B%(?.. %? )%b${vcs_info_msg_0_}$(git_time_since_commit)%F{8}%K{11}${current_dir}${suspended_jobs}%K{0}%F{10}$(ruby_version_maybe)
-%f%b%(!.${root_prompt}.${user_prompt})'
+local user_prompt="%F{4}$%f%k%b "
+PROMPT='%f%b${current_dir}%F{9}%(?..{%?})${suspended_jobs}%(!.${root_prompt}.${user_prompt})'
+RPROMPT='$(git_time_since_commit) ${vcs_info_msg_0_}%F{11}$(ruby_version_maybe)'
 
 setopt promptsubst
