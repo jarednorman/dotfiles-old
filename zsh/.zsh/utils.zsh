@@ -23,7 +23,7 @@ function jftest() {
   clear
   eval "$1"
   local retval=$?
-  first_tag
+  # first_tag
   if [ $retval -eq 0 ]; then
     notify-send "Tests passed!"
     exit
