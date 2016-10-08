@@ -18,7 +18,7 @@ beautiful.init("~/.config/awesome/theme.lua")
 
 local terminal
 if isLaptop then
-  terminal = "st -f 'Input:size=16'"
+  terminal = "st -f 'Input:size=18'"
 else
   terminal = "st -f 'Input:size=15'"
 end
@@ -46,7 +46,7 @@ mytaglist.buttons = awful.util.table.join(
 
 for s = 1, screen.count() do
   if isLaptop then
-    mywibox[s] = awful.wibox({ position = "bottom", screen = s, height = "30" })
+    mywibox[s] = awful.wibox({ position = "top", screen = s, height = "16" })
   else
     mywibox[s] = awful.wibox({ position = "bottom", screen = s, height = "33" })
   end
@@ -113,10 +113,8 @@ globalkeys = awful.util.table.join(
   -- awful.key({ }, "Print", function () awful.util.spawn("mpc toggle") end),
   awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -10") end),
   awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight +10") end),
-  awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("mpc toggle") end),
-  awful.key({ }, "XF86Explorer", function () awful.util.spawn("mpc toggle") end),
-  awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -20") end),
-  awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight +20") end),
+  awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -1") end),
+  awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight +1") end),
   awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume 0 +5%") end),
   awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume 0 -5%") end),
   awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pactl set-sink-mute 0 toggle") end)

@@ -9,7 +9,7 @@ theme.wallpaper_cmd = { "xsetroot -solid '#002B36'" }
 io.popen(theme.wallpaper_cmd[1])
 
 if isLaptop then
-  theme.font = "Input Medium 14"
+  theme.font = "Terminus Medium 8"
 else
   theme.font = "Input Medium 11"
 end
@@ -26,7 +26,7 @@ theme.fg_urgent     = "#dc322f"
 theme.fg_minimize   = "#93a1a1"
 
 if isLaptop then
-  theme.border_width = 0
+  theme.border_width = 3
 else
   theme.border_width = 0
 end
