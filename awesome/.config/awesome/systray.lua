@@ -1,12 +1,9 @@
 local hostname = require('hostname')
-local isLaptop = hostname() == "baburuman"
 
 local wibox = require('wibox')
 
 local systray = wibox.widget.systray()
-if isLaptop then
-  systray:set_base_size(15)
-else
-  systray:set_base_size(32)
-end
+
+systray:set_base_size(12)
+
 return systray

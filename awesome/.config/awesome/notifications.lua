@@ -17,4 +17,4 @@ naughty.config.defaults.bg               = '#657b83'
 naughty.config.defaults.border_color     = '#586e75'
 naughty.config.defaults.border_width     = 2
 
-naughty.notify({ text = "notification content" })
+naughty.notify({ text = "Notifications are working." })
