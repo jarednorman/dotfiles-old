@@ -1,7 +1,0 @@
-#!/bin/zsh
-pomme poll |
-while read -r LINE;
-do
-  echo "require('pomme'):set_markup('<span color=\"#dc322f\">$LINE</span> | ')" |
-  awesome-client
-done

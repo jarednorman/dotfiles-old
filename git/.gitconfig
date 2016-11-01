@@ -21,6 +21,7 @@
 [alias]
   a = add
   b = branch
+  bl = branch --sort=-committerdate
   c = commit -v
   ca = commit -v --amend
   cf = commit --fixup
