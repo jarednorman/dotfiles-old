@@ -48,9 +48,7 @@ for s = 1, screen.count() do
 
   local right_layout = wibox.layout.fixed.horizontal()
   if s == 1 then
-    right_layout:add(require('pomme'))
     right_layout:add(require('kbwidget'))
-    right_layout:add(require('mpdwidget'))
     right_layout:add(require('datewidget'))
     right_layout:add(require('systray'))
   end
