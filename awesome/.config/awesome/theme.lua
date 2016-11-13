@@ -4,11 +4,11 @@ local isLaptop = hostname() == "baburuman"
 theme = {}
 
 -- This doesn't seem to work so...
-theme.wallpaper_cmd = { "xsetroot -solid '#000000'" }
+theme.wallpaper_cmd = { "feh --bg-scale ~/.wallpaper.jpg" }
 -- I'll just do this:
 io.popen(theme.wallpaper_cmd[1])
 
-theme.font = "Terminus Medium 8"
+theme.font = "Input Bold 10"
 
 theme.bg_normal     = "#002b36"
 theme.bg_focus      = "#002b36"
@@ -21,7 +21,7 @@ theme.fg_focus      = "#eee8d5"
 theme.fg_urgent     = "#dc322f"
 theme.fg_minimize   = "#93a1a1"
 
-theme.border_width = 2
+theme.border_width = 0
 
 theme.border_normal = "#586e75"
 theme.border_focus  = "#268bd2"

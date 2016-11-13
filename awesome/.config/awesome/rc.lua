@@ -40,7 +40,7 @@ mytaglist.buttons = awful.util.table.join(
 )
 
 for s = 1, screen.count() do
-  mywibox[s] = awful.wibox({ position = "top", screen = s, height = "12" })
+  mywibox[s] = awful.wibox({ position = "top", screen = s, height = "16" })
 
   local left_layout = wibox.layout.fixed.horizontal()
   mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, mytaglist.buttons)
