@@ -39,6 +39,7 @@ function jftest() {
 # Misc
 
 alias bx='bundle exec'
+alias ya=yaourt
 alias grep='grep --color=auto'
 alias ls='ls -G'
 alias c='cd ~/Codes/$(ls ~/Codes | fzy)'

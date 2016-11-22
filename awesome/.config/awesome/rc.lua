@@ -16,7 +16,7 @@ local isLaptop = hostname() == "baburuman"
 
 beautiful.init("~/.config/awesome/theme.lua")
 
-local terminal = "st -f 'Input:size=15'"
+local terminal = "st -f 'Input:size=16'"
 
 local modkey = "Mod4"
 
