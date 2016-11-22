@@ -10,7 +10,7 @@ typeset -gU cdpath fpath mailpath path
 
 path=(
   $HOME/bin
-  $HOME/bin/local
+  $HOME/local/bin
   $HOME/Codes/elixir/bin
   /usr/local/{bin,sbin}
   /usr/local/share/npm/bin
