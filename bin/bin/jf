@@ -33,7 +33,7 @@ def new_window
 end
 
 def zoom_window(window)
-  `tmux resize-pane -Z -t "#{window}"`
+  # `tmux resize-pane -Z -t "#{window}"`
 end
 
 def save_window(window)

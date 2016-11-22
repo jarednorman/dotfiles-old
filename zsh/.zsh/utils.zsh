@@ -32,6 +32,11 @@ function jftest() {
   fi
 }
 
+function fix_keyboard {
+  xset m 0 0
+  togglekb qwerty
+}
+
 ###########
 # Aliases #
 ###########
