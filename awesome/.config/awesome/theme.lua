@@ -15,12 +15,12 @@ theme.border_normal = "#586e75"
 theme.border_focus  = "#268bd2"
 theme.border_marked = "#dc322f"
 
-theme.fg_normal     = "#657b83"
-theme.bg_normal     = "#eee8d5"
-theme.bg_systray    = theme.bg_normal
+theme.fg_normal     = "#93a1a1"
+theme.bg_normal     = "#002b36"
+theme.bg_systray    = "#073642"
 
 theme.fg_focus      = "#fdf8d5"
-theme.bg_focus      = "#268bd2"
+theme.bg_focus      = "#586e75"
 
 theme.fg_urgent     = "#fdf8d5"
 theme.bg_urgent     = "#cb4b16"

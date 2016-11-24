@@ -2,9 +2,13 @@
 
 set -e
 
+pulseaudio --start
+xset m 0 0
+xrdb $HOME/.Xresources
+autocutsel -fork
+autocutsel -selection PRIMARY -fork &
 unclutter &
 redshift &
-xset m 0 0
 
 if [ $(hostname -s) = "akedoman" ]; then
   togglekb norman
@@ -12,8 +16,5 @@ if [ $(hostname -s) = "akedoman" ]; then
 else
   togglekb qwerty
 fi
-
-autocutsel -fork
-autocutsel -selection PRIMARY -fork &
 
 exec awesome
