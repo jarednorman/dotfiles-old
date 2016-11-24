@@ -6,7 +6,7 @@ let s:N2 = ['', '', 8, 10]
 let s:N3 = ['', '', 12, 0]
 
 " Insert mode
-let s:I1 = ['', '', 0, 5]
+let s:I1 = ['', '', 0, 3]
 let s:I2 = ['', '', 8, 10]
 let s:I3 = ['', '', 12, 0]
 
@@ -27,9 +27,9 @@ let s:PA = ['', 1]
 let s:IM = ['', 1]
 
 " Inactive mode
-let s:IA1 = ['', '', 0, 14]
-let s:IA2 = ['', '', 0, 14]
-let s:IA3 = ['', '', 0, 14]
+let s:IA1 = ['', '', 14, 11]
+let s:IA2 = ['', '', 14, 11]
+let s:IA3 = ['', '', 14, 11]
 
 let g:airline#themes#jardo#palette = {}
 
