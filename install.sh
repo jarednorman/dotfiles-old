@@ -1,5 +1,3 @@
 #!/bin/sh
 set -ex
-mkdir -p ~/.config/beets
-mkdir -p ~/.config/mpd
-stow ag awesome bin git tmux vim music ruby x zsh -t ~
+stow ag bin git i3 tmux vim music ruby x zsh -t ~

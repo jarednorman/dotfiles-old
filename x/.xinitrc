@@ -19,4 +19,4 @@ else
   togglekb qwerty
 fi
 
-exec awesome
+exec i3
