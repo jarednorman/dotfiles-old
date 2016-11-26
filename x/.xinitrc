@@ -19,4 +19,4 @@ else
   togglekb qwerty
 fi
 
-exec i3
+exec xmonad
