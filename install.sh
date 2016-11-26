@@ -1,3 +1,3 @@
 #!/bin/sh
 set -ex
-stow ag bin git i3 tmux vim music ruby x zsh -t ~
+stow ag bin git tmux vim music ruby x xmonad zsh -t ~
