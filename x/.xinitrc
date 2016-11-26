@@ -2,13 +2,15 @@
 
 set -e
 
-pulseaudio --start
-xset m 0 0
-xrdb $HOME/.Xresources
-autocutsel -fork
-autocutsel -selection PRIMARY -fork &
-unclutter &
-redshift &
+{
+  pulseaudio --start --daemonize
+  xset m 0 0
+  xrdb $HOME/.Xresources
+  autocutsel -fork
+  autocutsel -selection PRIMARY -fork &
+  unclutter &
+  redshift &
+} &
 
 if [ $(hostname -s) = "akedoman" ]; then
   togglekb norman
