@@ -1,17 +1,21 @@
 import System.IO
-import XMonad
+import XMonad hiding (Tall)
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
 import Graphics.X11.ExtraTypes.XF86
 import XMonad.Hooks.EwmhDesktops
 import qualified XMonad.StackSet as W
-import XMonad.Layout.NoBorders
 
-myLayoutHook = smartBorders (Full ||| tall ||| twoTall)
+import XMonad.Layout.NoBorders
+import XMonad.Layout.HintedTile
+
+myLayoutHook = smartBorders (Full ||| hintedTile Tall ||| hintedTile Wide)
                where
-                  tall      = Tall 1 (1/100) (1/2)
-                  twoTall   = Tall 2 (1/100) (1/2)
+                  hintedTile = HintedTile nmaster delta ratio TopLeft
+                  nmaster    = 1
+                  ratio      = 1/2
+                  delta      = 3/100
 
 myManageHook = composeAll
     [ className =? "Xfce4-notifyd" --> doF W.focusDown
