@@ -74,7 +74,7 @@ zstyle ':vcs_info:*' unstagedstr "%F{1}×"
 precmd() { vcs_info }
 
 local suspended_jobs="%F{4}%(1j.[%j].)"
-local current_dir="%F{14}%n%F{11}@%F{14}%m%F{11}:%F{14}%~%f%b"
+local current_dir="%F{6}%n@%m:%~%f%b"
 local root_prompt="%F{9}%#%f%k%b "
 local user_prompt="%F{4}$%f%k%b "
 PROMPT='%f%b${current_dir}%F{9}%(?..{%?})${suspended_jobs}%(!.${root_prompt}.${user_prompt})'

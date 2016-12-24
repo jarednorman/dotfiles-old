@@ -10,7 +10,7 @@ import qualified XMonad.StackSet as W
 import XMonad.Layout.NoBorders
 import XMonad.Layout.HintedTile
 
-myLayoutHook = smartBorders (Full ||| hintedTile Tall ||| hintedTile Wide)
+myLayoutHook = smartBorders (Full ||| noBorders Full ||| hintedTile Tall ||| hintedTile Wide)
                where
                   hintedTile = HintedTile nmaster delta ratio TopLeft
                   nmaster    = 1
@@ -29,7 +29,7 @@ main = do
          , modMask            = mod4Mask
          , borderWidth        = 2
          , normalBorderColor  = "#93a1a1"
-         , focusedBorderColor = "#586e75"
+         , focusedBorderColor = "#d33682"
          , layoutHook         = myLayoutHook
          , handleEventHook    = handleEventHook defaultConfig <+> fullscreenEventHook
          , startupHook        = ewmhDesktopsStartup
