@@ -1,18 +1,8 @@
-# Add this to your .oh-my-zsh theme if you're using those, or directly to your zsh theme :)
-
 # Colors vary depending on time lapsed.
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%F{2}"
 ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%F{3}"
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%F{9}%B"
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%F{11}"
-
-#Customized git status, oh-my-zsh currently does not allow render dirty status before branch
-# git_custom_status() {
-#   local cb=$(current_branch)
-#   if [ -n "$cb" ]; then
-#     echo "$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX"
-#   fi
-# }
 
 # Determine the time since last commit. If branch is clean,
 # use a neutral color, otherwise colors will vary according to time.
@@ -68,16 +58,17 @@ function ruby_version_maybe() {
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git*' formats "%F{11}%b%f%u%c%f"
-zstyle ':vcs_info:*' stagedstr "%F{4}+"
-zstyle ':vcs_info:*' unstagedstr "%F{1}×"
+zstyle ':vcs_info:git*' formats "%F{13}%b%f%u%c%f"
+zstyle ':vcs_info:*' stagedstr " %F{4}staged"
+zstyle ':vcs_info:*' unstagedstr " %F{1}dirty"
 precmd() { vcs_info }
 
 local suspended_jobs="%F{4}%(1j.[%j].)"
-local current_dir="%F{6}%n@%m:%~%f%b"
+local current_dir="%F{6}%~%f%b"
 local root_prompt="%F{9}%#%f%k%b "
 local user_prompt="%F{4}$%f%k%b "
-PROMPT='%f%b${current_dir}%F{9}%(?..{%?})${suspended_jobs}%(!.${root_prompt}.${user_prompt})'
-RPROMPT='$(git_time_since_commit) ${vcs_info_msg_0_}%F{11}$(ruby_version_maybe)'
+PROMPT='%K{4}%F{8}┐%k %F{2}%n@%m $(git_time_since_commit) ${vcs_info_msg_0_}%F{11}$(ruby_version_maybe)
+%K{4}%F{8}└%k %f%b${current_dir}%F{9}%(?..{%?})${suspended_jobs}%(!.${root_prompt}.${user_prompt})'
+RPROMPT=''
 
 setopt promptsubst
