@@ -135,6 +135,8 @@ function! FzyCommand(choice_command, vim_command)
   endif
 endfunction
 
+au VimResized * :wincmd =
+
 nnoremap <cr> :
 nnoremap K \<noop>
 vnoremap K \<noop>
