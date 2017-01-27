@@ -1,8 +1,0 @@
-#!/bin/sh
-### lolcommits hook (begin) ###
-if [ ! -d "$GIT_DIR/rebase-merge" ]; then
-  export LANG="en_CA.UTF-8"
-  export PATH="/home/jared/.rubies/ruby-2.2.3/bin:/usr/bin:$PATH"
-  lolcommits --capture --gif --delay=1 --animate=2 --fork --stealth
-fi
-###  lolcommits hook (end)  ###
