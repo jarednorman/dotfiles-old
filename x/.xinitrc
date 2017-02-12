@@ -2,15 +2,15 @@
 
 set -e
 
->&2 echo "Starting PulseAudio..."
-pulseaudio --start -D
+# >&2 echo "Starting PulseAudio..."
+# pulseaudio --start -D
 
 >&2 echo "Setting screen layout..."
 sh $HOME/.xrandr.sh
 
->&2 echo "Setting wallpaper..."
-feh --bg-fill $HOME/.wallpaper.jpg
-
+# >&2 echo "Setting wallpaper..."
+# feh --bg-fill $HOME/.wallpaper.jpg
+# 
 >&2 echo "Loading .Xresources..."
 xrdb $HOME/.Xresources
 
@@ -31,12 +31,7 @@ unclutter &
 redshift &
 
 >&2 echo "Setting keyboard layout..."
-if [ $(hostname -s) = "akedoman" ]; then
-  togglekb norman
-  synclient TouchpadOff=1
-else
-  togglekb qwerty
-fi
+togglekb norman
 
 >&2 echo "Starting screen locker..."
 (while :; do
