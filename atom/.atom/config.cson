@@ -5,5 +5,12 @@
       "one-light-ui"
       "one-light-syntax"
     ]
+  editor:
+    fontFamily: "Fira Mono"
+    fontSize: 15
+    invisibles: {}
+    showInvisibles: true
+    softWrap: true
+    softWrapHangingIndent: 2
   "exception-reporting":
     userId: "47dc68bb-2990-434b-a8d9-63bd06f2bb84"
