@@ -1,10 +1,14 @@
 "*":
   core:
+    autoHideMenuBar: true
+    projectHome: "/home/jared/Codes"
+    reopenProjectMenuCount: 5
     telemetryConsent: "no"
     themes: [
       "one-light-ui"
       "one-light-syntax"
     ]
+    warnOnLargeFileLimit: 5
   editor:
     fontFamily: "Fira Mono"
     fontSize: 15
