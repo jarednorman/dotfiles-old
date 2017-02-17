@@ -67,8 +67,8 @@ local suspended_jobs="%F{4}%(1j. [%j].)"
 local current_dir="%F{6}%~%f%b"
 local root_prompt="%F{9}%#%f%k%b "
 local user_prompt="%F{4}$%f%k%b "
-PROMPT='%K{4}%F{8}┐%k %F{2}%n@%m $(git_time_since_commit) ${vcs_info_msg_0_}%F{11}$(ruby_version_maybe)%F{9}%(?.. {%?})${suspended_jobs}
-%K{4}%F{8}└%k %f%b${current_dir}%(!.${root_prompt}.${user_prompt})'
+PROMPT='%F{2}%n@%m $(git_time_since_commit) ${vcs_info_msg_0_}%F{11}$(ruby_version_maybe)%F{9}%(?.. {%?})${suspended_jobs}
+%f%b${current_dir}%(!.${root_prompt}.${user_prompt})'
 RPROMPT=''
 
 setopt promptsubst
