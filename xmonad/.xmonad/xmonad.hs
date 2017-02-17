@@ -25,7 +25,7 @@ myManageHook = composeAll
 main = do
   xmonad $ ewmh defaultConfig
          { manageHook         = myManageHook <+> manageHook defaultConfig
-         , terminal           = "st -f 'Fira Mono:pixelsize=14'"
+         , terminal           = "st"
          , modMask            = mod4Mask
          , borderWidth        = 2
          , normalBorderColor  = "#93a1a1"
