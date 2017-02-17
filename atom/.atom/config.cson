@@ -1,4 +1,5 @@
 "*":
+  "atom-clock": {}
   core:
     autoHideMenuBar: true
     projectHome: "/home/jared/Codes"
@@ -10,11 +11,12 @@
     ]
     warnOnLargeFileLimit: 5
   editor:
-    fontFamily: "Fira Mono"
-    fontSize: 15
+    fontFamily: "Fira Code"
     invisibles: {}
     showInvisibles: true
     softWrap: true
     softWrapHangingIndent: 2
   "exception-reporting":
     userId: "47dc68bb-2990-434b-a8d9-63bd06f2bb84"
+  welcome:
+    showOnStartup: false

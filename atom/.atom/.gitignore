@@ -4,3 +4,4 @@
 /packages
 /.apm/*
 /.node-gyp
+/blob-store
