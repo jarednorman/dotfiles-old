@@ -1,7 +1,13 @@
 "*":
   "atom-clock": {}
   core:
+    allowPendingPaneItems: false
+    audioBeep: false
     autoHideMenuBar: true
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "git-blame"
+    ]
     projectHome: "/home/jared/Codes"
     reopenProjectMenuCount: 5
     telemetryConsent: "no"
@@ -12,6 +18,7 @@
     warnOnLargeFileLimit: 5
   editor:
     fontFamily: "Fira Code"
+    fontSize: 15
     invisibles: {}
     showInvisibles: true
     softWrap: true
@@ -20,3 +27,17 @@
     userId: "47dc68bb-2990-434b-a8d9-63bd06f2bb84"
   welcome:
     showOnStartup: false
+  "git-plus":
+    commits:
+      verboseCommits: true
+    diffs:
+      wordDiff: false
+  linter:
+    lintOnFly: false
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.plain"
+      "text.plain.null-grammar"
+    ]
