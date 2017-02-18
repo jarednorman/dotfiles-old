@@ -31,7 +31,8 @@ filetype plugin indent on
 
 " Make it pretty!
 syntax on
-colo creepywizard
+set background=dark
+colo solarized
 
 " Built in Vim settings.
 set shell=$SHELL
