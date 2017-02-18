@@ -4,12 +4,36 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+
+" Some handy stuff:
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-eunuch'
+Plugin 'vim-airline/vim-airline'
+Plugin 'christoomey/vim-tmux-navigator'
+
+" Tool support:
+Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-fugitive'
+Plugin 'rking/ag.vim'
+
+" Language/framework support:
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-haml'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'jason0x43/vim-js-indent'
 
 call vundle#end()
 filetype plugin indent on
-syntax on
 
+" Make it pretty!
+syntax on
+colo creepywizard
+
+" Built in Vim settings.
 set shell=$SHELL
 set noswapfile
 set nobackup
@@ -20,14 +44,68 @@ set shiftwidth=2
 set hlsearch
 set ignorecase
 set smartcase
-set nonumber
+set number
 set wrap
 set cmdheight=1
 set wildmode=list:longest,list:full
 set splitright
 set splitbelow
 set ttyfast
-set undofile                " Save undo's after file closes
-set undodir=$HOME/.vim/undo " where to save undo histories
-set undolevels=1000         " How many undos
-set undoreload=10000        " number of lines to save for undo
+set list listchars=eol:¬,tab:→\ ,trail:•
+
+" Changes cursor while in insert mode.
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
+" The final frontier.
+let mapleader = "\<space>"
+let g:mapleader = "\<space>"
+
+" Distribute windows when resize happens.
+au VimResized * :wincmd =
+
+" Fzy support!
+function! FzyCommand(choice_command, vim_command)
+  try
+    let output = system(a:choice_command . " | fzy ")
+  catch /Vim:Interrupt/
+    " Swallow errors from ^C, allow redraw! below
+  endtry
+  redraw!
+  if v:shell_error == 0 && !empty(output)
+    exec a:vim_command . ' ' . output
+  endif
+endfunction
+nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l --hidden --ignore /.git", ":e")<cr>
+nnoremap <leader>fg :call FzyCommand("ag -g '' $(bundle show $(bundle list \| cut -f 4 -d' ' \| fzy))", ":e")<cr>
+nnoremap <leader>fp :call FzyCommand("ag --nocolor -l --hidden --ignore /.git -g '' ~/Codes/$(ls ~/Codes \| fzy)", ":e")<cr>
+
+" Convenience
+nnoremap <cr> :
+nnoremap <leader><cr> <cr>
+
+" Disable things I accidentally do.
+nnoremap K \<noop>
+vnoremap K \<noop>
+nnoremap <c-w>o \<noop>
+vnoremap <c-w>o \<noop>
+
+" Clear search.
+nnoremap <leader>/ :let @/=""<cr>
+
+" Tab navigation.
+nnoremap <leader><tab> :tabn<cr>
+nnoremap <leader><s-tab> :tabp<cr>
+
+" Create folder for current file
+nnoremap <leader>mk :!mkdir -p %:p:h<cr>
+
+" Custom test runner support.
+nnoremap <leader>t :!jf test %:.<cr><cr>
+nnoremap <leader>r :!jf run %:.<cr><cr>
+
+" Convenience for editing Vim themes.
+map <leader>x :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
