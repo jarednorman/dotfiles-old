@@ -80,7 +80,7 @@ hi SpecialKey      ctermfg=7       ctermbg=none    cterm=none
 " --------------------------------
 " Variable types
 " --------------------------------
-hi Constant        ctermfg=5       ctermbg=none    cterm=none
+hi Constant        ctermfg=14      ctermbg=none    cterm=none
 hi String          ctermfg=2       ctermbg=none    cterm=none
 hi StringDelimiter ctermfg=10      ctermbg=none    cterm=none
 hi Character       ctermfg=10      ctermbg=none    cterm=none
@@ -95,7 +95,7 @@ hi Function        ctermfg=12      ctermbg=none    cterm=none
 " Language constructs
 " --------------------------------
 hi Statement       ctermfg=2       ctermbg=none    cterm=none
-hi Conditional     ctermfg=2       ctermbg=none    cterm=none
+hi Conditional     ctermfg=11       ctermbg=none    cterm=none
 hi Repeat          ctermfg=2       ctermbg=none    cterm=none
 hi Label           ctermfg=10      ctermbg=none    cterm=none
 hi Operator        ctermfg=1       ctermbg=none    cterm=none
@@ -120,7 +120,7 @@ hi Macro           ctermfg=1       ctermbg=none    cterm=none
 hi PreCondit       ctermfg=1       ctermbg=none    cterm=none
 
 hi Type            ctermfg=3       ctermbg=none    cterm=none
-hi StorageClass    ctermfg=1       ctermbg=none    cterm=none
+hi StorageClass    ctermfg=12       ctermbg=none    cterm=none
 hi Structure       ctermfg=1       ctermbg=none    cterm=none
 hi Typedef         ctermfg=1       ctermbg=none    cterm=none
 
