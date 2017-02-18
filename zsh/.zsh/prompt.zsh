@@ -1,7 +1,7 @@
 # Colors vary depending on time lapsed.
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%F{2}"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%F{0}"
 ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%F{3}"
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%F{9}%B"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%F{1}"
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%F{11}"
 
 # Determine the time since last commit. If branch is clean,
@@ -58,7 +58,7 @@ function ruby_version_maybe() {
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git*' formats "%F{13}%b%f%u%c%f"
+zstyle ':vcs_info:git*' formats "%F{12}%b%f%u%c%f"
 zstyle ':vcs_info:*' stagedstr " %F{4}staged"
 zstyle ':vcs_info:*' unstagedstr " %F{1}dirty"
 precmd() { vcs_info }
