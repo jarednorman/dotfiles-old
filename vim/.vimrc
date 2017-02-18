@@ -51,7 +51,16 @@ set wildmode=list:longest,list:full
 set splitright
 set splitbelow
 set ttyfast
+set lazyredraw
 set list listchars=eol:¬,tab:→\ ,trail:•
+
+" vim-airline
+let g:airline_powerline_fonts = 0
+let g:airline_theme = 'creepywizard'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_alt_sep = ''
 
 " Changes cursor while in insert mode.
 let &t_SI = "\<Esc>[6 q"
