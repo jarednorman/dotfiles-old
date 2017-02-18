@@ -1,8 +1,8 @@
 # Colors vary depending on time lapsed.
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%F{0}"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%F{2}"
 ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%F{3}"
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%F{1}"
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%F{11}"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%F{14}"
 
 # Determine the time since last commit. If branch is clean,
 # use a neutral color, otherwise colors will vary according to time.
@@ -58,17 +58,17 @@ function ruby_version_maybe() {
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git*' formats "%F{12}%b%f%u%c%f"
-zstyle ':vcs_info:*' stagedstr " %F{4}staged"
-zstyle ':vcs_info:*' unstagedstr " %F{1}dirty"
+zstyle ':vcs_info:git*' formats "%F{14}(%F{6}%b%f%F{1}%u%F{4}%c%F{14})"
+zstyle ':vcs_info:*' stagedstr "+"
+zstyle ':vcs_info:*' unstagedstr "×"
 precmd() { vcs_info }
 
 local suspended_jobs="%F{4}%(1j. [%j].)"
-local current_dir="%F{6}%~%f%b"
+local current_dir="%F{3}%~%f%b"
 local root_prompt="%F{9}%#%f%k%b "
-local user_prompt="%F{4}$%f%k%b "
-PROMPT='%F{2}%n@%m $(git_time_since_commit) ${vcs_info_msg_0_}%F{11}$(ruby_version_maybe)%F{9}%(?.. {%?})${suspended_jobs}
-%f%b${current_dir}%(!.${root_prompt}.${user_prompt})'
+local user_prompt="%F{1}$%f%k%b "
+PROMPT='%F{4}%n%F{10}@%F{13}%m:%f%b${current_dir}${vcs_info_msg_0_}%F{11} $(git_time_since_commit)%F{10}$(ruby_version_maybe)%F{9}%(?.. {%?})${suspended_jobs}
+%(!.${root_prompt}.${user_prompt})'
 RPROMPT=''
 
 setopt promptsubst
