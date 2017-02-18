@@ -1,19 +1,14 @@
-" Vim colorscheme template file
-" Author: Gerardo Galindez <gerardo.galindez@gmail.com>
-" Maintainer: Gerardo Galindez <gerardo.galindez@gmail.com>
-" Notes: To check the meaning of the highlight groups, :help 'highlight'
+" Creepy Wizard Vim Theme
+" Author: Jared Norma <jared@creepywizard.com>
+" Maintainer: Jared Norma <jared@creepywizard.com>
 
-" --------------------------------
-set background=dark
-" - or ---------------------------
 set background=light
-" --------------------------------
 
 highlight clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="Colorscheme name"
+let g:colors_name="creepywizard"
 
 "----------------------------------------------------------------
 " General settings                                              |
@@ -27,8 +22,8 @@ let g:colors_name="Colorscheme name"
 " --------------------------------
 hi Normal          ctermfg=none    ctermbg=none    cterm=none
 hi Cursor          ctermfg=none    ctermbg=none    cterm=none
-hi CursorLine      ctermfg=none    ctermbg=none    cterm=none
-hi LineNr          ctermfg=none    ctermbg=none    cterm=none
+hi CursorLine      ctermfg=none    ctermbg=7       cterm=none
+hi LineNr          ctermfg=15      ctermbg=none    cterm=none
 hi CursorLineNR    ctermfg=none    ctermbg=none    cterm=none
 
 " -----------------
@@ -42,7 +37,7 @@ hi Folded          ctermfg=none    ctermbg=none    cterm=none
 " -------------------------
 " - Window/Tab delimiters - 
 " -------------------------
-hi VertSplit       ctermfg=none    ctermbg=none    cterm=none
+hi VertSplit       ctermfg=15      ctermbg=none    cterm=none
 hi ColorColumn     ctermfg=none    ctermbg=none    cterm=none
 hi TabLine         ctermfg=none    ctermbg=none    cterm=none
 hi TabLineFill     ctermfg=none    ctermbg=none    cterm=none
@@ -58,8 +53,8 @@ hi IncSearch       ctermfg=none    ctermbg=none    cterm=none
 " -----------------
 " - Prompt/Status -
 " -----------------
-hi StatusLine      ctermfg=none    ctermbg=none    cterm=none
-hi StatusLineNC    ctermfg=none    ctermbg=none    cterm=none
+hi StatusLine      ctermfg=15      ctermbg=15      cterm=bold
+hi StatusLineNC    ctermfg=15      ctermbg=15      cterm=none
 hi WildMenu        ctermfg=none    ctermbg=none    cterm=none
 hi Question        ctermfg=none    ctermbg=none    cterm=none
 hi Title           ctermfg=none    ctermbg=none    cterm=none
@@ -69,73 +64,80 @@ hi MoreMsg         ctermfg=none    ctermbg=none    cterm=none
 " --------------
 " - Visual aid -
 " --------------
-hi MatchParen      ctermfg=none    ctermbg=none    cterm=none
-hi Visual          ctermfg=none    ctermbg=none    cterm=none
+hi MatchParen      ctermfg=12      ctermbg=none    cterm=reverse
+hi Visual          ctermfg=12      ctermbg=none    cterm=reverse,bold
 hi VisualNOS       ctermfg=none    ctermbg=none    cterm=none
-hi NonText         ctermfg=none    ctermbg=none    cterm=none
+hi NonText         ctermfg=7       ctermbg=none    cterm=none
 
 hi Todo            ctermfg=none    ctermbg=none    cterm=none
 hi Underlined      ctermfg=none    ctermbg=none    cterm=none
-hi Error           ctermfg=none    ctermbg=none    cterm=none
-hi ErrorMsg        ctermfg=none    ctermbg=none    cterm=none
+hi Error           ctermfg=1       ctermbg=none    cterm=none
+hi ErrorMsg        ctermfg=1       ctermbg=none    cterm=none
 hi WarningMsg      ctermfg=none    ctermbg=none    cterm=none
 hi Ignore          ctermfg=none    ctermbg=none    cterm=none
-hi SpecialKey      ctermfg=none    ctermbg=none    cterm=none
+hi SpecialKey      ctermfg=7       ctermbg=none    cterm=none
 
 " --------------------------------
 " Variable types
 " --------------------------------
-hi Constant        ctermfg=none    ctermbg=none    cterm=none
-hi String          ctermfg=none    ctermbg=none    cterm=none
-hi StringDelimiter ctermfg=none    ctermbg=none    cterm=none
-hi Character       ctermfg=none    ctermbg=none    cterm=none
-hi Number          ctermfg=none    ctermbg=none    cterm=none
-hi Boolean         ctermfg=none    ctermbg=none    cterm=none
-hi Float           ctermfg=none    ctermbg=none    cterm=none
+hi Constant        ctermfg=5       ctermbg=none    cterm=none
+hi String          ctermfg=2       ctermbg=none    cterm=none
+hi StringDelimiter ctermfg=10      ctermbg=none    cterm=none
+hi Character       ctermfg=10      ctermbg=none    cterm=none
+hi Number          ctermfg=5       ctermbg=none    cterm=none
+hi Boolean         ctermfg=5       ctermbg=none    cterm=none
+hi Float           ctermfg=5       ctermbg=none    cterm=none
 
-hi Identifier      ctermfg=none    ctermbg=none    cterm=none
-hi Function        ctermfg=none    ctermbg=none    cterm=none
+hi Identifier      ctermfg=10      ctermbg=none    cterm=none
+hi Function        ctermfg=12      ctermbg=none    cterm=none
 
 " --------------------------------
 " Language constructs
 " --------------------------------
-hi Statement       ctermfg=none    ctermbg=none    cterm=none
-hi Conditional     ctermfg=none    ctermbg=none    cterm=none
-hi Repeat          ctermfg=none    ctermbg=none    cterm=none
-hi Label           ctermfg=none    ctermbg=none    cterm=none
-hi Operator        ctermfg=none    ctermbg=none    cterm=none
-hi Keyword         ctermfg=none    ctermbg=none    cterm=none
-hi Exception       ctermfg=none    ctermbg=none    cterm=none
-hi Comment         ctermfg=none    ctermbg=none    cterm=none
+hi Statement       ctermfg=2       ctermbg=none    cterm=none
+hi Conditional     ctermfg=2       ctermbg=none    cterm=none
+hi Repeat          ctermfg=2       ctermbg=none    cterm=none
+hi Label           ctermfg=10      ctermbg=none    cterm=none
+hi Operator        ctermfg=1       ctermbg=none    cterm=none
+hi Keyword         ctermfg=2       ctermbg=none    cterm=none
+hi Exception       ctermfg=1       ctermbg=none    cterm=none
+hi Comment         ctermfg=15      ctermbg=none    cterm=none
 
-hi Special         ctermfg=none    ctermbg=none    cterm=none
-hi SpecialChar     ctermfg=none    ctermbg=none    cterm=none
-hi Tag             ctermfg=none    ctermbg=none    cterm=none
-hi Delimiter       ctermfg=none    ctermbg=none    cterm=none
-hi SpecialComment  ctermfg=none    ctermbg=none    cterm=none
-hi Debug           ctermfg=none    ctermbg=none    cterm=none
+hi Special         ctermfg=1       ctermbg=none    cterm=none
+hi SpecialChar     ctermfg=1       ctermbg=none    cterm=none
+hi Tag             ctermfg=1       ctermbg=none    cterm=none
+hi Delimiter       ctermfg=1       ctermbg=none    cterm=none
+hi SpecialComment  ctermfg=1       ctermbg=none    cterm=none
+hi Debug           ctermfg=1       ctermbg=none    cterm=none
 
 " ----------
 " - C like -
 " ----------
-hi PreProc         ctermfg=none    ctermbg=none    cterm=none
-hi Include         ctermfg=none    ctermbg=none    cterm=none
-hi Define          ctermfg=none    ctermbg=none    cterm=none
-hi Macro           ctermfg=none    ctermbg=none    cterm=none
-hi PreCondit       ctermfg=none    ctermbg=none    cterm=none
+hi PreProc         ctermfg=2       ctermbg=none    cterm=none
+hi Include         ctermfg=1       ctermbg=none    cterm=none
+hi Define          ctermfg=2       ctermbg=none    cterm=none
+hi Macro           ctermfg=1       ctermbg=none    cterm=none
+hi PreCondit       ctermfg=1       ctermbg=none    cterm=none
 
-hi Type            ctermfg=none    ctermbg=none    cterm=none
-hi StorageClass    ctermfg=none    ctermbg=none    cterm=none
-hi Structure       ctermfg=none    ctermbg=none    cterm=none
-hi Typedef         ctermfg=none    ctermbg=none    cterm=none
+hi Type            ctermfg=3       ctermbg=none    cterm=none
+hi StorageClass    ctermfg=1       ctermbg=none    cterm=none
+hi Structure       ctermfg=1       ctermbg=none    cterm=none
+hi Typedef         ctermfg=1       ctermbg=none    cterm=none
 
 " --------------------------------
 " Diff
 " --------------------------------
-hi DiffAdd         ctermfg=none    ctermbg=none    cterm=none
+hi DiffAdd         ctermfg=10      ctermbg=none    cterm=none
 hi DiffChange      ctermfg=none    ctermbg=none    cterm=none
-hi DiffDelete      ctermfg=none    ctermbg=none    cterm=none
+hi DiffDelete      ctermfg=9       ctermbg=none    cterm=none
+hi DiffRemoved     ctermfg=9       ctermbg=none    cterm=none
 hi DiffText        ctermfg=none    ctermbg=none    cterm=none
+
+" --------------------------------
+" Git
+" --------------------------------
+hi GitCommitSummary  ctermfg=0       ctermbg=none    cterm=bold
+hi GitCommitOverflow ctermfg=231     ctermbg=9       cterm=none
 
 " --------------------------------
 " Completion menu

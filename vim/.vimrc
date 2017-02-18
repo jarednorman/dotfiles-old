@@ -53,6 +53,7 @@ set splitbelow
 set ttyfast
 set lazyredraw
 set list listchars=eol:¬,tab:→\ ,trail:•
+set fillchars+=vert:│
 
 " vim-airline
 let g:airline_powerline_fonts = 0
