@@ -31,7 +31,7 @@
   f = fetch
   ff = merge --ff-only
   ignore = update-index --assume-unchanged
-  l = log --graph --pretty=format:'%C(green)%h %C(red)→ %C(bold blue)%s%C(reset) %C(black)%aN%C(bold white) %cd%C(red)%d' --abbrev-commit --date=relative
+  l = log --graph --pretty=format:'%C(10)%h %C(4)→ %C(7)%s %C(12)%aN %C(2)%cd%C(red)%d' --abbrev-commit --date=relative
   m = merge
   p = pull
   pr = pull --rebase
