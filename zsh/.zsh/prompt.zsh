@@ -58,16 +58,16 @@ function ruby_version_maybe() {
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git*' formats "%F{14}(%F{6}%b%f%F{1}%u%F{4}%c%F{14})"
+zstyle ':vcs_info:git*' formats "%F{14}(%F{3}%b%f%F{1}%u%F{4}%c%F{14})"
 zstyle ':vcs_info:*' stagedstr "+"
 zstyle ':vcs_info:*' unstagedstr "×"
 precmd() { vcs_info }
 
 local suspended_jobs="%F{4}%(1j. [%j].)"
-local current_dir="%F{3}%~%f%b"
+local current_dir="%F{6}%~%f%b"
 local root_prompt="%F{9}%#%f%k%b "
 local user_prompt="%F{1}$%f%k%b "
-PROMPT='%F{4}%n%F{10}@%F{13}%m:%f%b${current_dir}${vcs_info_msg_0_}%F{11} $(git_time_since_commit)%F{10}$(ruby_version_maybe)%F{9}%(?.. {%?})${suspended_jobs}
+PROMPT='%F{13}%n%F{10}@%F{4}%m%F{10}:%f%b${current_dir}${vcs_info_msg_0_}%F{11} $(git_time_since_commit)%F{10}$(ruby_version_maybe)%F{9}%(?.. {%?})${suspended_jobs}
 %(!.${root_prompt}.${user_prompt})'
 RPROMPT=''
 
