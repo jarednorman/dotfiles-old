@@ -1,38 +1,43 @@
 import System.IO
+
+import Graphics.X11.ExtraTypes.XF86
+
 import XMonad hiding (Tall)
+
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.DynamicLog
+
 import XMonad.Util.EZConfig
-import Graphics.X11.ExtraTypes.XF86
-import XMonad.Hooks.EwmhDesktops
-import qualified XMonad.StackSet as W
+import XMonad.Util.Run(spawnPipe)
 
 import XMonad.Layout.NoBorders
 import XMonad.Layout.HintedTile
 
-myLayoutHook = smartBorders (Full ||| noBorders Full ||| hintedTile Tall ||| hintedTile Wide)
-               where
-                  hintedTile = HintedTile nmaster delta ratio TopLeft
-                  nmaster    = 1
-                  ratio      = 1/2
-                  delta      = 3/100
-
-myManageHook = composeAll
-    [ className =? "Xfce4-notifyd" --> doF W.focusDown
-    , manageDocks
-    ]
+myLayoutHook = avoidStruts (noBorders Full ||| Full)
 
 main = do
+  xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar.hs"
   xmonad $ ewmh defaultConfig
-         { manageHook         = myManageHook <+> manageHook defaultConfig
+         { manageHook         = manageDocks <+> manageHook defaultConfig
          , terminal           = "st"
          , modMask            = mod4Mask
          , borderWidth        = 2
          , normalBorderColor  = "#93a1a1"
          , focusedBorderColor = "#d33682"
          , layoutHook         = myLayoutHook
-         , handleEventHook    = handleEventHook defaultConfig <+> fullscreenEventHook
+         , handleEventHook    = docksEventHook <+> ewmhDesktopsEventHook
          , startupHook        = ewmhDesktopsStartup
+         , logHook = dynamicLogWithPP $ xmobarPP
+                     { ppOutput          = hPutStrLn xmproc
+                     , ppTitle           = xmobarColor "#2aa198" ""
+                     , ppCurrent         = xmobarColor "#fdf6e3" ""
+                     , ppVisible         = xmobarColor "#eee8d5" ""
+                     , ppHidden          = xmobarColor "#93a1a1" ""
+                     , ppHiddenNoWindows = xmobarColor "#586e75" ""
+                     , ppLayout          = xmobarColor "#859900" ""
+                     , ppSep             = " • "
+                     }
          }
          `additionalKeys`
          [ ((0,        xF86XK_AudioLowerVolume ), spawn "pactl set-sink-volume 0 -5%")
