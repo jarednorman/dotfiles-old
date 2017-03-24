@@ -14,20 +14,20 @@ import XMonad.Util.Run(spawnPipe)
 import XMonad.Layout.NoBorders
 import XMonad.Layout.HintedTile
 
-myLayoutHook = avoidStruts (noBorders Full ||| Full)
+myLayoutHook = smartBorders $ avoidStruts (Full)
 
 main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar.hs"
   xmonad $ ewmh defaultConfig
          { manageHook         = manageDocks <+> manageHook defaultConfig
-         , terminal           = "st"
+         , layoutHook         = myLayoutHook
+         , handleEventHook    = handleEventHook def <+> fullscreenEventHook  <+> docksEventHook
+         , startupHook        = ewmhDesktopsStartup
          , modMask            = mod4Mask
+         , terminal           = "st"
          , borderWidth        = 2
          , normalBorderColor  = "#93a1a1"
          , focusedBorderColor = "#d33682"
-         , layoutHook         = myLayoutHook
-         , handleEventHook    = docksEventHook <+> ewmhDesktopsEventHook
-         , startupHook        = ewmhDesktopsStartup
          , logHook = dynamicLogWithPP $ xmobarPP
                      { ppOutput          = hPutStrLn xmproc
                      , ppTitle           = xmobarColor "#2aa198" ""
