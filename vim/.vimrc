@@ -76,6 +76,8 @@ let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#buffer_min_count = 2
+let g:airline_section_a = '%{airline#util#wrap(airline#parts#mode(),0)}%#__restore__#%{airline#util#append(airline#parts#crypt(),0)}%{airline#util#append(airline#parts#paste(),0)}%{airline#util#append(airline#parts#spell(),0)}%{airline#util#append("",0)}%{airline#util#append("",0)}%{airline#util#append(airline#parts#iminsert(),0)}'
+let g:airline_section_z = '%p%% %{g:airline_symbols.linenr} %l/%L%{g:airline_symbols.maxlinenr} : %v'
 
 " Changes cursor while in insert mode.
 let &t_SI = "\<Esc>[6 q"
