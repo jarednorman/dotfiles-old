@@ -48,7 +48,6 @@ set shiftwidth=2
 set hlsearch
 set ignorecase
 set smartcase
-set number
 set wrap
 set cmdheight=1
 set wildmode=list:longest,list:full
