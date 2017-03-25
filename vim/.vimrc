@@ -36,6 +36,8 @@ filetype plugin indent on
 syntax on
 let base16colorspace=256
 colo base16-default-dark
+hi search ctermfg=4 ctermbg=0 cterm=bold,reverse
+hi incsearch ctermfg=4 ctermbg=18 cterm=bold
 
 " Built in Vim settings.
 set shell=$SHELL
