@@ -32,6 +32,16 @@ function jftest() {
   fi
 }
 
+function togglebg() {
+  echo $BASE16_THEME
+  if [ "hopscotch" = "$BASE16_THEME" ] || [ "base16-hopscotch" = "$BASE16_THEME" ]
+  then
+    base16_unikitty-light
+  else
+    base16_hopscotch
+  fi
+}
+
 function fix_keyboard {
   xset m 0 0
   togglekb qwerty
