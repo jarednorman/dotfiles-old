@@ -26,13 +26,16 @@ Plugin 'tpope/vim-haml'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'jason0x43/vim-js-indent'
 
+" Colors
+Plugin 'chriskempson/base16-vim'
+
 call vundle#end()
 filetype plugin indent on
 
 " Make it pretty!
 syntax on
-set background=dark
-colo solarized
+let base16colorspace=256
+colo base16-default-dark
 
 " Built in Vim settings.
 set shell=$SHELL
@@ -53,7 +56,7 @@ set splitright
 set splitbelow
 set ttyfast
 set lazyredraw
-set list listchars=eol:¬,tab:→\ ,trail:•
+set list listchars=tab:→\ ,trail:•
 set fillchars+=vert:│
 
 " vim-airline
