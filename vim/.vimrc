@@ -38,6 +38,10 @@ let base16colorspace=256
 colo base16-default-dark
 hi search ctermfg=4 ctermbg=0 cterm=bold,reverse
 hi incsearch ctermfg=4 ctermbg=18 cterm=bold
+hi visual ctermfg=6 ctermbg=0 cterm=reverse
+hi vertsplit ctermfg=18 ctermbg=18 cterm=none
+hi statusline ctermfg=18 ctermbg=18 cterm=none
+hi statuslinenc ctermfg=18 ctermbg=18 cterm=none
 
 " Built in Vim settings.
 set shell=$SHELL

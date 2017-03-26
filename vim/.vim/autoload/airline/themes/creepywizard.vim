@@ -2,23 +2,23 @@
 
 " Normal mode
 let s:N1 = ['', '', 0, 4]
-let s:N2 = ['', '', 21, 20]
-let s:N3 = ['', '', 20, 19]
+let s:N2 = ['', '', 20, 19]
+let s:N3 = ['', '', 20, 18]
 
 " Insert mode
 let s:I1 = ['', '', 0, 6]
-let s:I2 = ['', '', 21, 20]
-let s:I3 = ['', '', 20, 19]
+let s:I2 = ['', '', 20, 19]
+let s:I3 = ['', '', 20, 18]
 
 " Visual mode
 let s:V1 = ['', '', 0, 17]
-let s:V2 = ['', '', 21, 20]
-let s:V3 = ['', '', 20, 19]
+let s:V2 = ['', '', 20, 19]
+let s:V3 = ['', '', 20, 18]
 
 " Replace mode
 let s:R1 = ['', '', 0, 1]
-let s:R2 = ['', '', 21, 20]
-let s:R3 = ['', '', 20, 19]
+let s:R2 = ['', '', 20, 19]
+let s:R3 = ['', '', 20, 18]
 
 " Paste mode
 let s:PA = ['', 1]
@@ -27,9 +27,9 @@ let s:PA = ['', 1]
 let s:IM = ['', 1]
 
 " Inactive mode
-let s:IA1 = ['', '', 20, 19]
-let s:IA2 = ['', '', 20, 19]
-let s:IA3 = ['', '', 20, 19]
+let s:IA1 = ['', '', 19, 18]
+let s:IA2 = ['', '', 19, 18]
+let s:IA3 = ['', '', 19, 18]
 
 let g:airline#themes#creepywizard#palette = {}
 
