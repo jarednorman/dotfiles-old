@@ -62,7 +62,7 @@ set splitbelow
 set ttyfast
 set lazyredraw
 set list listchars=tab:→\ ,trail:•
-set fillchars+=vert:│
+set fillchars+=vert:\ 
 
 " vim-airline
 let g:airline_theme = 'creepywizard'
