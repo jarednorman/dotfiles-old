@@ -25,6 +25,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-haml'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'jason0x43/vim-js-indent'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " Colors
 Plugin 'chriskempson/base16-vim'
@@ -63,6 +65,9 @@ set ttyfast
 set lazyredraw
 set list listchars=tab:→\ ,trail:•
 set fillchars+=vert:\ 
+
+" vim-jsx
+let g:jsx_ext_required = 0
 
 " vim-airline
 let g:airline_theme = 'creepywizard'
