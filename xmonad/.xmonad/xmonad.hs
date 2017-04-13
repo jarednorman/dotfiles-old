@@ -26,16 +26,16 @@ main = do
          , modMask            = mod4Mask
          , terminal           = "st"
          , borderWidth        = 2
-         , normalBorderColor  = "#C4C3C5"
-         , focusedBorderColor = "#E013D0"
+         , normalBorderColor  = "#eee8d5"
+         , focusedBorderColor = "#cb4b16"
          , logHook = dynamicLogWithPP $ xmobarPP
                      { ppOutput          = hPutStrLn xmproc
-                     , ppTitle           = xmobarColor "#775DFF" ""
-                     , ppCurrent         = xmobarColor "#E013D0" ""
-                     , ppVisible         = xmobarColor "#E1E1E2" ""
-                     , ppHidden          = xmobarColor "#C4C3C5" ""
-                     , ppHiddenNoWindows = xmobarColor "#89878B" ""
-                     , ppLayout          = xmobarColor "#17AD98" ""
+                     , ppTitle           = xmobarColor "#2aa198" ""
+                     , ppCurrent         = xmobarColor "#cb4b16" ""
+                     , ppVisible         = xmobarColor "#eee8d5" ""
+                     , ppHidden          = xmobarColor "#93a1a1" ""
+                     , ppHiddenNoWindows = xmobarColor "#586e75" ""
+                     , ppLayout          = xmobarColor "#6c71c4" ""
                      , ppSep             = " • "
                      }
          }
