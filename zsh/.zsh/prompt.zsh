@@ -66,7 +66,7 @@ precmd() { vcs_info }
 local suspended_jobs="%(1j. [%j].)"
 local current_dir="%~"
 local root_prompt="%F{1}%B%#%f%k%b "
-local user_prompt="%F{4}%B→%f%k%b "
+local user_prompt="%F{11}%B→%f%k%b "
 PROMPT='%F{19}%n@%m:${current_dir}${vcs_info_msg_0_} $(git_time_since_commit)%F{19}$(ruby_version_maybe)%(?.. {%?})${suspended_jobs}
 %(!.${root_prompt}.${user_prompt})'
 RPROMPT=''

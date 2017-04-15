@@ -5,9 +5,9 @@ set -e
 >&2 echo "Setting screen layout..."
 sh $HOME/.xrandr.sh
 
-# >&2 echo "Setting wallpaper..."
-# feh --bg-fill $HOME/.wallpaper.jpg
-#
+>&2 echo "Setting wallpaper..."
+xsetroot -solid '#181818'
+
 >&2 echo "Loading .Xresources..."
 xrdb $HOME/.Xresources
 

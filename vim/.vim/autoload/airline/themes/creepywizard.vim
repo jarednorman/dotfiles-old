@@ -1,17 +1,17 @@
 " vim-airline 'creepywizard' theme
 
 " Normal mode
-let s:N1 = ['', '', 0, 4]
+let s:N1 = ['', '', 0, 6]
 let s:N2 = ['', '', 20, 19]
 let s:N3 = ['', '', 20, 18]
 
 " Insert mode
-let s:I1 = ['', '', 0, 6]
+let s:I1 = ['', '', 0, 3]
 let s:I2 = ['', '', 20, 19]
 let s:I3 = ['', '', 20, 18]
 
 " Visual mode
-let s:V1 = ['', '', 0, 17]
+let s:V1 = ['', '', 0, 15]
 let s:V2 = ['', '', 20, 19]
 let s:V3 = ['', '', 20, 18]
 

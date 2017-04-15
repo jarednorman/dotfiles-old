@@ -38,11 +38,11 @@ filetype plugin indent on
 syntax on
 let base16colorspace=256
 colo base16-default-dark
-hi search ctermfg=4 ctermbg=0 cterm=bold,reverse
-hi incsearch ctermfg=4 ctermbg=18 cterm=bold
-hi visual ctermfg=6 ctermbg=0 cterm=reverse
-hi vertsplit ctermfg=18 ctermbg=18 cterm=none
-hi statusline ctermfg=18 ctermbg=18 cterm=none
+hi search       ctermfg=16 ctermbg=0  cterm=reverse,bold
+hi incsearch    ctermfg=3  ctermbg=0  cterm=reverse,bold
+hi visual       ctermfg=15 ctermbg=0  cterm=reverse,bold
+hi vertsplit    ctermfg=18 ctermbg=18 cterm=none
+hi statusline   ctermfg=18 ctermbg=18 cterm=none
 hi statuslinenc ctermfg=18 ctermbg=18 cterm=none
 
 " Built in Vim settings.
