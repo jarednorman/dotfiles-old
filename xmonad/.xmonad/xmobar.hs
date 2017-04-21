@@ -9,5 +9,5 @@ Config { font = "xft:Input:bold:pixelsize=16"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ <fc=#a1b56c>%timer%</fc> %date% "
+       , template = " %StdinReader% }{ <fc=#a1b56c>%timer%</fc> %date%   "
        }
