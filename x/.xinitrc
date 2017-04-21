@@ -21,6 +21,8 @@ sh $HOME/.xrandr.sh
 autocutsel -fork
 autocutsel -selection PRIMARY -fork
 
+trayer --widthtype request --transparent true --alpha 0 --tint 0x181818 --align right --edge bottom --height 52 --padding 0 &
+
 >&2 echo "Starting unclutter..."
 unclutter &
 
