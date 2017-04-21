@@ -27,9 +27,14 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'jason0x43/vim-js-indent'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
 
 " Colors
 Plugin 'chriskempson/base16-vim'
+
+" Misc
+Plugin 'Shougo/vimproc.vim'
 
 call vundle#end()
 filetype plugin indent on
