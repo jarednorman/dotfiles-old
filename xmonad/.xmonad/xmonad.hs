@@ -30,12 +30,12 @@ main = do
          , focusedBorderColor = "#cb4b16"
          , logHook = dynamicLogWithPP $ xmobarPP
                      { ppOutput          = hPutStrLn xmproc
-                     , ppTitle           = xmobarColor "#86c1b9" ""
-                     , ppCurrent         = xmobarColor "#f7ca88" ""
-                     , ppVisible         = xmobarColor "#d8d8d8" ""
-                     , ppHidden          = xmobarColor "#585858" ""
-                     , ppHiddenNoWindows = xmobarColor "#282828" ""
-                     , ppLayout          = xmobarColor "#ba8baf" ""
+                     , ppTitle           = xmobarColor "#149BDA" ""
+                     , ppCurrent         = xmobarColor "#775DFF" ""
+                     , ppVisible         = xmobarColor "#C4C3C5" ""
+                     , ppHidden          = xmobarColor "#89878B" ""
+                     , ppHiddenNoWindows = xmobarColor "#4F4B51" ""
+                     , ppLayout          = xmobarColor "#E013D0" ""
                      , ppSep             = " • "
                      }
          }
