@@ -9,15 +9,13 @@ import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.DynamicLog
 
 import XMonad.Util.EZConfig
-import XMonad.Util.Run(spawnPipe)
 
-import XMonad.Layout.NoBorders
-import XMonad.Layout.HintedTile
+import XMonad.Layout.HintedGrid
+import XMonad.Layout.Gaps
 
-myLayoutHook = smartBorders $ avoidStruts (Full)
+myLayoutHook = gaps [(U,10), (R,10), (D,10), (L,10)] $ Grid False ||| Full
 
 main = do
-  xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar.hs"
   xmonad $ ewmh defaultConfig
          { manageHook         = manageDocks <+> manageHook defaultConfig
          , layoutHook         = myLayoutHook
@@ -25,19 +23,9 @@ main = do
          , startupHook        = ewmhDesktopsStartup
          , modMask            = mod4Mask
          , terminal           = "st"
-         , borderWidth        = 2
-         , normalBorderColor  = "#eee8d5"
-         , focusedBorderColor = "#cb4b16"
-         , logHook = dynamicLogWithPP $ xmobarPP
-                     { ppOutput          = hPutStrLn xmproc
-                     , ppTitle           = xmobarColor "#149BDA" ""
-                     , ppCurrent         = xmobarColor "#775DFF" ""
-                     , ppVisible         = xmobarColor "#C4C3C5" ""
-                     , ppHidden          = xmobarColor "#89878B" ""
-                     , ppHiddenNoWindows = xmobarColor "#4F4B51" ""
-                     , ppLayout          = xmobarColor "#E013D0" ""
-                     , ppSep             = " • "
-                     }
+         , borderWidth        = 3
+         , normalBorderColor  = "#e1e1e2"
+         , focusedBorderColor = "#149bda"
          }
          `additionalKeys`
          [ ((0,        xF86XK_AudioLowerVolume ), spawn "pactl set-sink-volume 0 -5%")
