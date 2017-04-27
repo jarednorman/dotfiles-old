@@ -40,7 +40,6 @@ REPORTTIME=10
 # Chruby up, and get the gems into my path.
 source $HOME/.zsh/vendor/chruby/chruby.sh
 source $HOME/.zsh/vendor/chruby/auto.sh
-source $HOME/.zsh/vendor/bundler-exec.sh
 chruby_auto
 
 # The source of my power.
