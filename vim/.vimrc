@@ -51,6 +51,7 @@ hi statusline   ctermfg=18 ctermbg=18   cterm=none
 hi statuslinenc ctermfg=18 ctermbg=18   cterm=none
 
 " Built in Vim settings.
+set number
 set shell=$SHELL
 set noswapfile
 set nobackup
