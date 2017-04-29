@@ -11,9 +11,10 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Util.EZConfig
 
 import XMonad.Layout.HintedGrid
+import XMonad.Layout.SimplestFloat
 import XMonad.Layout.Gaps
 
-myLayoutHook = gaps [(U,10), (R,10), (D,10), (L,10)] $ Grid False ||| Full
+myLayoutHook = gaps [(U,10), (R,10), (D,10), (L,10)] $ Grid False ||| Full ||| simplestFloat
 
 main = do
   xmonad $ ewmh defaultConfig
