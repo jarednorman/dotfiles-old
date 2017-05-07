@@ -1,18 +1,16 @@
-import System.IO
-
 import Graphics.X11.ExtraTypes.XF86
 
 import XMonad hiding (Tall)
 
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
-import XMonad.Hooks.DynamicLog
 
 import XMonad.Util.EZConfig
 
 import XMonad.Layout.HintedGrid
+import XMonad.Layout.NoBorders
 
-myLayoutHook = Grid False ||| Full
+myLayoutHook = smartBorders $ noBorders Full ||| Grid False
 
 main = do
   xmonad $ ewmh defaultConfig
@@ -22,7 +20,7 @@ main = do
          , startupHook        = ewmhDesktopsStartup
          , modMask            = mod4Mask
          , terminal           = "st"
-         , borderWidth        = 3
+         , borderWidth        = 2
          , normalBorderColor  = "#e1e1e2"
          , focusedBorderColor = "#149bda"
          }
