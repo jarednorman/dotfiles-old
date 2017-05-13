@@ -1,0 +1,12 @@
+xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap.norman
+xinput set-prop 11 "Device Enabled" 0
+feh --bg-scale ~/.wallpaper.jpg
+
+trayer --align right --height 28 --transparent true --alpha 255 --SetDockType false &
+redshift-gtk &
+mate-power-manager &
+st &
+google-chrome-stable &
+slack &
+emacs &
