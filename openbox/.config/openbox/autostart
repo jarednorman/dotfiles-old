@@ -4,7 +4,7 @@ xinput set-prop 11 "Device Enabled" 0
 feh --bg-scale ~/.wallpaper.jpg
 
 xcompmgr -cC -r 6 -t -6 -l -9 -o 0.25 &
-trayer --align right --height 28 --transparent true --alpha 255 --SetDockType false &
+trayer --align right --height 28 --transparent true --alpha 255 --SetDockType false --widthtype request &
 redshift-gtk &
 mate-power-manager &
 st &
