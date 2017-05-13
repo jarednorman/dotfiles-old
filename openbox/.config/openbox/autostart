@@ -3,6 +3,7 @@ xmodmap ~/.Xmodmap.norman
 xinput set-prop 11 "Device Enabled" 0
 feh --bg-scale ~/.wallpaper.jpg
 
+conky &
 xcompmgr -cC -r 4 -t -4 -l -6 -o 0.25 &
 trayer --align right --height 28 --transparent true --alpha 255 --SetDockType false --widthtype request &
 redshift-gtk &
