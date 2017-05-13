@@ -66,9 +66,10 @@ menu.border.color: #3F6071
 #     Osd		
 #======================================
 
-osd.hilight.bg: flat border
-osd.hilight.bg.color: #ff00ff
-osd.hilight.bg.border.color: #ff00ff
+osd.hilight.bg: flat
+osd.hilight.bg.color: #FFFFFF
+osd.unhilight.bg: flat
+osd.unhilight.bg.color: #658393
 
 #======================================
 #     Title Justification
