@@ -32,7 +32,7 @@
   f = fetch
   ff = merge --ff-only
   ignore = update-index --assume-unchanged
-  l = log --graph --pretty=format:'%C(20)%h %C(19)→ %C(21)%s %C(8)%aN %C(19)%cd%C(6)%d' --abbrev-commit --date=relative
+  l = log --graph --pretty=format:'%C(10)%h %C(12)→ %C(14)%s %C(3)%aN %C(11)%cd%C(6)%d' --abbrev-commit --date=relative
   m = merge
   p = pull
   pr = pull --rebase
@@ -40,7 +40,6 @@
   ra = rebase --abort
   rc = rebase --continue
   ri = rebase -i
-  flog = reflog --pretty=format:'%C(bold cyan)%h%C(reset) %C(blue)%cd %C(bold green)%s %C(bold cyan)%an%Creset%C(bold red)%d' --abbrev-commit --date=short
   s = status -s
   ss = status
   unignore = update-index --no-assume-unchanged

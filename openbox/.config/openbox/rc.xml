@@ -6,7 +6,7 @@
   </resistance>
   <focus>
     <focusNew>yes</focusNew>
-    <followMouse>no</followMouse>
+    <followMouse>yes</followMouse>
     <focusLast>yes</focusLast>
     <underMouse>no</underMouse>
     <focusDelay>200</focusDelay>
@@ -153,7 +153,7 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="A-p">
+    <keybind key="W-p">
       <action name="Execute">
         <command>dmenu_run</command>
       </action>
