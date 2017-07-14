@@ -6,15 +6,12 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-fugitive'
-Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
 
 " Make it pretty!
 syntax on
-set background=dark
-colo solarized
 
 " Built in Vim settings.
 set shell=$SHELL
