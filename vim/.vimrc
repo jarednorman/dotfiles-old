@@ -1,13 +1,12 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-fugitive'
+Plug 'gmarik/Vundle.vim'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " Make it pretty!
