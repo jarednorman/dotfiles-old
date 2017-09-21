@@ -5,14 +5,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'gmarik/Vundle.vim'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
-Plug 'chriskempson/base16-vim'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 filetype plugin indent on
 
 " Make it pretty!
 syntax on
-color base16-default-dark
+color gruvbox
 
 " Built in Vim settings.
 set shell=$SHELL
