@@ -32,18 +32,14 @@
   ds = diff --staged
   f = fetch
   ff = merge --ff-only
-  ignore = update-index --assume-unchanged
   l = log --graph --pretty=format:'%C(8)%h %C(14)→ %C(15)%s %C(3)%aN %C(8)%cd%C(14)%d' --abbrev-commit --date=relative
   m = merge
-  p = pull
-  pr = pull --rebase
   r = rebase
   ra = rebase --abort
   rc = rebase --continue
   ri = rebase -i
-  s = status -s
-  ss = status
-  unignore = update-index --no-assume-unchanged
+  s = status
+  ss = status -s
 [rebase]
   autosquash = true
 [color]
