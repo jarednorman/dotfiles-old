@@ -32,7 +32,7 @@
   ds = diff --staged
   f = fetch
   ff = merge --ff-only
-  l = log --graph --pretty=format:'%C(8)%h %C(14)→ %C(15)%s %C(3)%aN %C(8)%cd%C(14)%d' --abbrev-commit --date=relative
+  l = log --graph --pretty=format:'%C(14)%h %C(10)→ %C(10)%s %C(2)%aN %C(14)%cd%C(4)%d' --abbrev-commit --date=relative
   m = merge
   r = rebase
   ra = rebase --abort
