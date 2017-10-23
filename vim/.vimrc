@@ -5,15 +5,16 @@ call plug#begin('~/.vim/plugged')
 Plug 'gmarik/Vundle.vim'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
-Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 filetype plugin indent on
 
 " Make it pretty!
 syntax on
-set background=light
-color solarized
+set background=dark
+set termguicolors
+color gruvbox
 
 " Built in Vim settings.
 set shell=$SHELL
