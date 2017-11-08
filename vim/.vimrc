@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'gmarik/Vundle.vim'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
-Plug 'morhetz/gruvbox'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 filetype plugin indent on
@@ -13,8 +13,8 @@ filetype plugin indent on
 " Make it pretty!
 syntax on
 set background=dark
-set termguicolors
-color gruvbox
+let base16colorspace=256
+color base16-default-dark
 
 " Built in Vim settings.
 set shell=$SHELL
@@ -34,7 +34,7 @@ set splitbelow
 set ttyfast
 set lazyredraw
 set list listchars=tab:→\ ,trail:•
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 
 " Changes cursor while in insert mode.
 let &t_SI = "\<Esc>[6 q"
