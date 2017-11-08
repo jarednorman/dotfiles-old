@@ -10,6 +10,7 @@ path=(
     $HOME/.luarocks/bin
     /usr/local/{bin,sbin}
     /usr/local/share/npm/bin
+    /usr/local/opt/postgresql@9.6/bin
     $path
 )
 
