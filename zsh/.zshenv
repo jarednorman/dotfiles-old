@@ -14,6 +14,11 @@ path=(
     $path
 )
 
+# Chruby up, and get the gems into my path.
+source $HOME/.zsh/vendor/chruby/chruby.sh
+source $HOME/.zsh/vendor/chruby/auto.sh
+chruby_auto
+
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'

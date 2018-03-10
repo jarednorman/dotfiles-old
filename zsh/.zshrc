@@ -1,4 +1,4 @@
-autoload -U compinit
+autoload -U compinit zmv
 compinit -u
 
 # Vim it.
@@ -17,11 +17,6 @@ REPORTTIME=10
 
 BASE16_SHELL=$HOME/.base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
-# Chruby up, and get the gems into my path.
-source $HOME/.zsh/vendor/chruby/chruby.sh
-source $HOME/.zsh/vendor/chruby/auto.sh
-chruby_auto
 
 # The source of my power.
 source ~/.zsh/utils.zsh
