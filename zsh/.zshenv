@@ -5,7 +5,7 @@ fi
 
 path=(
     $HOME/bin
-    $HOME/local/bin
+    $HOME/bin/local
     $HOME/Codes/elixir/bin
     $HOME/.luarocks/bin
     /usr/local/{bin,sbin}
