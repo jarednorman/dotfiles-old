@@ -10,6 +10,13 @@ Plug 'tpope/vim-unimpaired'
 
 Plug 'mileszs/ack.vim'
 
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-haml'
+Plug 'vim-ruby/vim-ruby'
+Plug 'jason0x43/vim-js-indent'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
 Plug 'chriskempson/base16-vim'
 
 call plug#end()
