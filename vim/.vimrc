@@ -9,6 +9,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 
 Plug 'mileszs/ack.vim'
+Plug '/usr/local/opt/fzf'
 
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-haml'
@@ -47,6 +48,7 @@ set ttyfast
 set lazyredraw
 set list listchars=tab:→\ ,trail:•
 set fillchars+=vert:\
+set grepprg=rg\ --vimgrep
 
 " Use ripgrep when available.
 if executable("rg")

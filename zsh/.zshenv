@@ -27,3 +27,7 @@ export PAGER='less'
 if [[ -z "$LANG" ]]; then
     export LANG='en_US.UTF-8'
 fi
+
+# FZF
+export FZF_DEFAULT_OPTS='-e'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
