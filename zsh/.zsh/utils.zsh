@@ -57,9 +57,9 @@ alias bx='bundle exec'
 alias ya=yaourt
 alias grep='grep --color=auto'
 alias ls='ls -G'
-alias c='cd ~/Codes/$(ls ~/Codes | fzy)'
+alias c='cd ~/Codes/$(ls ~/Codes | fzf)'
 alias tms="tmux attach -t"
-alias tm='tmux switch -t "`tmux list-sessions | cut -d':' -f1 | fzy`"'
+alias tm='tmux switch -t "`tmux list-sessions | cut -d':' -f1 | fzf`"'
 alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
 
 # Git

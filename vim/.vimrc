@@ -78,18 +78,5 @@ vnoremap <c-w>o \<noop>
 " Clear search.
 nnoremap <leader>/ :let @/=""<cr>
 
-" Fzy support!
-function! FzyCommand(choice_command, vim_command)
-  try
-    let output = system(a:choice_command . " | fzy ")
-  catch /Vim:Interrupt/
-    " Swallow errors from ^C, allow redraw! below
-  endtry
-  redraw!
-  if v:shell_error == 0 && !empty(output)
-    exec a:vim_command . ' ' . output
-  endif
-endfunction
-nnoremap <leader><leader> :call FzyCommand("ag --nocolor -l --hidden --ignore /.git", ":e")<cr>
-nnoremap <leader>fg :call FzyCommand("ag -g '' $(bundle show $(bundle list \| cut -f 4 -d' ' \| fzy))", ":e")<cr>
-nnoremap <leader>fp :call FzyCommand("ag --nocolor -l --hidden --ignore /.git -g '' ~/Codes/$(ls ~/Codes \| fzy)", ":e")<cr>
+" FZF support!
+nnoremap <leader><leader> :FZF<cr>
