@@ -80,3 +80,15 @@ nnoremap <leader>/ :let @/=""<cr>
 
 " FZF support!
 nnoremap <leader><leader> :FZF<cr>
+
+" Gem search
+function! GemSearch()
+  call fzf#run(fzf#wrap({'source': "bundle list | sed '1d;$d' | cut -d ' ' -f 4", 'sink': {gem -> GemFileSearch(gem)}}))
+endfunction
+
+function! GemFileSearch(gem)
+  let gemdir = substitute(system("bundle show " . a:gem), '\n\+$', '', '')
+  call fzf#run(fzf#wrap({'source': 'rg --files ' . gemdir . ' --color never | sed -e "s#^' . gemdir . '/##"', 'dir': gemdir}))
+endfunction
+
+nnoremap <leader>gf :call GemSearch()<cr>
