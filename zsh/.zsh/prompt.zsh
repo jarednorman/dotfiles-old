@@ -10,7 +10,8 @@ precmd() { vcs_info }
 
 setopt promptsubst
 
+local suspended_jobs="%F{17}%(1j. %j.)%f"
 local root_prompt="%F{1}▲"
 local user_prompt="%(?.%F{15}△.%F{1}▽)"
 
-PROMPT='%F{5}%n%F{15}@%F{3}%m%F{15}:%F{6}%1~${vcs_info_msg_0_} %(!.${root_prompt}.${user_prompt})%f%k%b '
+PROMPT='%F{5}%n%F{15}@%F{3}%m%F{15}:%F{6}%1~${vcs_info_msg_0_}${suspended_jobs} %(!.${root_prompt}.${user_prompt})%f%k%b '
