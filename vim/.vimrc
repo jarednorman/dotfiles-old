@@ -17,6 +17,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'jason0x43/vim-js-indent'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'kchmck/vim-coffee-script'
 
 Plug 'chriskempson/base16-vim'
 
