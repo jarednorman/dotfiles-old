@@ -18,6 +18,7 @@ Plug 'jason0x43/vim-js-indent'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'kchmck/vim-coffee-script'
+Plug 'mustache/vim-mustache-handlebars'
 
 Plug 'chriskempson/base16-vim'
 
