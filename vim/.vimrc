@@ -94,3 +94,7 @@ function! GemFileSearch(gem)
 endfunction
 
 nnoremap <leader>gf :call GemSearch()<cr>
+
+" Default search colours in base16 are really bad:
+hi Search cterm=NONE ctermfg=black ctermbg=blue
+hi IncSearch cterm=NONE ctermfg=black ctermbg=red
