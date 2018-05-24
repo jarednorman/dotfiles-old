@@ -29,5 +29,5 @@ if [[ -z "$LANG" ]]; then
 fi
 
 # FZF
-export FZF_DEFAULT_OPTS='-e --color=fg:20,bg:0,fg+:15,bg+:19,info:19,hl:1,hl+:1,pointer:4,prompt:4,spinner:3'
+export FZF_DEFAULT_OPTS='-e --color=fg:8,bg:0,fg+:15,bg+:19,info:19,hl:3,hl+:3,pointer:3,prompt:3,spinner:3'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
