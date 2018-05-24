@@ -1,3 +1,0 @@
-! Set capslock to escape
-clear Lock
-keycode 0x42 = Escape
