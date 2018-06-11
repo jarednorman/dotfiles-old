@@ -8,6 +8,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-dispatch'
 
 Plug 'mileszs/ack.vim'
 Plug '/usr/local/opt/fzf'
