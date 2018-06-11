@@ -10,7 +10,6 @@ path=(
     $HOME/.luarocks/bin
     /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
     /usr/local/{bin,sbin}
-    /usr/local/share/npm/bin
     /usr/local/opt/postgresql@9.6/bin
     $path
 )
