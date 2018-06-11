@@ -8,13 +8,13 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-haml'
 Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-projectionist'
 
 Plug 'mileszs/ack.vim'
 Plug '/usr/local/opt/fzf'
 
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-haml'
 Plug 'vim-ruby/vim-ruby'
 Plug 'jason0x43/vim-js-indent'
 Plug 'pangloss/vim-javascript'
@@ -79,11 +79,31 @@ vnoremap K \<noop>
 nnoremap <c-w>o \<noop>
 vnoremap <c-w>o \<noop>
 
+" Pane navigation
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+
 " Clear search.
 nnoremap <leader>/ :let @/=""<cr>
 
 " FZF support!
 nnoremap <leader><leader> :FZF<cr>
+
+" Projectionist
+let g:projectionist_heuristics = {
+      \  'Gemfile': {
+      \    '*_spec.rb' : {
+      \      'dispatch': "bundle exec rspec {file}",
+      \      'make': "bundle exec rails c",
+      \      'start': "bundex exec rails s"
+      \    }
+      \  }
+      \}
+nnoremap <leader>d :Dispatch<cr>
+nnoremap <leader>m :Make<cr>
+nnoremap <leader>s :Start<cr>
 
 " Gem search
 function! GemSearch()

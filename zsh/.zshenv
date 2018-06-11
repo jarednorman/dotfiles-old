@@ -19,6 +19,10 @@ source $HOME/.zsh/vendor/chruby/chruby.sh
 source $HOME/.zsh/vendor/chruby/auto.sh
 chruby_auto
 
+# NVM is slow as F, but I need it.
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
