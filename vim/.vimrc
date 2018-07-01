@@ -3,11 +3,9 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-haml'
-Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -111,20 +109,6 @@ nnoremap <leader>/ :let @/=""<cr>
 
 " FZF support!
 nnoremap <leader><leader> :FZF<cr>
-
-" Projectionist
-let g:projectionist_heuristics = {
-      \  'Gemfile': {
-      \    '*_spec.rb' : {
-      \      'dispatch': "bundle exec rspec {file}",
-      \      'make': "bundle exec rails c",
-      \      'start': "bundex exec rails s"
-      \    }
-      \  }
-      \}
-nnoremap <leader>d :Dispatch<cr>
-nnoremap <leader>m :Make<cr>
-nnoremap <leader>s :Start<cr>
 
 " Gem search
 function! GemSearch()
