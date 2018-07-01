@@ -110,6 +110,9 @@ nnoremap <leader>/ :let @/=""<cr>
 " FZF support!
 nnoremap <leader><leader> :FZF<cr>
 
+" Test running! I promise I'll do something more sensible at some point.
+nnoremap <leader>t :!bundle exec rspec %<cr>
+
 " Gem search
 function! GemSearch()
   call fzf#run(fzf#wrap({'source': "bundle list | sed '1d;$d' | cut -d ' ' -f 4", 'sink': {gem -> GemFileSearch(gem)}}))
