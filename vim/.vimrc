@@ -102,6 +102,10 @@ nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 
+" Tab navigation
+nnoremap <leader><tab> :tabn<cr>
+nnoremap <leader><s-tab> :tabp<cr>
+
 " Clear search.
 nnoremap <leader>/ :let @/=""<cr>
 
