@@ -25,6 +25,9 @@ Plug 'mustache/vim-mustache-handlebars'
 
 Plug 'chriskempson/base16-vim'
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 filetype plugin indent on
 
@@ -54,6 +57,19 @@ set lazyredraw
 set list listchars=tab:→\ ,trail:•
 set fillchars+=vert:\
 set grepprg=rg\ --vimgrep
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_splits = 0
 
 " Use ripgrep when available.
 if executable("rg")
