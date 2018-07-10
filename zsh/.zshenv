@@ -3,21 +3,23 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-path=(
-    $HOME/bin
-    $HOME/bin/local
-    $HOME/Codes/elixir/bin
-    $HOME/.luarocks/bin
-    /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
-    /usr/local/{bin,sbin}
-    /usr/local/opt/postgresql@9.6/bin
-    $path
-)
+if ! [[ -v JARDO_SET_PATH ]]; then
+  path=(
+      $HOME/bin
+      $HOME/bin/local
+      $HOME/.cargo/bin
+      $HOME/.luarocks/bin
+      /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+      /usr/local/{bin,sbin}
+      /usr/local/opt/postgresql@9.6/bin
+      $path
+  )
+fi
+export JARDO_SET_PATH=yep
 
 # Chruby up, and get the gems into my path.
 source $HOME/.zsh/vendor/chruby/chruby.sh
 source $HOME/.zsh/vendor/chruby/auto.sh
-chruby_auto
 
 # NVM is slow as F, but I need it.
 export NVM_DIR="$HOME/.nvm"
