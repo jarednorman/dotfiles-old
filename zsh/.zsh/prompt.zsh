@@ -1,4 +1,6 @@
 autoload -Uz vcs_info
+autoload -U colors && colors
+
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:git*' check-for-changes true
 zstyle ':vcs_info:git*' check-for-staged-changes true
@@ -14,4 +16,4 @@ local suspended_jobs="%F{17}%(1j. %j.)%f"
 local root_prompt="%F{1}▲"
 local user_prompt="%(?.%F{20}△.%F{1}▽)"
 
-PROMPT='%F{5}%n%F{15}@%F{3}%m%F{15}:%F{6}%1~${vcs_info_msg_0_}${suspended_jobs} %(!.${root_prompt}.${user_prompt})%f%k%b '
+PROMPT='%F{5}%n%F{15}@%F{3}%m%F{15}:%F{6}%1~${vcs_info_msg_0_}${suspended_jobs} %(!.${root_prompt}.${user_prompt})%{$reset_color%} '

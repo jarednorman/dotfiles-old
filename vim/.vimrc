@@ -18,6 +18,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'jason0x43/vim-js-indent'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mustache/vim-mustache-handlebars'
 
@@ -43,6 +44,7 @@ set noerrorbells visualbell t_vb=
 set expandtab
 set softtabstop=2
 set shiftwidth=2
+set scrolljump=15
 set hlsearch
 set ignorecase
 set smartcase
