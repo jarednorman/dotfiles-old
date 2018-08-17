@@ -1,4 +1,4 @@
 #!/bin/sh
-GEM=$(bundle list | cut -f 4 -d' ' | fzy)
+GEM=$(bundle list | cut -f 4 -d' ' | fzf)
 DESTINATION=$(bundle show $GEM)
 tmux new-window -c $DESTINATION -n $GEM
