@@ -1,6 +1,7 @@
 /bin/bin/local/*
 /vim/.vim/.netrwhist
 /vim/.vim/bundle
+/vim/.vim/autoload
 /ruby/.bundle/cache
 /zsh/.zsh/local.zsh
 /xmonad/.xmonad/xmonad-x86_64-linux

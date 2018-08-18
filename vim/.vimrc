@@ -12,7 +12,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
 Plug 'mileszs/ack.vim'
-Plug '/usr/local/opt/fzf'
+Plug '~/.fzf'
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'jason0x43/vim-js-indent'
