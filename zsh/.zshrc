@@ -16,6 +16,9 @@ path=(
   $path
 )
 
+# Disable line editor highlighting, for reasons.
+zle_highlight=(none)
+
 # Those who cannot remember the past...
 HISTSIZE=1000000
 SAVEHIST=1000000

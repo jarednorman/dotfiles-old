@@ -16,4 +16,4 @@ local suspended_jobs="%F{17}%(1j. %j.)%f"
 local root_prompt="%F{1}▲"
 local user_prompt="%(?.%F{20}△.%F{1}▽)"
 
-PROMPT='%F{5}%n%F{15}@%F{3}%m%F{15}:%F{6}%1~${vcs_info_msg_0_}${suspended_jobs} %(!.${root_prompt}.${user_prompt})%{$reset_color%} '
+PROMPT='%F{5}%n%F{15}@%F{3}%m%F{15}:%F{6}%1~${vcs_info_msg_0_}${suspended_jobs} %(!.${root_prompt}.${user_prompt}) %{$reset_color%}'
