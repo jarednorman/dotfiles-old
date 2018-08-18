@@ -8,6 +8,7 @@ bindkey -v
 path=(
   $HOME/bin
   $HOME/bin/local
+  $HOME/.fzf/bin
   $HOME/.cargo/bin
   $HOME/.luarocks/bin
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
