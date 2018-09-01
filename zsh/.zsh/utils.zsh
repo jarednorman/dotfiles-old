@@ -61,6 +61,7 @@ alias c='cd ~/Codes/$(ls ~/Codes | fzf)'
 alias tms="tmux attach -t"
 alias tm='tmux switch -t "`tmux list-sessions | cut -d':' -f1 | fzf`"'
 alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
+alias dev='ssh -t `grep -w -i "Host" ~/.ssh/config | sed 's/Host//' | grep -i "\-dev$" | fzf`'
 
 # Git
 alias g='git'
