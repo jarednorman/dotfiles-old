@@ -33,7 +33,7 @@ BASE16_SHELL=$HOME/.base16-shell/
 
 # NVM is slow as F, but I need it.
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 
 # Chruby up, and get the gems into my path.
 source $HOME/.zsh/vendor/chruby/chruby.sh
